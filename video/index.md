@@ -2,7 +2,7 @@
 
 created by auctioneer
 
-## features
+## Fields
 
 1. auctioneer - owner of video
 2. VideoID - unique id of video
@@ -16,7 +16,7 @@ created by auctioneer
 10. is_published - if true will be visiblle to public
 11. is_Recommended
 
-# actions
+# Operations
 
 create video
 
