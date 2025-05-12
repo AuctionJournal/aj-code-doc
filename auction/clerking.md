@@ -1,4 +1,4 @@
-[Auction Journal](../README.md)
+[Auction Journal](../index.md)
 
 # Clerking
 
@@ -33,7 +33,22 @@ Clerking edit on an auction lot
 - create related bidding
 - lot update
 - altering settlement if already generated
-  - check the type of settlement alteration there are 7 types
+  - alter buyer settlement
+  - check the type of buyer settlement alteration there are 7 types
+    - isBSCreate
+    - isBSAddLotChargeSame
+    - isBSAddLotChargeNew
+    - isBSUpdateLotCharge
+    - isBSTransferLotCharge
+    - isBSRemoveLotCharge
+    - isBSDeleteEntire
+  - alter seller settlement
+  - check the type of seller settlement alteration there are 5 types
+    - isSSCreate
+    - isSSAddLotCharge
+    - isSSUpdateLotCharge
+    - isSSRemoveLotCharge
+    - isSSDeleteEntire
 
 ### Making prescedense bidder as winner
 

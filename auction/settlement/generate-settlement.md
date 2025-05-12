@@ -1,4 +1,4 @@
-[Auction Journal](../../README.md)
+[Auction Journal](../../index.md)
 
 # Generate Auction Settlement
 
