@@ -1,5 +1,7 @@
 [Auction Journal](../index.md)
 
+# Video
+
 created by auctioneer
 
 ## Fields
@@ -18,6 +20,8 @@ created by auctioneer
 
 # Operations
 
-create video
+## create video
 
-edit video
+## edit video
+
+## Publish video

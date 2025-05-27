@@ -9,7 +9,7 @@
 ## Operations
 
 - [Build](./build.md)
-- [Registration](./build.md)
+- [Registration](./registration.md)
 - [Bidding](./build.md)
 - [Live Bidding](./build.md)
 - [Clerking](./clerking.md)

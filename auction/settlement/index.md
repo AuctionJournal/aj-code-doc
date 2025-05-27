@@ -10,8 +10,7 @@ Settlement is generated after auction close
 
 # Operations
 
-- [Generate Settlement](./generate-settlement.md)
-- Edit Buyer Settlement
-- Edit Seller Settlement
+- [Create Settlement](./create.md)
+- [Edit Settlement](./edit.md)
 - Email Settlement
 - Add Recipt
