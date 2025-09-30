@@ -1,1 +1,0 @@
-[Auction Journal](../index.md)

@@ -11,7 +11,7 @@
 
 - Customer
 - [Payment Cards](cards.md)
-- Connect account for auctioneer
+- [Connect account for auctioneer](connect-account.md)
 - Payment
   - create listing
   - advertisement
