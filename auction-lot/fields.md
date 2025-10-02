@@ -24,7 +24,7 @@
 - isSellerTaxable
 
   - Info - check if seller can be taxed
-  - logic - taxable if seller have specific buy back setting and no tax exempt. Else if seller have no specific buy back setting and auction is not collecting taxes
+  - logic - Not taxable if seller have specific buy back setting and have tax exempt. Else taxable if auction is collecting taxes
 
 - SellerTax
 
