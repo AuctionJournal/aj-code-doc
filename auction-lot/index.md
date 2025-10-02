@@ -1,5 +1,5 @@
 [Auction Journal](../index.md)
 
-# Fields
+# [Fields](./fields.md)
 
-[Fields](./fields.md)
+# [Build Lot](./build.md)

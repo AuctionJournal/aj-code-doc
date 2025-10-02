@@ -2,6 +2,13 @@
 
 # Auction Lot Building
 
+## Build Through
+
+- Create Lot
+- Import Lot
+- Fast Catalog
+- QR only lot
+
 ## Requirements
 
 ## Intial create

@@ -6,6 +6,21 @@
 
   - Info - auctioneer client who is selling this lot
 
+- commission
+
+  - Info - formula applicable for commission
+  - logic - if seller have specific buy back setting and seller have specific commission then that will be used else auction's default will be used
+
+- buyerTax
+
+  - Info - formula applicable for buyer tax
+  - logic - auction's default will be used
+
+- buyersPermium
+
+  - Info - formula applicable for buyers premium
+  - logic - auction's default will be used
+
 - isSellerTaxable
 
   - Info - check if seller can be taxed
@@ -14,7 +29,7 @@
 - SellerTax
 
   - Info - formula applicable for seller tax
-  - logic - if seller have specific buy back setting and seller have specific seller tax then that will be used else provided will be used
+  - logic - if seller have specific buy back setting and seller have specific seller tax then that will be used else auction's default will be used
   - changable - if auction is collecting taxes and lot is taxable and before auction close bidding
 
         Auctioneer: { type: ObjectId, ref: "Auctioneer" },
