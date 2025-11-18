@@ -13,6 +13,7 @@ Documentation of auction journal code logic and implementation. Only code logic 
 - [Auctioneer Assistants](auctioneer-assistants/index.md)
   - [Build](auctioneer-assistants/index.md)
 - [Bidder](bidder/index.md)
+  - [Fields](bidder/fields.md)
   - [Registration](bidder/index.md)
   - [Profile](bidder/index.md)
   - [Verification](bidder/index.md)
