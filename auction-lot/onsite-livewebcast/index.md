@@ -7,6 +7,60 @@
 ## Operations
 
 - Open Lot
-- Bidding
+  - Suggested lot
+  - Auto open next lot
+- [Bidding](./bidding.md)
 - Reset Bidding
 - Clerk Lot
+
+## Open Lot
+
+- Auctioneer will get suggestion of next lot number to open
+- Auctioneer can open suggested lot or different lot by lot number
+- Next lot can be automatically opened after clerking if the feature is turned on
+- Open lot validations
+  - basic auctioneer, auction validation
+  - lot validation and warning
+    - is lot
+    - is lot auction ready
+    - is already opened
+    - check is of different ring lot
+    - check is already clerked lot
+
+### Lot open diveations
+
+- Opening Diff ring Lot
+  - if opened then that lot become part of this ring
+  - will be removed from actual ring
+  - lot count of both ring will be updated
+- Opening already clerked lot
+  - If opened clerked status will be removed
+  - lot will be opened again to bid and closebidding of lot updated to end of auction
+  - lot count in ring will be updated
+  - live biddings will be updated
+
+## Reset Bidding
+
+- live bidding in the lot will be reseted
+
+## Clerk Lot
+
+- before clerking lot fair warning will be given
+- can be clerked to sold or pass
+- after clerking close of lot will be updated to current time. thus lot will be shown as closed
+- clerked lots and lots left count in ring will be updated
+
+### Fair Warning
+
+### Pass lot
+
+- lot will be clerked as pass
+
+### Sold lot
+
+- lot will be clerked as sold
+- can be sold to floor bidder or internet bidder
+  - Internet bidder
+  - Floor bidder
+    - will ask for bid card no of registered floor bidder
+    - then sold to that floor bidder
