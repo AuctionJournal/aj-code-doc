@@ -9,11 +9,13 @@
 - Pause Ring
 - Close Ring
 - Completely Closed Ring
+- Auctioneer session
+- Upcoming Lots in ring
 
 ### Start Ring
 
 - Can only start ring during bidding date
-- Select ring if there are multiple rings available
+- Select any one ring if there are multiple rings available
 - Select video and mic input device
 - Test the input device if necessary
 - Call start ring api
@@ -52,3 +54,12 @@
 - If all lots in the ring are clerked, ring become completely closed
 - Once Completely closed, this ring cant be opened
 - Once all lots in auction are clerked .....
+
+### Auctioneer Session
+
+### Upcoming lots in ring
+
+Desc : - upcoming lots in the ring will be show in public website in ring page to bidders. so that bidder can bid on those lots too, alongside live lot
+
+- lots which fall in the ring range
+- lots which are not clerked

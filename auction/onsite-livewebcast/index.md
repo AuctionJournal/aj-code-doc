@@ -11,10 +11,10 @@
 ## Operations
 
 - [Ring Operations](./ring.md)
-- Lot Operations
-- Chat Operations
-- Video Streaming
-- Price controller
+- [Lot Operations](../../auction-lot/onsite-livewebcast/index.md)
+- [Chat Operations](./chat.md)
+- [Video Streaming](./video-streaming.md)
+- Bidding Price controller
 - Clerking
 
 ### Socket.io
