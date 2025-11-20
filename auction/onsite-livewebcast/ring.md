@@ -4,20 +4,24 @@
 
 ## Operations
 
-- Start Ring
+- Prepare Ring Start
 - Enter Ring
 - Pause Ring
 - Close Ring
 - Completely Closed Ring
-- Auctioneer session
+- Ring Room
 - Upcoming Lots in ring
 
-### Start Ring
+### Prepare Ring Start
 
 - Can only start ring during bidding date
-- Select any one ring if there are multiple rings available
+- Select any one ring if there are multiple rings available, if sigle ring it will be default selected
+- auctioneer wont be able to enter ring in following conditions
+  - if bidding date is not started
+  - if ring is already live
+  - if ring is completely closed instead of closed, means all lots in ring are clerked
 - Select video and mic input device
-- Test the input device if necessary
+- Test the input devices if necessary
 - Call start ring api
 
 ### Start Ring Api
@@ -28,7 +32,13 @@
   - bidding time
   - is ring completely closed
   - is ring already live
-- Create Ring Object
+- Starting Ring for first time
+  - create ring object
+- Restarting ring
+  - jhhj
+- Update ringOptions in auction
+- ring should auto close at end of the day, if not closed manually. Thus create cron job for it
+- proced with entering ring
 
 ### Enter Ring
 
@@ -55,7 +65,13 @@
 - Once Completely closed, this ring cant be opened
 - Once all lots in auction are clerked .....
 
-### Auctioneer Session
+### Ring Room
+
+- Each livewebcast takes plaace in a socket room
+- id of the room is id of the ring
+- connected user can join room with ring id
+- info related to the ring is broadcasted in the room
+- users joined in the room can listen to broadcasted messages
 
 ### Upcoming lots in ring
 

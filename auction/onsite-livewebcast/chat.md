@@ -4,7 +4,7 @@
 
 # Fields
 
-[click to view fields](./fields.md)
+[click to view fields](./fields.md#chat)
 
 - Disable Bidder Chat
 - views Count
