@@ -12,6 +12,7 @@
 - [Bidding](./bidding.md)
 - Reset Bidding
 - Clerk Lot
+- [Price Controllers](./price-controllers.md)
 
 ## Open Lot
 
