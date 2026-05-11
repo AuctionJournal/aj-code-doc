@@ -1,70 +1,67 @@
--- Auctioneer: { type: ObjectId, ref: "Auctioneer" },
+# Listing Fields
 
--- ListingID: { type: String, unique: true },
+Source model: `AJ-Main-Backend/app/models/auctionListing.js`
 
--- AuctionType: {
-type: String,
-enum: [
-"OnSite Auction",
-"Live Webcast Auction",
-"Online Timed Auction",
-"Online Absolute Auction",
-"Live Webcast with OnSite Auction",
-],
-},
+## Ownership and Identity
 
--- AuctionTitle: { type: String },
+- `Auctioneer` (ref `Auctioneer`)
+- `ListingID` (unique business id)
 
--- AuctionMonthYear: { type: String },
+Business meaning:
+- Ties listing to auctioneer tenant and provides stable external id.
 
--- AuctionDate: { type: Date },
+## Lifecycle and State
 
--- AuctionTime: { type: Date },
+- `isPublished` (default `false`)
+- `AuctionDate`, `AuctionTime`
+- `AuctionMonthYear`
 
--- Address1: { type: String, default: null },
+Business meaning:
+- Draft vs published visibility is controlled by `isPublished`.
+- `AuctionDate` is used in live/past timeline behavior.
 
--- Address2: { type: String, default: null },
+## Listing Classification
 
--- City: { type: String },
+- `AuctionType` (enum):
+  - `OnSite Auction`
+  - `Live Webcast Auction`
+  - `Online Timed Auction`
+  - `Online Absolute Auction`
+  - `Live Webcast with OnSite Auction`
+- `AuctionCategory`
+- `CategoryDetails`
 
--- State: { type: String },
+Business meaning:
+- Drives listing type UX and bidder CTA path (bid pass vs callback request).
 
--- Country: { type: String },
+## Public Content
 
--- Zip: { type: String },
+- `AuctionTitle`
+- `NameOfProduct`
+- `ProductDescription`
+- `uploadPhoto` (array of media objects)
+- `BiddingNotice`
+- `AuctionNotice`
+- `TermsAndCondition`
 
--- location: {
-type: {
-type: String, // Don't do `{ location: { type: String } }`
-enum: ["Point"], // 'location.type' must be 'Point'
-required: true,
-},
-coordinates: {
-type: [Number],
-required: true,
-},
-},
+Business meaning:
+- Public-facing description and policy payload shown on listing detail pages.
 
--- AuctionCategory: { type: String },
+## Location and Map Data
 
--- CategoryDetails: { type: String },
+- `Address1`, `Address2`, `City`, `State`, `Country`, `Zip`
+- `location.type` (required, `Point`)
+- `location.coordinates` (required `[longitude, latitude]`)
 
--- imagePathId: { type: String },
+Business meaning:
+- Address supports discovery and map rendering.
+- Geo point is mandatory in model and is computed during publish/create flows.
 
--- NameOfProduct: { type: String },
+## Commercial and Media Plumbing
 
--- uploadPhoto: { type: [Object], default: [] },
+- `price`
+- `PaymentInfo` (ref `Purchase_order`)
+- `imagePathId`
 
--- ProductDescription: { type: Object },
-
--- BiddingNotice: { type: Object },
-
--- AuctionNotice: { type: Object },
-
--- TermsAndCondition: { type: Object },
-
--- PaymentInfo: { type: ObjectId, ref: "Purchase_order" },
-
--- isPublished: { type: Boolean, default: false },
-
--- price: { type: Number },
+Business meaning:
+- Tracks listing pricing/payment linkage and image storage grouping.
