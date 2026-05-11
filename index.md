@@ -21,6 +21,8 @@ Documentation of auction journal code logic and implementation. Only code logic 
 - [Bidder Score](bidder-score/index.md)
 - [Auctioneer Client](auctioneer-client/index.md)
   - [Building](auctioneer-client/index.md)
+  - [Fields](auctioneer-client/fields.md)
+  - [Mailing List](auctioneer-client/mailing-list.md)
 - [Auctioneer Miscellaneous](auctioneer-misc/index.md)
 - [Listing](listing/index.md)
   - [Fields](listing/fields.md)

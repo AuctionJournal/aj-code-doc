@@ -1,3 +1,103 @@
+[Auction Journal](../index.md)
+
+# Auctioneer Client Fields
+
+Source model: `AJ-Main-Backend/app/models/clientsOfAuctioneer.js`
+
+## Identity and Ownership
+
+- `clientCode` (required, unique)
+- `auctioneer` (required, owner reference)
+- `clientMail` (required, primary client identity key)
+- `email` (optional alternate email field used in floor-bidder path)
+
+Business meaning:
+- Defines auctioneer-scoped client identity and uniqueness boundaries.
+
+## Profile Core
+
+- `companyName`
+- `clientName`
+  - `firstName`
+  - `middleName`
+  - `lastName`
+- `phone1`, `phone2`
+- `dlNumber`
+- `dob`
+- `notes`
+- `auctionFoundFrom`
+
+## Address Structure
+
+- `clientAddress.billTo`
+  - `address1`, `address2`, `city`, `state`, `zip`, `country`
+- `clientAddress.shipTo`
+  - `address1`, `address2`, `city`, `state`, `zip`, `country`
+
+## Role and Linkage Flags
+
+- `isFloorBidder`
+- `isBuyer`
+- `isConsigner`
+- `isLinkedToBidder`
+- `isBidderDataConnected`
+- `buyerRef` (linked `Bidder` reference)
+
+Business meaning:
+- A single client may hold multiple roles simultaneously.
+- Bidder linkage enables cross-model sync and permission/scoring workflows.
+
+## Identity Proof and Media
+
+- `imageProvided`
+- `idCardImageFrontView`
+- `idCardImageBackView`
+- `identityType` (`Driving Licence` / `State ID` / `Passport`)
+- `buyerIdentification`
+  - `identityType`
+  - `imageFrontView`
+  - `imageBackView`
+
+## Accounting Block
+
+### Buyer Accounting
+
+- `reservedBidCard`
+- `isTaxable`
+- `taxExempt`
+- `taxExpires`
+- `isDefaultBuyerPremium`
+- `buyerPremium` (formula reference)
+- `buyerPermission`
+- `buyerPermissionStatus` (`Default` / `Approved` / `Declined`)
+- `isShareContact`
+- `buyerPermissionPublicNotes`
+- `buyerPermissionPrivateNotes`
+- `buyerPermissionDeclinedReason`
+- `buyerPermissionModifiedAt`
+
+### Consigner Accounting
+
+- `isSpecificBuybackSetting`
+- `comission` (formula reference)
+- `isTaxExempt`
+- `sellerTax` (formula reference)
+- `taxIDExpireDate`
+
+## Index and Uniqueness Notes
+
+- Indexed by `auctioneer`.
+- Composite uniqueness includes auctioneer-scoped client identity/accounting dimensions:
+  - `auctioneer`
+  - `accounting.buyer.reservedBidCard`
+  - `clientMail`
+  - `clientCode`
+  - `buyerRef`
+
+## System Metadata
+
+- `createdAt`, `updatedAt` (timestamps enabled)
+- `versionKey` disabled
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema.Types;
 const mongoosePaginate = require("mongoose-paginate-v2");
