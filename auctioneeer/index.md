@@ -63,6 +63,7 @@ Special case:
 ## Data Fields
 
 - Detailed schema fields and business meaning: [Fields](./fields.md)
+- Free listing publish gate and eligibility flow: [Free Listing Eligibility](./free-listing-eligibility.md)
 
 ## Minimal API Map (Reference Only)
 

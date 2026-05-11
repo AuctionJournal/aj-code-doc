@@ -1,8 +1,8 @@
 [Auction Journal](../index.md)
 
-# Free Listing
+# Free Listing Eligibility
 
-This page documents free-listing eligibility logic for listing publish flows.
+This page documents auctioneer free-listing eligibility logic used by listing publish flows.
 
 ## Business Purpose
 
