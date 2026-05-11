@@ -2,70 +2,64 @@
 
 # Video
 
-This module documents the video content feature used by auctioneers in `AJ-Main-Backend`.
+This module explains the business logic of auctioneer-created videos used for public content and featured placements.
 
-## Fields
+## Business Purpose
 
-Primary model: `AdsVideo_db` (`app/models/adsVideo_Db.js`)
+- Allow auctioneers to submit informational/promotional videos.
+- Keep submissions in a review-first state before public visibility.
+- Support two public display channels:
+  - standard public video list
+  - recommended/featured placements
 
-1. `auctioneer` - owner reference (`Auctioneer` object id)
-2. `VideoID` - generated id (`VideoID_<timestamp>`)
-3. `VideoTitle` - title
-4. `AuctioneerID` - business id of auctioneer
-5. `VideoDescription` - description/content
-6. `VideoLink` - required URI link (validated with Joi on create)
-7. `PostedBy` - display name of creator
-8. `AuthorName` - display name of creator
-9. `CoverImage` - optional image path/link
-10. `is_published` - publish flag (default `false`)
-11. `is_Recommended` - recommendation flag
+## Core Lifecycle
 
-## Routes and Access
+1. Auctioneer creates a video entry.
+2. System stores creator identity and assigns a unique business id (`VideoID_<timestamp>`).
+3. Video starts as unpublished (`is_published = false`).
+4. After separate publish/review handling, it can become visible to public listing.
+5. A video may also be marked as recommended (`is_Recommended = true`) for recommendation surfaces.
 
-Routes are mounted under `/api` (`app/routes/index.js`).
+## Key Business Rules
 
-- `POST /api/createVideo`
-  - Auth required: JWT + `Auctioneer` role
-  - Body validation: `VideoTitle`, `VideoLink` (URI), `VideoDescription` required
-  - Creates video with `is_published = false`
-  - File: `app/controllers/ManageVideos/createVideo.js`
+- Only auctioneers can create, edit, or delete their video entries.
+- Public video feed intentionally excludes recommended videos to avoid duplication across sections.
+- Recommended section is independently resolved from `is_Recommended = true`.
+- Featured video ads are resolved from active advertisement windows (`AdType = "video"` + date range).
 
-- `PUT /api/editVideo`
-  - Auth required: JWT + `Auctioneer` role
-  - Updates by `req.body.id`
-  - Currently updates: `VideoTitle`, `VideoLink`, `PostedBy`
-  - File: `app/controllers/ManageVideos/editVideo.js`
+## Data Model (Business Meaning)
 
-- `DELETE /api/deleteVideo`
-  - Auth required: JWT + `Auctioneer` role
-  - Deletes by `req.body.id`
-  - File: `app/controllers/ManageVideos/deleteVideo.js`
+Primary model: `AdsVideo_db`.
 
-- `GET /api/Videos`
-  - Public
-  - Returns only published and non-recommended videos
-  - Filter: `{ is_published: true, is_Recommended: { $ne: true } }`
-  - File: `app/controllers/ManageVideos/fetchVideos.js`
+- `auctioneer`, `AuctioneerID`: ownership and tenancy context.
+- `VideoID`: business-facing id for lookup/tracking.
+- `VideoTitle`, `VideoDescription`, `VideoLink`: content payload.
+- `PostedBy`, `AuthorName`: display attribution.
+- `CoverImage`: media presentation metadata.
+- `is_published`: visibility gate for public listing.
+- `is_Recommended`: eligibility for recommendation list.
 
-- `GET /api/auctioneer/videos`
-  - Auth required: JWT + `Auctioneer` role
-  - Returns videos for logged-in auctioneer
-  - Optional filter supported in code: if `req.body.is_published` then published-only
-  - File: `app/controllers/ManageVideos/fetchVideosPostedByUser.js`
+## Validation and Decisions
 
-- `GET /api/fetchFeaturedVideos`
-  - Public
-  - Returns active advertisement video refs (`AdType: "video"`, date-range active, `isPublished: true`)
-  - Uses cache key `currentVideoAd` with 10-minute TTL
-  - File: `app/controllers/ManageVideos/fetchVideos.js`
+- Create flow requires `VideoTitle`, valid URI `VideoLink`, and `VideoDescription`.
+- Author/display names are derived from authenticated user profile.
+- Public listing query enforces:
+  - `is_published = true`
+  - `is_Recommended != true`
 
-- `GET /api/recommendedVideo`
-  - Public
-  - Returns videos where `is_Recommended = true`
-  - File: `app/controllers/contact/recommendedVideo.js`
+## Visibility Logic
 
-## Behavior Notes
+- **Draft/Review state**: `is_published = false` (not publicly listed).
+- **Public list state**: `is_published = true` and not recommended.
+- **Recommended state**: `is_Recommended = true` (served in recommended feed).
+- **Featured ad state**: comes from Advertisement mapping, not from video flags alone.
 
-- Video publish/review workflow is implied by `is_published` defaults and read filters.
-- No dedicated publish endpoint exists in this module currently; publish state is managed by update flows/admin logic elsewhere.
-- `editVideo` and `deleteVideo` currently trust `req.body.id` ownership checks at role level, so API consumers should ensure they only operate on own records.
+## System Notes
+
+- Featured video ads use cache (`currentVideoAd`) with short TTL (10 min) to reduce repeated DB load.
+- There is no dedicated publish endpoint in the video route file; publishing appears to be controlled by another admin/review flow.
+
+## Minimal API Map (Reference Only)
+
+- Create/Update/Delete by auctioneer role
+- Public list/recommended/featured retrieval
