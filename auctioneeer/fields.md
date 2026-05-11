@@ -2,67 +2,74 @@
 
 # Auctioneer Fields
 
-    CompanyName: { type: String },
+Source model: `AJ-Main-Backend/app/models/Auctioneer.js`
 
-    FirstName: { type: String },
+## Business Identity
 
-    LastName: { type: String },
+- `CompanyName`
+- `FirstName`, `LastName`
+- `AuctioneerID` (unique business identifier)
+- `tickerSymbol`
 
-    StreetAddress: { type: String },
+Business meaning:
+- Represents both legal/business brand and contact person identity used in public and internal views.
 
-    City: { type: String },
+## Contact and Address
 
-    State: { type: String },
+- `StreetAddress`, `City`, `State`, `Country`, `ZipCode`
+- `Email` (indexed, lowercase), `Phone` (required, unique), `AlternateContact`
 
-    Country: { type: String },
+Business meaning:
+- Primary communication and geo identity for discovery/search and document generation.
 
-    ZipCode: { type: String },
+## Verification and Auth State
 
-    Email: { type: String, index: true, sparse: true },
+- `otp`, `Expiry_time`, `is_PhoneVerified`
+- `Email_otp`, `Email_Expiry_time`, `is_EmailVerified`
+- `password`
+- `isRegistered`
 
-    Email_otp: { type: String },
+Business meaning:
+- Tracks onboarding and verification lifecycle gates before full operational access.
 
-    Email_Expiry_time: { type: Date },
+## License and Profile Content
 
-    is_EmailVerified: { type: Boolean, default: false },
+- `AuctioneerLicensceNo`
+- `AuctioneerLicenscePhoto`
+- `AuctioneerBio`
+- `Photo`
 
-    Phone: { type: String, required: true, unique: true },
+Business meaning:
+- Establishes trust credentials and public-facing profile for auctioneer pages.
 
-    AlternateContact: { type: String },
+## Web and Social Presence
 
-    otp: { type: String, required: true },
+- `Website`, `websiteWithTag`
+- `facebook`, `youtube`, `instagram`, `linkedin`
 
-    Expiry_time: { type: Date, required: true },
+Business meaning:
+- Used for public branding, credibility, and external navigation.
 
-    is_PhoneVerified: { type: Boolean, default: false },
+## Payments and Commercial Eligibility
 
-    Photo: { type: String, default: "" },
+- `stripeCustomer`
+- `stripeConnectedAccount`
+- `isEligibleForFreeListing`
 
-    AuctioneerID: { type: String, unique: true },
+Business meaning:
+- Stripe linkage supports payout/commercial workflows and auction-creation prerequisites.
+- Free listing eligibility is a business entitlement flag.
 
-    AuctioneerLicensceNo: { type: String },
+## Preferences and Notifications
 
-    AuctioneerLicenscePhoto: { type: Object },
+- `subscribedNewsletter`
+- `notification.isNotify`
+- `notification.auctionID`
 
-    AuctioneerBio: { type: Object },
+Business meaning:
+- Stores communication preference and lightweight auction notification state.
 
-    Website: { type: String, default: null },
+## System Metadata
 
-    facebook: { type: String, default: null },
-
-    youtube: { type: String, default: null },
-
-    instagram: { type: String, default: null },
-
-    linkedin: { type: String, default: null },
-
-    password: { type: String },
-
-    tickerSymbol: { type: String },
-
-    subscribedNewsletter: { type: Boolean, default: false },
-    stripeCustomer: { type: String },
-    stripeConnectedAccount: { type: String },
-    isRegistered: { type: Boolean, default: false },
-    isEligibleForFreeListing: { type: Boolean, default: false },
-    websiteWithTag: { type: String, default: "" },
+- `createdAt`, `updatedAt` (timestamps enabled)
+- `versionKey` disabled

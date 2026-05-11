@@ -1,100 +1,61 @@
-const identityVerification = new mongoose.Schema(
-{
-identityType: {
-type: String,
-enum: ["Driving Licence", "State ID", "Passport"],
-default: "Driving Licence",
-},
-imageFrontView: { type: String },
-imageBackView: { type: String },
-isVerified: { type: Boolean, default: false },
-},
-{ \_id: false }
-);
+# Bidder Fields
 
-const BidderSchema = new mongoose.Schema(
-{
-FirstName: { type: String },
+Source model: `AJ-Main-Backend/app/models/Bidder.js`
 
-    LastName: { type: String },
+## Identity Verification (nested object)
 
-    UserName: { type: String },
+- `identityType`: one of `Driving Licence`, `State ID`, `Passport`
+- `imageFrontView`: front document image blob/link
+- `imageBackView`: back document image blob/link
+- `isVerified`: identity proof validity flag
 
-    StreetAddress: { type: String },
+Business rule:
+- Passport can work with front image only; other types need front + back image.
 
-    City: { type: String },
+## Profile and Contact
 
-    State: { type: String },
+- `FirstName`, `LastName`, `UserName`
+- `StreetAddress`, `City`, `State`, `Country`, `ZipCode`
+- `Email` (indexed), `Phone` (required, unique)
+- `Photo`
 
-    Country: { type: String },
+Business meaning:
+- Core bidder profile used for account display and downstream buyer references.
+- Profile photo/name changes are propagated to auctioneer-side client references.
 
-    ZipCode: { type: String },
+## Auth and OTP State
 
-    Email: { type: String, index: true, sparse: true },
+- `password`
+- `otp`, `Expiry_time`, `is_PhoneVerified`
+- `Email_otp`, `Email_Expiry_time`, `is_EmailVerified`
 
-    Email_otp: { type: String },
+Business meaning:
+- Tracks phone/email verification lifecycle and temporary OTP challenge state.
 
-    Email_Expiry_time: { type: Date },
+## Business IDs and Payments
 
-    is_EmailVerified: { type: Boolean, default: false },
+- `BidderID` (unique business identifier)
+- `stripeCustomer`
+- `stripeConnectedAccount`
 
-    Phone: { type: String, required: true, unique: true },
+Business meaning:
+- Stripe linkage is required for card-based verification checks.
 
-    otp: { type: String, required: true },
+## Trust and Reputation
 
-    Expiry_time: { type: Date, required: true },
+- `isRegistered`: bidder completed registration status
+- `isVerified`: bidder passed platform trust checks
+- `scoreObtained`: aggregate bidder score (bounded `-100` to `100`)
+- `latestScoreObtained`: most recent score delta/state
 
-    is_PhoneVerified: { type: Boolean, default: false },
+Business rule:
+- `scoreObtained` is clamped in pre-save hook to remain within `-100..100`.
 
-    DrivingLicenseNo: { type: String },
+## Preferences
 
-    DrivingLicensePhoto: {
-      frontView: { type: String },
-      backView: { type: String },
-    },
+- `subscribedNewsletter`
 
-    password: { type: String },
+## System Metadata
 
-    BidderID: { type: String, unique: true },
-
-    stripeCustomer: { type: String },
-    stripeConnectedAccount: { type: String },
-
-    Photo: { type: String, default: "" },
-
-    identityVerification,
-    scoreObtained: {
-      type: Number,
-      min: -100,
-      max: 100,
-      required: true,
-      default: 0,
-    },
-    latestScoreObtained: {
-      type: Number,
-      min: -100,
-      max: 100,
-      required: true,
-      default: 0,
-    },
-
-    subscribedNewsletter: { type: Boolean, default: false },
-    isRegistered: { type: Boolean, default: false },
-    isVerified: { type: Boolean, default: false },
-
-},
-{
-versionKey: false,
-timestamps: true,
-}
-);
-
-BidderSchema.pre("save", function (next) {
-if (this.scoreObtained < -100) {
-this.scoreObtained = -100;
-} else if (this.scoreObtained > 100) {
-this.scoreObtained = 100;
-}
-
-next();
-});
+- `createdAt`, `updatedAt` (timestamps enabled)
+- `versionKey` disabled
