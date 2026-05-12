@@ -1,0 +1,240 @@
+Auction Journal — sample user help questions
+================================================================
+
+Questions only — no answers yet.
+
+The app has two main user types. Questions below are split by who
+would typically ask them: AUCTIONEER vs BIDDER.
+
+
+################################################################################
+PART A — AUCTIONEER PERSPECTIVE (you run sales, listings, and your business)
+################################################################################
+
+
+Account, profile, and listings
+--------------------------------
+
+Why can't I publish my listing even though I filled everything in?
+
+What is "free listing eligibility" and how do I become eligible?
+
+Why does my listing need a full address before it can go live on the map?
+
+
+Users and team
+-------------------
+
+What can an user do on my behalf versus what only I can do?
+
+How do I add or remove an user from my auctioneer account?
+
+
+Clients and contacts
+--------------------
+
+What is a "client" in the system, and how is that different from a bidder?
+
+When a bidder updates their name or photo, why do my client records change?
+
+How do I use the mailing list with my clients without breaking consent rules?
+
+
+Listings you create
+--------------------
+
+What is the difference between a draft listing and a live public listing?
+
+What steps must pass before I can hit publish?
+
+What happens to a listing after the auction date on it has passed?
+
+
+Auctions you run
+----------------
+
+How do I know which bidders are registered vs only browsing?
+
+How do registration approvals or declines work for my auction?
+
+What is clerking, and where do I handle floor bids versus online bids?
+
+Where do I see or manage settlement and expenses after the sale?
+
+
+Live webcast and video (auctioneer side)
+----------------------------------------
+
+How do I start or manage a live webcast for an onsite auction?
+
+What should I do if bidders say they cannot see or hear the stream?
+
+
+Auction lots (auctioneer / clerk view)
+--------------------------------------
+
+How do lots relate to the catalog I showed bidders before the sale?
+
+How do I open, hold, or sell a lot during the live sale?
+
+
+Blog and content (if you publish)
+---------------------------------
+
+Where do I choose category and type when I publish a blog post?
+
+Why is my post not showing where I expected on the website?
+
+
+Advertisements
+--------------
+
+How do I buy or renew an advertisement slot?
+
+How are ad payments different from listing fees or auction settlement?
+
+
+Payments and money (auctioneer)
+-------------------------------
+
+What is Stripe Connect and why does the app ask me to complete it?
+
+Where do payouts from sales or fees show up for my business?
+
+
+Newsletter (if you send campaigns)
+----------------------------------
+
+How do I send a newsletter to my mailing list?
+
+How do I see who unsubscribed?
+
+
+Help and support (auctioneer)
+-----------------------------
+
+Should I request a callback or email when something breaks on sale day?
+
+Who do I contact for billing or Stripe issues for my company account?
+
+
+Settings and organization info (auctioneer)
+-------------------------------------------
+
+Where do I change branding, defaults, or organization details?
+
+Where do I manage notification preferences for my auctioneer account?
+
+
+################################################################################
+PART B — BIDDER PERSPECTIVE (you browse, register, bid, and buy)
+################################################################################
+
+
+Account, verification, and profile
+----------------------------------
+
+I uploaded my ID — why am I still not "verified" on the platform?
+
+Why does the app ask me to add a payment card before I am fully verified?
+
+Do I need both front and back of my driver's license, or is one side enough?
+
+
+Auction registration and access
+-------------------------------
+
+How do I register for an auction, and how long until I can bid?
+
+Why does it say I'm registered but I still can't place a bid?
+
+Can I cancel or withdraw my registration from an auction?
+
+What happens after I register — what should I watch for in email or the app?
+
+
+Listings you view (marketing pages)
+------------------------------------
+
+I see a "request callback" or "get a bid pass" — what is the difference?
+
+Why does my friend see a different button on the same listing than I do?
+
+I already clicked something on a listing — why won't the app let me do it again?
+
+
+Bidding and lots
+----------------
+
+How does bidding on a lot work compared to bidding on the whole auction?
+
+Why was my bid rejected or not accepted?
+
+How do I add a lot to my watchlist, and what does that do?
+
+If I win several lots, how does payment or pickup work together?
+
+
+Live video and webcast (bidder)
+-------------------------------
+
+When an auction says it has video or webcast, what should I expect?
+
+The stream won't load — what should I check before I call support?
+
+Do I have to be verified before I can watch or bid during a live webcast?
+
+
+Bidder score and reputation
+---------------------------
+
+What is my bidder score, and why did it go up or down?
+
+Does my score affect whether I can bid or register?
+
+
+Blog and news (bidder)
+----------------------
+
+I'm looking for an article — how do categories or types help me find it?
+
+
+Payments and checkout (bidder)
+------------------------------
+
+Why do I need a card on file even if I only plan to pay later at pickup?
+
+Where do I update or remove my saved payment methods?
+
+
+Marketing email and newsletter (bidder)
+---------------------------------------
+
+How do I stop receiving marketing emails?
+
+I unsubscribed but still got an email — why might that happen?
+
+
+Help and support (bidder)
+-------------------------
+
+Should I request a callback or email when I have a problem with bidding or payment?
+
+Who do I contact — the auction house or Auction Journal support?
+
+
+Settings (bidder)
+-----------------
+
+Where do I change my profile, password, or notification preferences?
+
+
+################################################################################
+PART C — EITHER ROLE (same support channel, different account areas)
+################################################################################
+
+The app logged me out or says my session expired — what should I do?
+
+I forgot my password — how do I reset it?
+
+Where do I find the privacy policy or terms I agreed to?

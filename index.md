@@ -28,7 +28,7 @@ Documentation of auction journal code logic and implementation. Only code logic 
   - [Fields](listing/fields.md)
   - [Building](listing/index.md)
 - [Auction](auction/index.md)
-  - [Fields](auction/features.md)
+  - [Fields](auction/fields.md)
   - [Building](auction/build.md)
   - [Registration](auction/registration.md)
   - [Clerking](auction/clerking.md)

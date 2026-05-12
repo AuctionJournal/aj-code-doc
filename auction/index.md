@@ -4,12 +4,12 @@
 
 ## Fields
 
-[click to view fields](./features.md)
+[Fields](./fields.md)
 
 ## Operations
 
 - [Build](./build.md)
-- [Registration](./registration.md)
+- [Registration](./registration.md) · [Registration fields](./registration-fields.md)
 - [Bidding](./build.md)
 - [Live Bidding](./build.md)
 - [Clerking](./clerking.md)
