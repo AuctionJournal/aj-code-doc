@@ -72,6 +72,7 @@ How “locked” fields behave after that is guided mainly by the **auctioneer b
 **What publish means**
 
 - **Publish** is the auctioneer’s commitment that the auction is **ready to run** under the configured rules (content, fees, schedule where applicable, and other required setup the product enforces at publish time).
+- **Lot catalog:** **QR-only** placeholder lots used during setup are **removed when the auction publishes**; the live catalog is the remaining real lots (see [Auction lot build](../auction-lot/build.md)).
 - The auction is **not** shown on the **public** catalog or listing experience **until `startDate`**. From **`startDate`** onward it is **visible to the public**, and **bidders can register** for that auction (see [Registration](./registration.md) for how registration and approval work).
 
 ## Edit publish

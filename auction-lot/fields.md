@@ -1,117 +1,130 @@
 [Auction Journal](../index.md)
 
-# Auction Lot Fields
+# Auction lot fields
 
-- seller
+Source model: `AJ-Main-Backend/app/models/lots.js` (Mongoose model `lotdetails`).
 
-  - Info - auctioneer client who is selling this lot
+---
 
-- commission
+## Identity and placement
 
-  - Info - formula applicable for commission
-  - logic - if seller have specific buy back setting and seller have specific commission then that will be used else auction's default will be used
+| Field | Type | Notes |
+|--------|------|--------|
+| `Auctioneer` | ObjectId → Auctioneer | Owner auctioneer |
+| `auctionDetailId` | ObjectId → auctionDetail | Parent auction |
+| `lotNumber` | Number | Unique per auction with `auctionDetailId` |
+| `saleOrder` | Number | Catalog / run order |
+| `quantity` | Number | Default `1` |
 
-- buyerTax
+---
 
-  - Info - formula applicable for buyer tax
-  - logic - auction's default will be used
+## Catalog content
 
-- buyersPermium
+| Field | Type | Notes |
+|--------|------|--------|
+| `seller` | ObjectId → clientsOfAuctioneer | Consignor / seller client |
+| `title` | String | |
+| `category` | ObjectId → lotcategory | |
+| `categoryDetail` | String | |
+| `description` | String | |
+| `lotMedia` | Mixed | Images / media payload (schema type `Object`) |
+| `suggestedValueMinRange`, `suggestedValueMaxRange` | Number | Estimates |
+| `reserve` | Number | |
+| `startBid` | Number | Opening level |
+| `featured` | Boolean | Default `false` |
+| `shipping` | Boolean | Default `false` |
 
-  - Info - formula applicable for buyers premium
-  - logic - auction's default will be used
+---
 
-- isSellerTaxable
+## Timing (lot-level)
 
-  - Info - check if seller can be taxed
-  - logic - Not taxable if seller have specific buy back setting and have tax exempt. Else taxable if auction is collecting taxes
+| Field | Type | Notes |
+|--------|------|--------|
+| `softCloseMilliSecs`, `bidSoftCloseMilliSecs` | Number | |
+| `softCloseSeconds`, `bidSoftCloseSeconds` | String | e.g. `hh:mm:ss` usage in app |
+| `closeBidding` | Date | Lot close anchor (aligned with auction rules) |
 
-- SellerTax
+---
 
-  - Info - formula applicable for seller tax
-  - logic - if seller have specific buy back setting and seller have specific seller tax then that will be used else auction's default will be used
-  - changable - if auction is collecting taxes and lot is taxable and before auction close bidding
+## Bidding state (runtime)
 
-        Auctioneer: { type: ObjectId, ref: "Auctioneer" },
+| Field | Type | Notes |
+|--------|------|--------|
+| `currentBidAmount` | Number | Required, default `0` |
+| `nextBidAmount` | Number | Required, default `0` |
+| `highestMaximumBidAmount` | Number | Default `0` |
+| `lotWinner` | ObjectId → Bidder | |
+| `winningFloorBidder` | ObjectId → clientsOfAuctioneer | Onsite / floor context |
+| `winnerBidCardNumber` | Number | |
+| `bidCount` | Number | Default `0` |
+| `viewCount` | Number | Required, default `0` |
+| `watchlistCount` | Number | Required, default `0` |
 
-        auctionDetailId: { type: ObjectId, ref: "auctionDetail" },
+---
 
-        lotNumber: { type: Number, default: null },
+## Clerking (onsite / clerk UI)
 
-        saleOrder: { type: Number, default: null },
+| Field | Type | Notes |
+|--------|------|--------|
+| `clerkStatus` | String or null | `Sold`, `Pass`, `Hold`, `High Bid`, or null |
+| `isClerkUpdated` | Boolean | Default `false` |
+| `clerkUpdatedAt` | Date | |
 
-        quantity: { type: Number, default: 1 },
+---
 
-        seller: { type: Object, default: null },
+## Fees, taxes, and seller economics
 
-        title: { type: String, default: null },
+| Field | Type | Notes |
+|--------|------|--------|
+| `commission` | ObjectId → acMiscFormulas | Often from auction default unless seller-specific rules apply |
+| `buyersPermium` | ObjectId → acMiscFormulas | Field name as in schema |
+| `buyerTax` | ObjectId → acMiscFormulas | |
+| `SellerTax` | ObjectId → acMiscFormulas | |
+| `isSellerTaxable` | Boolean | Default `true` |
+| `sellerLotExpenses` | Array of subdocs | `account` (ObjectId → AuctioneerMiscAccount), `description`, `amount` |
+| `salesPerson` | String | |
+| `salesPersoncommission` | String | |
+| `buyerLotCharge1`, `buyerLotCharge2` | String | Stored with `ref: "acMiscFormulas"` in schema |
+| `defaultsFieldsFromAuction` | Array of strings | Tracks which values were inherited from the auction header |
 
-        category: { type: ObjectId, default: null, ref: "lotcategory" },
+**Business logic (high level):**
 
-        categoryDetail: { type: String, default: null },
+- **Commission / seller tax:** If the seller client uses specific consigner “buy back” style settings, **commission** and **SellerTax** on the lot can follow the client; otherwise the **auction** defaults apply.
+- **Buyer premium / buyer tax:** Typically follow **auction** defaults on the lot.
+- **isSellerTaxable:** Generally reflects whether the seller is taxable for this lot (e.g. not taxable when the client is tax-exempt under specific consigner settings; otherwise tied to whether the auction collects taxes).
 
-        description: { type: String, default: null },
+---
 
-        closeBidding: { type: Date, default: null },
+## Live webcast linkage
 
-        softCloseMilliSecs: { type: Number, default: 0 },
-        bidSoftCloseMilliSecs: { type: Number, default: 0 },
-        softCloseSeconds: { type: String, default: null },
-        bidSoftCloseSeconds: { type: String, default: null },
+| Field | Type | Notes |
+|--------|------|--------|
+| `isItLiveWebcastLive` | Boolean | |
+| `lotLiveWebcast` | ObjectId → auctionLotLiveWebcast | |
+| `auctionLiveWebcast` | ObjectId → auctionLiveWebcast | |
 
-        lotMedia: { type: Object, default: null },
+---
 
-        suggestedValueMinRange: { type: Number, default: null },
+## Visibility and lifecycle flags
 
-        suggestedValueMaxRange: { type: Number, default: null },
+| Field | Type | Notes |
+|--------|------|--------|
+| `isHidden` | Boolean | e.g. hide from public catalog until ready |
+| `isForQROnly` | Boolean | QR placeholder lot; removed on auction publish (see [build](./build.md)) |
+| `isAuctionReady` | Boolean | Default `false`; catalog completeness for publish |
+| `isCreatedOnTheFly` | Boolean | Instant / on-the-fly create during event |
+| `isLotClosed` | Boolean | |
+| `isAuctionClosed` | Boolean | Default `false` |
 
-        reserve: { type: Number, default: null },
+---
 
-        startBid: { type: Number, default: null },
+## Indexes (implementation)
 
-        currentBidAmount: { type: Number, required: true, default: 0 },
-        nextBidAmount: { type: Number, required: true, default: 0 },
-        highestMaximumBidAmount: { type: Number, default: 0 },
-        lotWinner: { type: ObjectId, ref: "Bidder" },
-        bidCount: { type: Number, default: 0 },
+- Compound unique: `(auctionDetailId, lotNumber)`.
+- Common list filters: `auctionDetailId` with `isHidden`, `closeBidding`, `featured`, `saleOrder`, etc.
 
-        clerkStatus: {
-          type: String,
-          default: null,
-          enum: [null, "Sold", "Pass", "Hold", "High Bid"],
-        },
+---
 
-        featured: { type: Boolean, default: false },
+## Timestamps
 
-        shipping: { type: Boolean, default: false },
-
-        seller: { type: ObjectId, default: null, ref: "clientsOfAuctioneer" },
-
-        commission: { type: ObjectId, ref: "acMiscFormulas" },
-
-        SellerTax: { type: ObjectId, ref: "acMiscFormulas" },
-
-        isSellerTaxable: { type: Boolean, default: true },
-
-        sellerLotExpenses: { type: [sellerLotExpensesSchema], default: [] },
-
-        salesPerson: { type: String, default: null },
-
-        salesPersoncommission: { type: String },
-
-        buyersPermium: { type: ObjectId, ref: "acMiscFormulas" },
-
-        buyerTax: { type: ObjectId, ref: "acMiscFormulas" },
-
-        buyerLotCharge1: { type: String, ref: "acMiscFormulas" },
-
-        buyerLotCharge2: { type: String, ref: "acMiscFormulas" },
-        isHidden: { type: Boolean },
-        isClerkUpdated: { type: Boolean, default: false },
-        isLotClosed: { type: Boolean },
-        isAuctionClosed: { type: Boolean, default: false },
-        isForQROnly: { type: Boolean },
-        isAuctionReady: { type: Boolean, default: false },
-        clerkUpdatedAt: { type: Date, default: null },
-        viewCount: { type: Number, required: true, default: 0 },
-        watchlistCount: { type: Number, required: true, default: 0 },
+- `createdAt`, `updatedAt` (from `timestamps: true`).
