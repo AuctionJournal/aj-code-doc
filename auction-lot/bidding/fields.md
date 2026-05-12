@@ -1,29 +1,37 @@
 [Auction Journal](../../index.md)
 
-# Auction Lot Flat/Max Bidding Fields
+# Bidding record fields
 
-bidder: { type: ObjectId, ref: "Bidder", required: true },
-lot: { type: ObjectId, ref: "lotdetails", required: true },
-auction: { type: ObjectId, ref: "auctionDetail" },
-auctioneer: { type: ObjectId, ref: "Auctioneer" },
-auctioneerClient: { type: ObjectId, ref: "clientsOfAuctioneer" },
-bidding: [bidding],
-maxBidAmount: { type: Number, min: 0 },
-acceptanceStatus: {
-type: String,
-enum: ["Accepted", "Pending", "Declined"],
-default: "Accepted",
-},
-isClerkUpdated: { type: Boolean },
+Source model: `AJ-Main-Backend/app/models/bidding.js` (Mongoose model `Bidding`). One document typically represents **one bidder’s participation on one lot**, with a history array of bid steps.
 
-bidding =
-{
-maxBidAmount: { type: Number },
-bidAmount: { type: Number, required: true },
-bidAmountType: {
-type: String,
-enum: ["maximumBidding", "flatBidding", "autoBidding", "clerkingEdit"],
-},
-}
+## Header
 
-# Auction Lot Live Bidding Fields
+| Field | Type | Notes |
+|--------|------|--------|
+| `bidder` | ObjectId → Bidder | Required, immutable |
+| `lot` | ObjectId → lotdetails | Required, immutable |
+| `auction` | ObjectId → auctionDetail | |
+| `auctioneer` | ObjectId → Auctioneer | |
+| `auctioneerClient` | ObjectId → clientsOfAuctioneer | Client row used at bid time |
+| `bidding` | Array of subdocs | See below |
+| `maxBidAmount` | Number | ≥ 0; summary ceiling where used |
+| `acceptanceStatus` | String (enum) | `Accepted` (default), `Pending`, `Declined` |
+| `isClerkUpdated` | Boolean | Clerk / auctioneer touch |
+
+**Index:** `(bidder, lot)` for lookup.
+
+## `bidding[]` subdocument
+
+| Field | Type | Notes |
+|--------|------|--------|
+| `bidAmount` | Number | Required |
+| `maxBidAmount` | Number | Used for proxy / max-bid semantics |
+| `bidAmountType` | String (enum) | `maximumBidding`, `flatBidding`, `autoBidding`, `clerkingEdit` |
+
+Subdocuments use `timestamps` in schema.
+
+---
+
+## Live / clerk bidding
+
+Clerk-driven or live-webcast bidding may use additional models (e.g. live bid payloads). See [Onsite live webcast bidding](../onsite-livewebcast/bidding.md) and related field notes under [onsite-livewebcast/fields.md](../onsite-livewebcast/fields.md).

@@ -2,7 +2,7 @@
 
 # Auction Settlement
 
-Settlement is generated after auction close
+Settlement is generated **after** the auction is **closed** and **eligible**—see the end-to-end story in **[After auction closes](../post-close.md)**.
 
 # Fields
 

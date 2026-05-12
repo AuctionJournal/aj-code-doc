@@ -29,7 +29,6 @@
 
 ## Auction Close
 
-- Auction Status will updated to closed
-- All caches related to auction and lots will be deleted.
-- Lots clerking will be done.
--
+- Auction **status** moves to **closed**; **caches** for the auction and lots are cleared.
+- **Default lot clerking** runs for lots that still have no clerk decision (sold vs pass / absentee high bid)—see **[After auction closes](./post-close.md)**.
+- **Settlement** is generated in a separate auctioneer step when rules allow—see **[Settlement](./settlement/index.md)**.

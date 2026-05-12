@@ -32,6 +32,7 @@ Documentation of auction journal code logic and implementation. Only code logic 
   - [Building](auction/build.md)
   - [Registration](auction/registration.md)
   - [Clerking](auction/clerking.md)
+  - [After auction closes](auction/post-close.md)
   - [Auction Expenses](auction/index.md)
   - [Live Webcast](auction/onsite-livewebcast/index.md)
   - [Settlement](auction/settlement/index.md)
