@@ -35,7 +35,7 @@ Documentation of auction journal code logic and implementation. Only code logic 
   - [After auction closes](auction/post-close.md)
   - [Auction Expenses](auction/index.md)
   - [Live Webcast](auction/onsite-livewebcast/index.md)
-  - [Settlement](auction/settlement/index.md)
+  - [Settlement](auction/settlement.md)
 - [Auction Lot](auction-lot/index.md)
   - [Fields](auction-lot/fields.md)
   - [Building](auction-lot/build.md)

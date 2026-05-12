@@ -50,6 +50,14 @@ More on the live event: [Onsite live webcast](./onsite-livewebcast/index.md).
 
 ---
 
+## Floor vs online bidder (identity)
+
+- **Different account paths:** A **floor** registration is anchored on the **auctioneer client** (floor participant) path; an **online** registration is anchored on a **bidder** account. They are **not** treated as interchangeable identities on the same auction—settlement and permissions follow **the registration row** that applies, not an assumed “same person” merge across both.
+- **Target rule (not both at once):** When someone **moves to an online bidder** for that auction, they **should not** remain an active **floor bidder** for the same participation story—the business treats those roles as **mutually exclusive**.
+- **Implementation:** A dedicated auctioneer **floor → online bidder** conversion (and automatic **cleanup** of floor-only state—live webcast floor flags, bid card handling, etc.) is **not completed yet**. Until that ships, do not assume the platform enforces the target rule end-to-end; operations may need **manual** steps. See **Pending clarifications**.
+
+---
+
 ## Permission changes (auctioneer)
 
 The **auctioneer** may update an existing **auction registration**—for example resolving **pending** into **approved** or **declined**, changing the **bid cap**, or updating **notes**, **decline reasons**, and **contact-sharing** choices visible to the bidder. The platform sends **email** to the bidder when outcomes change, and may record **bidder score** events where trust history should reflect the decision. When a change is meant to **stick for the buyer across that auctioneer’s relationship**, the same action can also align the **auctioneer client** buyer-permission fields so listings and future registrations see a consistent story. Internal implementation is treated as **one “permission change”** product idea, not multiple separate flows in this doc.
@@ -91,3 +99,4 @@ These actions assume the auctioneer is working in context of a **single auction�
 ## Pending clarifications
 
 - **Payment method:** Confirm whether an **online** registration **must** always include an active card, or only when the UI collects one (implementation only validates when an id is sent).
+- **Floor → online bidder:** When the conversion flow is built, document whether **floor-only state** is cleared **in the same action** as conversion or left for **manual** follow-up; update § **Floor vs online bidder (identity)** accordingly.

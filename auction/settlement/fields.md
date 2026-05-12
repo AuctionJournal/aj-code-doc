@@ -2,6 +2,8 @@
 
 # Fields
 
+Settlement overview: **[Auction settlement](./index.md)**.
+
 const auctionCharges =
 {
 account: { type: ObjectId, ref: "AuctioneerMiscAccount" },

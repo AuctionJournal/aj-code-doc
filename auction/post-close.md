@@ -4,7 +4,7 @@
 
 This page describes the **business flow** once an auction is **finished** (timed catalog complete, or onsite rings and schedule resolved): system **close**, **lot clerking** defaults, **cache** cleanup, and **settlement** generation. Grounded in `AJ-Main-Backend` (`auction-events.js`, `auction-lot/actions/clerking.js`, settlement generation).
 
-**Related:** [Clerking](./clerking.md), [Settlement](./settlement/index.md) · [Generate settlement](./settlement/create.md), [Auction lot life cycle](../auction-lot/life-cycle.md).
+**Related:** [Clerking](./clerking.md), [Settlement](./settlement.md) · [Generate settlement](./settlement/create.md), [Auction lot life cycle](../auction-lot/life-cycle.md).
 
 ---
 
@@ -52,15 +52,15 @@ Settlement is **not** assumed to run automatically on every auction the instant 
 
 - **Buyer-side** settlement lines for **approved** registrations, from **lots that count as sold** for that bidder (rules differ slightly for **onsite live webcast** vs online timed—e.g. winner vs clerk `Sold`).
 - **Seller-side** settlement lines for **distinct sellers** on lots in the auction.
-- Auction flag **`isSettlementGenerated`** is set **true** after successful insert.
+- Auction flag **`isSettlementGenerated`** is set **true** after a successful generation run, **including** when **zero** settlement documents are inserted (no sold lots to bill).
 
-Detail of line items, premiums, taxes, and edits: **[Settlement create](./settlement/create.md)** and **[Settlement fields](./settlement/fields.md)**.
+Detail of line items, premiums, taxes, and edits: **[Auction settlement](./settlement.md)** · [Generate settlement](./settlement/create.md) · [Settlement fields](./settlement/fields.md).
 
 ---
 
 ## 4. What happens next (product-level)
 
-- **Invoices / PDFs / email** and **receipts** are part of the settlement and ops story (see settlement operations in the settlement index).
+- **Invoices / PDFs / email** and **receipts** are part of the settlement and ops story (see **[Auction settlement](./settlement.md)**).
 - **Payments** and **payouts** (e.g. Stripe) are documented under **[Payment](../payment/index.md)** when you extend that module.
 
 ---

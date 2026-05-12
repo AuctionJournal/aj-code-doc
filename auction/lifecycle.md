@@ -31,4 +31,4 @@
 
 - Auction **status** moves to **closed**; **caches** for the auction and lots are cleared.
 - **Default lot clerking** runs for lots that still have no clerk decision (sold vs pass / absentee high bid)—see **[After auction closes](./post-close.md)**.
-- **Settlement** is generated in a separate auctioneer step when rules allow—see **[Settlement](./settlement/index.md)**.
+- **Settlement** is generated in a separate auctioneer step when rules allow—see **[Settlement](./settlement.md)**.
