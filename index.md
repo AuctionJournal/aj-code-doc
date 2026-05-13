@@ -48,7 +48,7 @@ Documentation of auction journal code logic and implementation. Only code logic 
   - [Category](blog/index.md)
   - [Type](blog/index.md)
 - [Advertisement](advertisement/index.md)
-- Products *(docs pending)*
+- Products _(docs pending)_
 - [Payment](payment/index.md)
   - [Payment Cards](payment/cards.md)
   - [Stripe connect](payment/connect-account.md)
@@ -60,4 +60,8 @@ Documentation of auction journal code logic and implementation. Only code logic 
   - [Callback](help-and-support/index.md)
   - [Email](help-and-support/index.md)
 - [AJ Settings and info](aj-settings-and-info/index.md)
-- Blob *(docs pending)*
+- Blob _(docs pending)_
+
+## User Side Doc
+
+[Open](user_side_doc/index.md)

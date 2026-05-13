@@ -1,0 +1,701 @@
+Auction Journal — user help Q&A (full)
+========================================================================
+
+AUCTIONEER (CORE ACCOUNT, REGISTRATION, PROFILE, ELIGIBILITY TO CREATE AUCTIONS)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: How do I get started as an auctioneer on the platform?  
+A:  Typical flow: you begin with phone-based pre-registration, then complete full registration with your business profile, license details, credentials, and optional newsletter choice. When registration is complete, the system marks you as registered and starts the email verification lifecycle. You then work through operational setup (invoice details, clients/sellers, formulas, Stripe Connect, and related items) so you can run listings and auctions under the platform’s rules.
+
+Q: Why won’t the system let me create my first auction?  
+A:  Before you can create the first draft of an auction (for most auction types), the platform runs an eligibility check. For Online Timed, Online Absolute, and Onsite with Live Webcast auctions, you typically need: at least one seller client on file, a Stripe Connect account that is fully set up (details submitted to Stripe, charges enabled, payouts enabled), invoice details, and saved formulas for commission, buyer premium, buyer tax, and seller tax. For Absentee Bidding, the rule is relaxed: you need at least one seller client. If something is missing, creation is blocked and the app should indicate which checks failed.
+
+Q: Can I register twice or “reset” my auctioneer registration?  
+A:  The platform does not allow repeating full registration once your account is already registered—this helps prevent abuse. If you need account changes, those go through normal profile and support paths, not by signing up again.
+
+Q: What is a ticker symbol in my profile, and can I change it?  
+A:  During registration the system can generate a short ticker-style symbol from your company and city. It is used as a public or internal identifier; how you edit it later depends on the product screens you use.
+
+Q: Why must my phone and email meet certain rules?  
+A:  Phone verification is mandatory before full registration completes. Email must be unique on the platform and then follows the verification lifecycle after signup. Those steps anchor login, recovery, and compliance for your business account.
+
+
+For bidders
+-----------
+
+
+Q: Is this “Auctioneer” section about me?  
+A:  No. This section is about seller-side business accounts (auction houses) and their readiness to create auctions. As a bidder, you interact with auctioneers as hosts of sales, not through this onboarding path.
+
+
+========================================================================
+FREE LISTING ELIGIBILITY (AUCTIONEER + LISTING GATE)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What is free listing eligibility?  
+A:  Your auctioneer profile carries a free-listing flag that controls whether you may publish (or create in some paths) listings without going through the separate paid or eligibility flow your organization uses. If that flag is off, listing publish is blocked until eligibility is fixed. Updates may come from admin or integration processes, not only from a button in your everyday dashboard.
+
+Q: Who sets whether I am eligible for free listings?  
+A:  Eligibility is usually updated through admin or automated integration channels your company uses, not something bidders set. Your organization decides who may turn free listing on for your account.
+
+
+For bidders
+-----------
+
+
+Q: Do I need “free listing eligibility”?  
+A:  That flag applies to auctioneer accounts when they publish listings. Bidders do not carry this eligibility; it affects whether a house’s listing can go public on the website.
+
+
+========================================================================
+AUCTIONEER ASSISTANTS
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: How do I add someone on my team?  
+A:  You send an invitation by email. The system stores a pending assistant until they complete registration from the invite link (secured with a token). When they finish, they become a registered assistant with their own login, tied only to your auctioneer company. You can edit their details, disable access, or delete them; disabling is an immediate “kill switch” for login.
+
+Q: Can two assistants use the same email under my company?  
+A:  No. The rule is unique (auctioneer, email)—the same email cannot be duplicated under one auctioneer.
+
+Q: What if my assistant says their invite expired?  
+A:  Expired tokens block late registration; the usual fix is to resend or issue a new invite from your side. Resending should not create duplicate invites.
+
+Q: Can my assistant approve bidders who are “pending” on an auction?  
+A:  Only the auctioneer (not assistants) is meant to approve or decline Pending registrations. Assistants still help with many operational tasks, but that specific approval decision is reserved for the auctioneer role in the design.
+
+
+For bidders
+-----------
+
+
+Q: I got an email to be an “assistant”—is that the same as a bidder account?  
+A:  No. Assistants log in on a separate assistant path and work for one auctioneer business. Bidders are buyer accounts for participating in sales. If you both buy at auctions and work for a house, you would usually have different roles and different logins.
+
+
+========================================================================
+BIDDER (IDENTITY, VERIFICATION, PROFILE, DASHBOARD)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: When someone registers for my auction, what happens to my client list?  
+A:  The rule is: when a bidder registers in any auction of yours, the platform creates or updates a client of auctioneer profile for that bidder under your business. That gives you one place for accounting, permissions, and history—not an anonymous bidder from your point of view.
+
+Q: Why did a bidder’s name or photo change on my client record?  
+A:  Bidder profile updates flow through to linked client records so you do not keep stale names or photos. If you edit the client in your dashboard, those edits stay on your client record and do not change the bidder’s own profile.
+
+
+For bidders
+-----------
+
+
+Q: I uploaded my ID—why am I still not “verified”?  
+A:  Full platform verification is two parts: (1) identity proof accepted by the system, and (2) at least one valid payment method (card) on file. Until both pass, you are not treated as fully verified. For most ID types you need front and back images; passport is the exception that may allow front only in the rules.
+
+Q: Why does the app insist I add a card?  
+A:  Verification is explicitly defined as identity + card. The verification result you see can break out identity verified vs card verified so you know which half still fails.
+
+Q: I have an account—why can’t I use some list or catalog features?  
+A:  Some experiences require you to finish bidder registration on the platform, not only to have started signup. Complete your bidder registration if the app prompts you.
+
+Q: What does my bidder dashboard show?  
+A:  dashboard logic includes counts such as: auctions you registered for, winning lots (within active/open windows), auctions watched (currently aligned with registrations), and total spent derived from settlement sums. A calendar can show days when you had approved auction registrations or listing callback / bid-pass activity.
+
+
+========================================================================
+BIDDER SCORE (REPUTATION)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What do I see of a bidder’s score?  
+A:  The auctioneer-facing view is intended to show the score value, not the full detailed reason history that the bidder can see.
+
+Q: Does the score affect registration for my auctions?  
+A:  Yes. When a bidder self-registers, their score (and prior standing with your business, invitations, caps, etc.) feeds into whether they land pending manual review, approved, or declined. Low score or history can route them to pending until you approve or decline.
+
+
+For bidders
+-----------
+
+
+Q: What is my bidder score?  
+A:  It is a numeric trust signal stored on your profile, with a bounded range (as −100 to +100). It aggregates events such as account registration, becoming verified, reaching registration milestones, positive payment behavior, and negative events tied to settlement conduct (non-payment, chargebacks, no-shows, permission declines, etc.). Examples include +25 for becoming a verified bidder, −80 for some serious settlement-related negatives—wording may vary by release).
+
+Q: Can I dispute a score change?  
+A:  The baseline is: no bidder dispute/appeal flow exists in this logic today. Use Help and Support if you believe data is wrong.
+
+Q: Does my score automatically block every bid?  
+A:  Score is informational in the sense that no automatic enforcement action is defined from score alone in the bidder-score module—but registration and permission flows do use score in combination with other rules. So it affects whether you get approved to bid, not a separate hidden “score gate” on every click.
+
+Q: Why did a negative score line disappear from my history?  
+A:  The timeline can cancel prior negative entries when related approval statuses change. Canceled entries are left out of the score history you see.
+
+
+========================================================================
+AUCTIONEER CLIENT (CRM / BUYERS, SELLERS, FLOOR BIDDERS)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What is a “client” compared to a bidder?  
+A:  A client is your CRM-style profile for a buyer, seller, floor bidder, or linked combination. A bidder is a platform login for participating online. One person can be represented as a bidder account and also as your client; the system links them for operations like registration and settlement.
+
+Q: What happens if my client was a “floor bidder” and later links to a real bidder account?  
+A:  When this happens: floor-bidder state is cleared, accounting fields on the client should be overwritten from the bidder profile, and invite or self-register flows may default role coverage toward both buyer and seller where that applies. Unusual cases may still need support.
+
+Q: What are “private” vs “public” bid-permission notes?  
+A:  Private notes are visible only to your auctioneer business. Public notes can be visible to other auctioneers in shared bidder-client contexts—so treat “public” as cross-house visibility, not “public on the open internet” unless the product says otherwise.
+
+
+For bidders
+-----------
+
+
+Q: Why do I have a “client” record if I only ever logged in as a bidder?  
+A:  When you register for an auction, the platform ensures an auctioneer client exists for you under that auctioneer so they can manage permissions, invoices, and floor vs online rules in one place.
+
+
+========================================================================
+AUCTIONEER CLIENT — MAILING LIST
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What can I do with mailing lists?  
+A:  You can create lists (name and description), edit metadata and membership, view a list with client details populated, view all your lists, and delete a list—except for a protected system list.
+
+Q: What is the “Subscribed from website” list?  
+A:  It is a special system-managed list. The system prevents deleting it. It collects people who subscribe from your website subscription flow: either by linking an existing client or storing a raw email if no client match exists. Duplicate subscriptions are blocked.
+
+Q: Can I add everyone to a list at once?  
+A:  Membership operations include add all auctioneer clients, add one client, remove one, remove all, and sync membership to a selected set—useful for keeping marketing segments aligned with your CRM.
+
+
+For bidders
+-----------
+
+
+Q: I subscribed on an auctioneer’s website—why am I on a list?  
+A:  Website emails are collected into that auctioneer’s system mailing list for outreach. Marketing laws and your consent checkbox copy are business/legal responsibilities; the platform stores membership and duplicates policy at the technical level.
+
+
+========================================================================
+AUCTIONEER MISCELLANEOUS (INVOICE, LOCATIONS, FORMULAS, STRIPE, TEMPLATES, ACCOUNTS)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What belongs under “Miscellaneous” in my dashboard?  
+A:  Operational setup that supports auctions but is not the main “build an auction” wizard: invoice details, auction locations, formula management (commission, buyer premium, taxes—including multiple formulas per type such as slabs), account management (parent/sub accounts), Stripe Connect, and templates (terms, buyer premium short explanation, bidding notices, auction notices, email bodies, bid increment text). Template text applies at the auctioneer account level, not separately for every single auction.
+
+Q: Does miscellaneous configuration gate my auctions?  
+A:  Miscellaneous is described as setup, while auction creation and listing flows consume these settings through their own gates (for example Stripe Connect and formulas are part of auction creation eligibility).
+
+
+For bidders
+-----------
+
+
+Q: Do I configure formulas and Stripe Connect?  
+A:  No. Those are auctioneer-side operational settings. As a bidder you mainly see their effects in fees, taxes, and payment experiences during registration and settlement.
+
+
+========================================================================
+LISTING (AUCTIONEER-CREATED PUBLIC CATALOG / MARKETING PAGES)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What is the lifecycle of a listing?  
+A:  states: Draft → Published → Live → Past. Publish happens when you choose to publish, not automatically on a timer. When published, the listing can appear on the public website. It is Live from publish until the listing’s auction date. After that date passes, it becomes Past, and bidder action buttons are disabled.
+
+Q: Why won’t publish work even though my draft looks complete?  
+A:  Common gates: you must be free-listing eligible for the usual publish path; the draft must exist; and the listing must have address fields the system can geocode (street line, city, state, country, postal code). If geocoding fails, publish fails because a map location is required. When you publish, the system may merge your latest form values with what was already saved on the draft, so missing saved fields can still block publish.
+
+Q: Can I freely edit everything after a listing is public?  
+A:  No. After publish, only a limited set of fields may be edited; full draft-style editing is not allowed once the listing is public. Which fields stay editable can change by release—check the live product.
+
+Q: How do I handle bidder “requests” from listings?  
+A:  Today the auctioneer tools are intentionally simple: you can view inbound requests and export them. There is no built-in approve/decline/contact-status workflow yet.
+
+
+For bidders
+-----------
+
+
+Q: Why do I see “get a bid pass” on one listing and “request a callback” on another?  
+A:  The path depends on listing type. If the listing is for an onsite auction, you get a bid pass flow. For other types, you request a callback. Those are different lead flows for the auctioneer.
+
+Q: Can I submit twice on the same listing?  
+A:  No. The rule is strictly one bidder action per listing per bidder—one bid pass or one callback request. Duplicates are blocked with a user-facing message.
+
+Q: I clicked the wrong thing—can I undo it?  
+A:  There is no self-service cancel or withdraw for that yet. Contact the auctioneer or support.
+
+Q: Why can’t I act on a listing anymore?  
+A:  After the listing’s auction date, bidder actions are disabled even if the page still loads.
+
+
+========================================================================
+AUCTION (BUILDING, PUBLISHING, VISIBILITY, DELETE)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What does “building an auction” mean?  
+A:  You create a container for lots, fees, registration rules, and either timed online behavior or onsite live webcast behavior, depending on type. You save drafts until you publish when the sale is ready under product rules.
+
+Q: When does my auction appear to the public?  
+A:  After publish, the auction is still not shown on the public catalog until the auction’s startDate. From startDate onward it becomes publicly visible and self-serve registration can open (through endDate for registration).
+
+Q: What happens to placeholder lots when I publish?  
+A:  Placeholder lots used only during setup are removed when you publish; the live catalog is the remaining real lots.
+
+Q: Can I delete an auction after I change my mind?  
+A:  Product intent is draft-only deletion. Deleting removes auction images, all lots (and lot images), and related auction expense records in the effects. If the auction is already published, normal expectation is no delete—confirm in your live product.
+
+Q: Why can’t I change auction type or lot type later?  
+A:  In the build UI, auction type and lot type are fixed after the auction exists; other fields become read-only as the auction advances through registration and bidding phases.
+
+
+For bidders
+-----------
+
+
+Q: Why can’t I see an auction my friend sees?  
+A:  Common reasons: the auction is not published, current time is before the auction start date, or you are looking at a different catalog filter. Registration and bidding have additional time windows per auction.
+
+
+========================================================================
+AUCTION — REGISTRATION AND PERMISSIONS
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: How do online bidders register for my auction?  
+A:  They must register in the self-serve window: on or after the auction startDate and on or before endDate. The auction must be published. They must meet your registration tier (verified vs registered bidder checks). They get only one self-serve registration row per auction—if any row already exists in any status, another online registration is not allowed; you must change their situation via auctioneer tools if appropriate.
+
+Q: What does “pending” registration mean for my workload?  
+A:  Pending registrations do not resolve automatically. You (the auctioneer) must approve or decline—assistants are not intended for that decision in product intent. After you approve, there is no separate “unlock bidding” step—the bidder may bid when bidding is open, subject to caps and lot rules.
+
+Q: How do I export or email my registrants?  
+A:  You can export CSV of all registration rows (bid card, names, emails, phones, addresses, score where available, permission line, IP at registration, terms column layout, bidder note). You can email all registrants with a subject and body you supply—one campaign to everyone currently registered for that auction.
+
+Q: How do invitations work?  
+A:  You pick a bid permission cap and invite either one bidder by email (must be an existing bidder account) or multiple bidders. Invites are not allowed after endDate. Bidders already registered cannot be invited again on this path. Invites do not create the final registration row until the bidder completes self-serve registration using the invite.
+
+Q: What is a “floor bidder” registration?  
+A:  For Onsite with Live Webcast auctions, you (the auctioneer) onboard a floor participant tied to an existing client, during the same registration window. It creates a normal registration row marked as floor, usually approved, with a bid card chosen with collision avoidance similar to online. You may instead email prospects to become bidders first—that branch prepares them and does not create the floor row in the same step.
+
+Q: Can someone be both floor and online bidder on the same auction?  
+A:  The business target is mutually exclusive roles for the same participation story. A full floor → online conversion with automatic cleanup is as not completed yet—operations may need manual handling until that ships.
+
+
+For bidders
+-----------
+
+
+Q: Why won’t the site let me register for an auction?  
+A:  Check: you are within startDate–endDate, the auction is published, you meet the verified vs registered tier, you are not trying to create a second self-serve registration (not allowed if a row already exists), and—if the flow collects it—your payment method validates when sent.
+
+Q: I’m “pending”—what happens next?  
+A:  Nothing automatic. Wait for the auctioneer to approve or decline, or contact them if the sale is soon.
+
+Q: I’m approved—why can’t I bid yet?  
+A:  Approval means you may bid when bidding is open for the auction and lot. Separate rules cover lot visibility, lot timers, onsite live vs pre-bidding, bid permission cap, and whether a prior bid on a lot is accepted vs pending/declined.
+
+
+========================================================================
+AUCTION — CLERKING, CLOSE, AND SETTLEMENT (AFTER THE SALE)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What is clerking?  
+A:  Clerking is recording the official outcome of each lot: sold (hammer and buyer), pass, hold, or high bid (absentee style). Settlement and accounting rely on clerking, not only raw bid chatter.
+
+Q: What happens automatically when the auction ends?  
+A:  When the auction ends, auction status becomes Closed, caches clear, and default clerking fills in missing clerk outcomes on lots from bid versus reserve rules—without overwriting lots you already clerked during the sale (common for onsite). For absentee-style auctions, lots in the “winning” bucket may get a High Bid outcome instead of Sold.
+
+Q: When can I manually edit clerking?  
+A:  Only after the auction end date has passed. You can adjust hammer price (must be above zero and not below the current bid), clerk outcome, and winner (either an online bidder or a floor client—not both). If settlement already exists, edits may update invoices after a short delay; if payment has already started on a buyer invoice, clerking changes may be blocked. Taking a lot out of Sold removes its line items from settlement documents rather than leaving a zero “void” line.
+
+Q: When can I generate settlement?  
+A:  When the auction is published, the auction end date has passed (for onsite sales, all rings may need to be fully closed first), settlement has not already been generated, and hold lots are resolved or you choose to ignore holds (which may move them to pass). Generation does not have to run the instant the sale ends—you choose when to run it within those rules.
+
+Q: What does settlement create?  
+A:  Buyer settlements for approved registrations that actually have sold lots to pay for (rules differ slightly for onsite vs timed). Seller settlements per distinct seller with sold lots. If no one gets an invoice (e.g. all lots pass), the auction can still be marked settlement generated with zero rows—you still do not get a second “first generation.”
+
+
+For bidders
+-----------
+
+
+Q: I won a lot—when do I get an invoice?  
+A:  Invoices come from the settlement process after the auction is closed and the auctioneer generates settlement under the eligibility rules. Until then, amounts may still change if clerking changes.
+
+Q: Why did my invoice total change after the sale?  
+A:  If clerking or settlement line items are edited before payment starts, buyer documents can be rebuilt or adjusted. Updates can be asynchronous—refresh totals if they look stale right after a change.
+
+
+========================================================================
+AUCTION — ONSITE LIVE WEBCAST (HIGH LEVEL)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What technology powers the live sale?  
+A:  The stack includes Socket.io for real-time ring/session/lot/chat/video streaming interactions. Detailed ring and session behavior lives in the onsite live webcast submodule.
+
+Q: When is floor bidding “available” for the event?  
+A:  After a floor client is successfully onboarded for that auction, the platform enables floor bidder availability for that auction’s live webcast setup.
+
+
+For bidders
+-----------
+
+
+Q: Why can’t I place normal online bids during a live webcast auction?  
+A:  For onsite with live webcast, ordinary timed online bidding is only available when pre-bidding is allowed for that auction; otherwise you follow the live ring flow. If you are outbid online, you may see timing or amount mismatch messages—refresh and use the next valid bid the screen shows.
+
+
+========================================================================
+AUCTION LOT (CATALOG ITEM, BIDDING SURFACE)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: How does a lot relate to the auction?  
+A:  Each lot is a sellable unit inside the auction. Bidding, increments, soft close, and webcast “live lot” states attach to the lot. Clerking and settlement read per lot outcomes.
+
+Q: What does “soft close” mean for bidders?  
+A:  For auctions that are not onsite live webcast, bids near the scheduled end can extend the closing window (anti-sniping style behavior). Exact messages depend on the product.
+
+
+For bidders
+-----------
+
+
+Q: What is the difference between “flat” and “maximum” bidding?  
+A:  Flat bids must match the platform’s next increment exactly. Maximum bidding (only when the auction allows maximumBidding) lets you set a ceiling in whole dollars at or above the next step; the engine resolves competition between max bidders and may auto-advance the visible price.
+
+Q: Why did my bid fail with “amount mismatch”?  
+A:  Someone else likely changed the next valid bid between your page load and submit—refresh and bid again.
+
+Q: Why does it say I’m “already winning” on a flat bid?  
+A:  On flat bids, if you are already the high bidder at the current price, another identical step is rejected.
+
+Q: Why can’t I bid on a lot even though I’m registered?  
+A:  Common checks: your registration must be approved (not pending or declined), the lot must be visible and inside its bidding window, the lot must be in the correct state for online bidding if the sale is a live webcast, and if you already have a bid on that lot it may need to be accepted before some later steps can proceed on non-onsite auctions.
+
+
+========================================================================
+AUCTION LOT — WATCHLIST
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: Is watchlist for operations?  
+A:  Public help may not list every watchlist rule; confirm in the live app or with support.
+
+
+For bidders
+-----------
+
+
+Q: How does watchlist work?  
+A:  If the app offers watchlists, watchlists alert you to lots you follow without owning the high bid—verify in the live app.
+
+
+========================================================================
+VIDEO (PROMOTIONAL / INFORMATIONAL VIDEOS)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: How do I publish a video to the public site?  
+A:  You create a video entry (title, valid link, description, cover image where applicable). It starts unpublished. A separate publish or review step makes it appear in the standard public video list. You can also mark content as recommended for a separate recommended area. Featured video spots can come from paid advertisement windows.
+
+Q: Why doesn’t my recommended video show in the main video list?  
+A:  The public list intentionally excludes recommended items to avoid duplicates across sections.
+
+
+For bidders
+-----------
+
+
+Q: Why can’t I find a video the auctioneer mentioned?  
+A:  It may still be unpublished, only shown in the recommended area, or shown as a paid featured ad for a date range. The main public list is meant for published, non-recommended items so lists do not duplicate the same video everywhere.
+
+
+========================================================================
+BLOG
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: How do categories and types work?  
+A:  You choose type and category from fixed lists when creating a blog. New posts stay unpublished until a publish step turns them on for the public site. Featured spots on the homepage can also depend on active advertisement schedules for blogs, not only on publish status.
+
+Q: Why can visitors not open my blog post by link yet?  
+A:  Visitors only see posts that have been published. Until then, a direct link may show nothing or an error even if you can still see the draft on your side.
+
+
+For bidders
+-----------
+
+
+Q: How do I find posts I care about?  
+A:  Use type/category filters on the public list. Featured areas may show only a curated subset tied to active promotions, not the full blog archive.
+
+
+========================================================================
+ADVERTISEMENT
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What can I advertise?  
+A:  Supported placement types include listing, auction, blog, video, banner, and print, usually sold as packages. Exact packages and prices come from your sales or admin team and the live product.
+
+Q: How does this tie to videos and blogs?  
+A:  Active ad windows can drive featured video and featured blog retrieval, with caching (~10 minute TTL) to reduce database load.
+
+
+For bidders
+-----------
+
+
+Q: Why do I see some auctions or blogs highlighted?  
+A:  They may be in sponsored or featured slots purchased by auctioneers, in addition to normal organic sorting.
+
+
+========================================================================
+PAYMENT (STRIPE, CARDS, CHECKOUT PATTERNS)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What is Stripe Connect for?  
+A:  It lets your business receive money according to Stripe’s connected account model—intent is that payments from bidders for settlement can go to your Stripe account rather than staying with Auction Journal’s platform account in those flows.
+
+Q: What do I pay Auction Journal for?  
+A:  In general, auctioneers pay Auction Journal for certain products such as advertisements and listing-related fees, while winning bidders pay the auctioneer through settlement flows configured for that sale.
+
+Q: How do bidders pay me after an auction?  
+A:  Common options include paying with a new card, paying with a saved card, or you collecting payment from the bidder directly. The app walks bidders through checkout and confirmation according to how you have payments configured.
+
+
+For bidders
+-----------
+
+
+Q: How are my cards stored?  
+A:  You are saved as a Stripe customer for Auction Journal; the app uses a secure card setup flow and stores the payment method for later use. If your site supports bank or other methods, those appear when enabled.
+
+Q: Who gets my payment for items I won?  
+A:  Settlement is between you and the auctioneer’s payment setup; Auction Journal provides the payment flows that connect you.
+
+
+========================================================================
+NEWSLETTER (AJ MARKETING SUBSCRIPTION)
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: What happens when I subscribe with my auctioneer email?  
+A:  The system classifies the subscriber by email match priority: Auctioneer if your email matches an auctioneer account, else Bidder, else Non Customer. A confirmation email is sent on subscribe. Unsubscribe keeps your record but marks you unsubscribed.
+
+
+For bidders
+-----------
+
+
+Q: How do I unsubscribe?  
+A:  Use the unsubscribe link or screen the product provides (often from marketing emails). Unsubscribe updates your subscription status; you may not receive a separate “you are unsubscribed” email.
+
+Q: Why am I still getting email after unsubscribing?  
+A:  Marketing mail can come from more than one system (for example a newsletter tool plus this platform). Check which sender it was. Registration and settlement emails are transactional mail, not the same as marketing newsletter opt-in.
+
+
+========================================================================
+HELP AND SUPPORT
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: Email support vs callback—what should I use?  
+A:  Email support creates a ticket with description, priority, message, and optional attachments; you can reply on the same ticket and see the thread. Callback requests capture when you want a call and your phone details; status moves through Raised, Open, and Closed as staff work the ticket. Closed tickets cannot receive new replies from you.
+
+Q: Who sees my tickets?  
+A:  You only see your own tickets when logged in. Staff work them from their tools. Creating a ticket usually emails you a confirmation and notifies support.
+
+
+For bidders
+-----------
+
+
+Q: Same channels—any difference?  
+A:  Same channels and ticket lifecycle. The system stores whether you are an auctioneer or a bidder so support can route the ticket. Use callback when you want a scheduled phone response; use email when you can share screenshots and links.
+
+
+========================================================================
+AJ SETTINGS AND INFORMATION
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: Where does listing pricing come from?  
+A:  Listing package pricing comes from a global app setting (one listing price used when drafts or creates need a package amount). Per-auctioneer overrides are not part of that setting today.
+
+Q: Where are FAQs, privacy, and terms?  
+A:  The app serves standard pages for listing policy, auctioneer and bidder FAQs, about us, data security, privacy policy, terms, and general FAQ—use the links inside the website or app.
+
+Q: What does the “URL list” or sitemap-style URL export do?  
+A:  It can produce lists of public web addresses for auctions, lots, blogs, auctioneers, and listings—often used for search engines or site maps.
+
+
+For bidders
+-----------
+
+
+Q: Where do I read privacy and security information?  
+A:  Use the legal and help links in the website or app menu—the same pages are shared for all visitors.
+
+
+========================================================================
+PRODUCTS
+========================================================================
+
+
+For auctioneers
+---------------
+
+
+Q: Where is the products checkout flow for users?  
+A:  Products and purchase orders are still being finalized; follow your live app and release notes.
+
+
+For bidders
+-----------
+
+
+Q: Can I buy arbitrary products in the app today?  
+A:  Use your live app and release notes to see what is available.
+
+
+========================================================================
+BLOB STORAGE
+========================================================================
+
+
+For auctioneers / bidders
+-------------------------
+
+
+Q: What user-facing questions belong under “Blob”?  
+A:  Blob storage is mainly internal; users rarely need a FAQ unless the product exposes it by name.
+
+
+========================================================================
+CROSS-ROLE QUICK REFERENCE
+========================================================================
+
+
+|--------|------------|--------|
+Stripe Connect:
+  Auctioneer: Required for most auction creation; payouts/collections
+  Bidder: Usually not your dashboard domain
+
+Listing publish:
+  Auctioneer: Draft/publish + eligibility + address/geocode
+  Bidder: Interact via public listing; bid pass vs callback
+
+Registration:
+  Auctioneer: Approve/decline pending; export/email; invites
+  Bidder: Self-serve in window; one row per auction
+
+Settlement:
+  Auctioneer: Generate and edit charges; clerking first
+  Bidder: Pay per settlement experience
+
+Score:
+  Auctioneer: See value; decisions in registration
+  Bidder: See history; verification boosts score
+
+Support:
+  Auctioneer: Email + callback tickets
+  Bidder: Same ticket types
