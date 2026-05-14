@@ -2,7 +2,7 @@
 
 # Questions
 
-## Modules Structure during doc creation
+## Module structure during doc creation
 
 - Auctioneer
   - Clients
@@ -31,203 +31,224 @@
   - Stripe
   - Billing
 - Newsletter
-- Help And Support
+- Help and Support
   - Email Support
-  - Callback support
+  - Callback Support
   - Chat Bot
 
 ## Auctioneer/Bidder onboarding
 
-#### For Auctioneer
+##### For Auctioneer
 
-1. How to register in Auction Journal as Auctioneer?
-2. What to do if in case auctioneer forgot the password to login?
-3. What are the intial setup to do, to become fully functional Auctioneer?
-4. What if auctioneer wanted to update the provided details in profile? What are the details auctioneer can update?
+1. How do I register in Auction Journal as an auctioneer?
+2. What should I do if I forget my login password?
+3. What initial setup is required to become a fully functional auctioneer?
+4. How can an auctioneer update profile details? Which fields can be updated?
 
-#### For Bidder
+##### For Bidder
 
-1. How to register in Auction Journal as Bidder?
-2. What to do if in case bidder forgot the password to login?
-3. Is it mandatory to become verified bidder? What are the benifits bidder can get if they become verified?
-4. What's the cost of become a bidder in Auction Journal?
-5. What if bidder wanted to update the provided details in profile? What are the details bidder can update?
+1. How do I register in Auction Journal as a bidder?
+2. What should I do if I forget my login password?
+3. How to become verified bidder?
+4. Is it mandatory to become a verified bidder? What are the benefits of verification?
+5. What does it cost to become a bidder in Auction Journal?
+6. How can a bidder update profile details? Which fields can be updated?
+
+# Auctioneer
+
+1. Who is an auctioneer? What do they do in Auction Journal?
+2. How do I use the Auctioneer Dashboard?
+
+# Bidder
+
+1. Who is a bidder? What does a bidder do in Auction Journal?
+2. How do I use the Bidder Dashboard?
 
 ## Help and support
 
-1. How to get help and support from Auction Journal in case of any query?
-2. How to start a "Request a Callback" support. How helpful it is?
-3. How to start a "Email support". How convinient is it?
-4. Is Auction Journal chatbot good for immediate support?
-5. How to view my ongoing and previous supports and continue with the support?
+1. How do I get help from Auction Journal when I have a question?
+2. How do I start a "Request a Callback" support request? How helpful is it?
+3. How do I start email support? How convenient is it?
+4. Is the Auction Journal chatbot suitable for immediate support?
+5. How do I view my ongoing and past support requests, and how do I continue a conversation?
 
 ## Listing
 
-#### For Auctioneer
+##### For Auctioneer
 
-1. What is Listing? How to create a new Listing?
-2. What are the types of listing? Which type to choose for my Listing?
-3. Can I publish my listing for free? If yes, how can I?
-4. How can I view and manage my listing also how to see the bidders intrested in my listing?
-5. Whats the cost of publishing a listing in Auction Journal? Is it One time payment or is there any hidden charges?
-6. How to highlight my Listing for better bidder reach?
+1. What is a listing? How do I create a new listing?
+2. What listing types exist? Which type should I choose for my listing?
+3. Can I publish my listing for free? If yes, how?
+4. How do I view and manage my listings, and how do I see bidders interested in my listing?
+5. What is the cost of publishing a listing in Auction Journal? Is it a one-time payment, and are there any hidden charges?
+6. How do I highlight my listing for better bidder reach?
 
-#### For Bidder
+##### For Bidder
 
-1. How to search listing in Auction Journal?
-2. How to register for a listing? Is there any charges involved to register?
-3. How to see my registered listings?
+1. How do I search for listings in Auction Journal?
+2. How do I register for a listing? Are there any charges?
+3. How do I see my registered listings?
 
 ## Bidder Score
 
-1. What is bidder score? How will it effect me?
-2. How to view my score? Can I do anything about my score history?
-3. What are the ways I can improve my score? How to avoid decreasing of my score?
+1. What is bidder score? How does it affect me?
+2. How do I view my score? Can I do anything about my score history?
+3. What can I do to improve my score? How can I avoid losing score?
 
 ## Video
 
-#### for Auctioneer
+##### For Auctioneer
 
-1. How can auctioneer add video content in Auction Journal?
-2. Does the video instantly get appeared in Auction Journal? What are the things to avoid in video to prevent rejection?
-3. How to highlight videos uploaded by auctioneer?
+1. How can an auctioneer add video content in Auction Journal?
+2. Does video appear in Auction Journal immediately? What should I avoid in videos to prevent rejection?
+3. How do I highlight my videos in Auction Journal?
 
-### for Public
+### For Public
 
-1. How to find helpful videos
+1. How do I find helpful videos in Auction Journal?
 
 ## Blog
 
-#### for Auctioneer
+##### For Auctioneer
 
-1. How can auctioneer add blog content in Auction Journal?
-2. Does the blog instantly get appeared in Auction Journal? What are the things to avoid in blog to prevent rejection?
-3. How to highlight blogs uploaded by auctioneer?
+1. How can an auctioneer add blog content in Auction Journal?
+2. Does a blog post appear in Auction Journal immediately? What should I avoid in blog posts to prevent rejection?
+3. How do I highlight my blogs in Auction Journal?
 
-### for Public
+### For Public
 
-1. How to find helpful blogs
+1. How do I find helpful blogs in Auction Journal?
 
 ## Miscellaneous
 
-1. What is the use of Account in Miscellaneous? How to manage It?
-2. What is formula? Why should I have pre created formulas?
-3. Does changing existing formulas, which is already used in any Auction will have any effect on that Auction. Ireespective of the Auction is draft/live/past?
-4. Why should I have pre created templates?
-5. What are the types of templates I can create? Where can I use it?
-6. Why should I fill Invoice details? Where will it be used?
+1. What is the Account section in Miscellaneous for? How do I manage it?
+2. What is a formula? Why should I create formulas in advance?
+3. If I change an existing formula that is already used in an auction, does that affect the auction—whether it is draft, live, or past?
+4. Why should I create templates in advance?
+5. What types of templates can I create? Where can I use them?
+6. Why should I fill in invoice details? Where are they used?
 
 ## Auction
 
-#### for Auctioneer
+##### For Auctioneer
 
-1. What is an Auction? How to create one?
-2. What are the different types of Auction? Which one should I choose?
-3. What are the prerequests to create an Auction?
-4. How to fill details section to create Auction?
-5. How to fill upload settings section to create Auction?
-6. What is Auction expenses? How to create?
-7. What are the different stages of Auction?
-8. How Ring works in Auction?
-9. Explain Soft close in Auction? How bid soft close and soft close works?
+1. What is an auction? How do I create one?
+2. What types of auction exist? Which one should I choose?
+3. What are the prerequisites for creating an auction?
+4. How do I fill in the details section when creating an auction?
+5. How do I fill in the upload settings section when creating an auction?
+6. What are auction expenses? How do I create them?
+7. What are the different stages of an auction?
+8. How does Ring work in an auction?
+9. Explain soft close in an auction. How do bid soft close and soft close work?
+10. How do I use the Auction Dashboard?
+
+##### For Bidder
+
+1. How do I search for auctions in Auction Journal?
 
 ## Auction Lot
 
-1. How to create a lot in Auction?
-2. What are the ways lots can be created in an Auction?
-3. What are QR Lots?
-4. How to import Lots?
-5. How to import Lots Images in bulk?
-6. How to create Instand Lot during Live Bidding?
-7. How auctioneer can edit Lot?
+1. How do I create a lot in an auction?
+2. What are the ways lots can be created in an auction?
+3. What are QR lots?
+4. How do I import lots?
+5. How do I import lot images in bulk?
+6. How do I create an instant lot during live bidding?
+7. How can an auctioneer edit a lot?
+
+##### For Bidder
+
+1. How do I search for auction lots in Auction Journal?
 
 ## Auction Lot AI
 
-1. How auctioneer user create Auction Lot?
-2. How auctioneer user can edit Lot?
-3. How to generate content for Lot using AI?
+1. How does an auctioneer user create an auction lot?
+2. How can an auctioneer user edit a lot?
+3. How do I generate content for a lot using AI?
 
 ## Auction Registration
 
-#### for Auctioneer
+##### For Auctioneer
 
-1. How bidder registration accepence work in an Auction? Can auctioneer manually change it?
-2. How to know about the bidder registered in my Auction?
-3. How to check in floor bidder to Auction?
-4. How auctioneer can invite bidders to Auction?
+1. How does bidder registration acceptance work in an auction? Can the auctioneer change it manually?
+2. How do I see which bidders registered for my auction?
+3. How do I check in a floor bidder for an auction?
+4. How can an auctioneer invite bidders to an auction?
 
-#### for Bidder
+##### For Bidder
 
-1. How to register in an Auction?
+1. How do I register for an auction?
 
 ## Auction Lot Bidding
 
-1. Explain bid increment?
-2. How bidding works?
-3. How can auctioneer edit Bidders bid?
+1. How bid increments work?
+2. How does bidding work?
+3. How can an auctioneer edit a bidder's bid?
 
 ## Auction Live Bidding
 
-1. How to start live bidding?
-2. How Bid Increments works in Live Bidding?
-3. How to stream in Live Bidding?
-4. How chat works in Live Bidding?
-5. How Bidding works in Live Bidding?
-6. How Lots are opened for Live Bidding?
-7. Explain different controllers in Live Bidding?
-8. Difference between pre bidding and Live Bidding?
+1. How do I start live bidding?
+2. How do bid increments work in live bidding?
+3. How do I stream during live bidding?
+4. How does chat work in live bidding?
+5. How does bidding work in live bidding?
+6. How are lots opened for live bidding?
+7. What are the different controllers in live bidding?
+8. What is the difference between pre-bidding and live bidding?
+9. Explain live bidding window. How to use it?
 
 ## Auction Clerking
 
-1. How clerking works in Auction?
-2. How can Auctioneer edit clerking?
+1. How does clerking work in an auction?
+2. How can an auctioneer edit clerking?
 
 ## Auction Settlement
 
-1. How settlement is generated?
-2. Explain whole calculation of settlement for Buyer?
-3. Explain whole calculation of settlement for Seller?
-4. How can auctioneer edit settlement?
-5. How Adjustment works in settlement?
-6. How payment works after Auction settlement?
+1. How is a settlement generated for an auction?
+2. Explain the full settlement calculation for a buyer.
+3. Explain the full settlement calculation for a seller.
+4. How can an auctioneer edit a settlement?
+5. How do adjustments work in settlement?
+6. How does payment work after auction settlement?
 
 ## Billing and Payment
 
-#### for Auctioneer
+##### For Auctioneer
 
-1. Should auctioneer create Stripe connect in Auction Journal? How to setup? What are the uses?
-2. Why should auctioneer add card details in Auction Journal? How to add? Is it safe?
-3. How to see invoices of auctioneer?
+1. Should an auctioneer create Stripe Connect in Auction Journal? How do I set it up? What is it used for?
+2. Why should an auctioneer add card details in Auction Journal? How do I add them? Is it safe?
+3. How do I view my payment invoices as an auctioneer?
 
-#### for Bidder
+##### For Bidder
 
-1. Why should bidder add card details in Auction Journal? How to add? Is it safe?
-2. How to see invoices of bidder?
+1. Why should a bidder add card details in Auction Journal? How do I add them? Is it safe?
+2. How do I view my payment invoices as a bidder?
 
 ## Advertisement
 
-1. How Advertisement work in Auction Journal? How can an auctioneer benefit from it?
-2. What are types of Advertisement available for auctioneer in Auction Journal?
-3. How to create an Advertisement?
+1. How does Advertisement work in Auction Journal? How can an auctioneer benefit from it?
+2. What types of Advertisement are available to auctioneers in Auction Journal?
+3. How do I create an advertisement?
 
 ## Customer
 
-#### for auctioneer
+##### For Auctioneer
 
-1. Who is customer of auctioneer? What are the types of customer? How to add a customer?
-2. What are the ways customers are created for auctioneer?
-3. How can auctioneer use Mailing List in Customer? Whats the benifit of this?
-4. For auctioneer new to Auction Journal with lots of existing customer? How can auctioneer add them to Auction Journal customer?
-5. How can auctioneer configure each customer according to their preferences?
-6. What's the relation ship between bidder in Auction Journal and customer of Auctioneer?
-7. Who is floor bidder? How to onboard one?
-8. How can auctioneer invite seller to self register as their customer?
-9. How can a seller self register as a customer to the auctioneer from the email they got? Whats the role of the seller after becoming the customer of Auctioneer?
-10. How to manage customers in Mailing List?
+1. Who is a customer of an auctioneer? What customer types exist? How do I add a customer?
+2. In what ways are customers created for an auctioneer?
+3. How can an auctioneer use the mailing list in Customers? What is the benefit?
+4. For an auctioneer new to Auction Journal with many existing customers, how can they add them as customers in Auction Journal?
+5. How can an auctioneer configure each customer according to their preferences as a seller and as a buyer?
+6. What is the relationship between a bidder in Auction Journal and a customer of an auctioneer?
+7. Who is a floor bidder? How do I onboard one?
+8. How can an auctioneer invite a seller to self-register as their customer?
+9. How does a seller self-register as a customer from the invitation email? What is the seller's role after becoming a customer of the auctioneer?
+10. How do I manage customers in a mailing list?
 
 ## Users
 
-1. Who is User? How can a User become helpful to an Auctioneer?
-2. How to onboard an user?
-3. How to managage existing users and user invitations?
-4. How can a user self register as an user to Auction Journal from the invitation email they got from auctioneer?
+1. Who is a user? How can a user help an auctioneer?
+2. How do I onboard a user?
+3. How do I manage existing users and user invitations?
+4. How does a user self-register from the invitation email sent by an auctioneer?
