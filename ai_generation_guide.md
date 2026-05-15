@@ -12,7 +12,8 @@ Doc will be in module wise.
 
 - **AJ-Main-Backend** — The main backend of whole AJ
 - **auctioneer_dashboard_revamp** — The auctioneer CRM Dashboard
-- *(add others as needed)*
+- **auctionjournal-public** — Public marketing and bidder dashboard
+- _(add others as needed)_
 
 ## User-side documentation sync (`user_side_doc`)
 
@@ -26,7 +27,7 @@ When **developer-side** docs under `aj-code-doc` change in a way that **should**
 **Standard marker** (paste at the top of the affected dev doc section, or just under the file title):
 
 ```markdown
-> **User-side doc:** Pending — sync with `user_side_doc/…` after dev doc change (*reason optional*).
+> **User-side doc:** Pending — sync with `user_side_doc/…` after dev doc change (_reason optional_).
 ```
 
 Replace `user_side_doc/…` with the path(s) to update (e.g. `user_side_doc/auctioneeer/registration.md`).
