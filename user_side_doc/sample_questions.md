@@ -40,7 +40,7 @@
 
 ##### For Auctioneer
 
-1. How do I register in Auction Journal as an auctioneer?
+1. [How do I register in Auction Journal as an auctioneer?](auctioneeer/registration.md)
 2. What should I do if I forget my login password?
 3. What initial setup is required to become a fully functional auctioneer?
 4. How can an auctioneer update profile details? Which fields can be updated?
@@ -54,12 +54,12 @@
 5. What does it cost to become a bidder in Auction Journal?
 6. How can a bidder update profile details? Which fields can be updated?
 
-# Auctioneer
+## Auctioneer
 
 1. Who is an auctioneer? What do they do in Auction Journal?
 2. How do I use the Auctioneer Dashboard?
 
-# Bidder
+## Bidder
 
 1. Who is a bidder? What does a bidder do in Auction Journal?
 2. How do I use the Bidder Dashboard?

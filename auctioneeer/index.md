@@ -13,7 +13,7 @@ This module explains auctioneer business logic in `AJ-Main-Backend`, focused on 
 
 ## Core Lifecycle
 
-1. Auctioneer starts account via phone-based pre-registration flow.
+1. Auctioneer starts account via phone-based pre-registration flow (see [Registration](./registration.md)).
 2. Full registration completes business profile, license details, credentials, and newsletter option.
 3. System marks account as registered (`isRegistered = true`) and sends email verification flow.
 4. Default miscellaneous accounts are provisioned for operational setup.
@@ -67,7 +67,7 @@ Special case:
 
 ## Minimal API Map (Reference Only)
 
-- Registration and verification (auth module)
+- Registration and verification (auth module) — detail: [Registration](./registration.md)
 - Profile read/edit/photo/public bio
 - Invoice + location configuration
 - Auctioneer search/discovery
