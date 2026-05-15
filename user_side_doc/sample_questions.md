@@ -49,7 +49,7 @@
 
 1. [How do I register in Auction Journal as a bidder?](bidder/registration.md)
 2. [What should I do if I forget my login password?](bidder/forgot-password.md)
-3. How to become verified bidder?
+3. [How to become verified bidder?](bidder/verification.md)
 4. Is it mandatory to become a verified bidder? What are the benefits of verification?
 5. What does it cost to become a bidder in Auction Journal?
 6. How can a bidder update profile details? Which fields can be updated?

@@ -8,6 +8,11 @@ This doc will be manually updated by developer or will be updated by developer w
 
 Doc will be in module wise.
 
+## Screenshots
+
+- **Developer docs** (`aj-code-doc/`, excluding `user_side_doc/`): use tables, flow descriptions, and API references — **do not** embed application UI screenshots. Point readers to the parallel page under `user_side_doc/` for form-level visuals.
+- **User docs** (`user_side_doc/`): follow [`user_side_doc/ai_generation_guide.md`](user_side_doc/ai_generation_guide.md) — screenshots in `user_side_doc/image/<module>/`, embedded with relative paths (e.g. `../image/bidder/file.png` from `user_side_doc/bidder/`).
+
 ## Code base references
 
 - **AJ-Main-Backend** — The main backend of whole AJ

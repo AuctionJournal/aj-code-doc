@@ -89,4 +89,4 @@ There is **no separate driving-license capture** on this public signup form; the
 ## After registration (user outcome)
 
 - Success popup / redirect copy: **check email** to verify the address.
-- Platform **verification** (identity + card) is a **later** lifecycle stage (see main [Bidder](./index.md) module); registration only establishes the account and email verification pending state.
+- Platform **verification** (identity + card) is a **later** stage — see [Verification](./verification.md); registration only establishes the account and email verification pending state.

@@ -53,7 +53,7 @@ This guide walks you through **Bidder Sign Up** on the public Auction Journal si
 
 - You should see a **thank you** message asking you to **check your email** to verify your email address.
 - Follow the link in that email when it arrives (check spam if you do not see it).
-- **Verified bidder** status (for extra trust when bidding) is a **separate** step later: identity and payment card, as explained in help for bidders.
+- **Verified bidder** status is a **separate** step after signup — see [How to become a verified bidder?](verification.md).
 
 ---
 

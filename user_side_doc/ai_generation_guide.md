@@ -37,6 +37,27 @@ Developer-oriented detail lives under [`aj-code-doc`](../) (controllers, APIs, i
 
 ---
 
+## Screenshots (application UI)
+
+User guides should show **what the reader sees in the product**, especially **forms** (fields, labels, buttons, step order).
+
+- **Store files only under `user_side_doc/image/<module>/`** (e.g. `user_side_doc/image/bidder/verification-step1-payment.png`). Do not put user-facing screenshots in `aj-code-doc/images/` or other dev-only folders.
+- **Embed in markdown** so images render inline in the doc viewer:
+
+  ```markdown
+  ![Short description of the screen](../image/bidder/verification-step1-payment.png "Optional hover title")
+  ```
+
+  Use a **relative path from the `.md` file** to `user_side_doc/image/<module>/` (e.g. from `user_side_doc/bidder/page.md` → `../image/bidder/...`). Do **not** use `/image/...` alone — that breaks preview in VS Code/Cursor and many static viewers.
+
+- **Place each image** immediately after the step it illustrates.
+- **Add a one-line caption** under each image in italics if the alt text alone is not enough.
+- **Prefer form screenshots** for multi-step flows: empty state, filled form, submit button, and post-success screen when relevant.
+- **Capture from the real app** when possible; keep PII out of shots (test data, masked cards).
+- **Developer docs** (`aj-code-doc/` outside `user_side_doc/`) should **not** embed UI screenshots; link to the matching user page instead (see [`../ai_generation_guide.md`](../ai_generation_guide.md)).
+
+---
+
 ## Dev doc changes and keeping user docs in sync
 
 Developer docs live in [`aj-code-doc`](../). User guides live here in **`user_side_doc`**. They are **not** updated by a background job: during an **AI-assisted or manual edit** to dev docs, whoever updates should keep them aligned when the change affects what users see or do.

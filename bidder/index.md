@@ -15,13 +15,9 @@ This module explains bidder business logic in `AJ-Main-Backend`, focused on trus
 
 1. Bidder starts via **public registration** (phone OTP, then `registerBidder`) — see [Registration](./registration.md).
 2. Bidder account exists with profile + verification placeholders.
-3. Bidder updates identity proof (`identityType`, front/back images).
-4. System marks identity proof as verified only when required images are valid.
-5. Bidder runs verification flow:
-   - identity proof must be verified
-   - at least one payment card must exist
-6. If both pass, bidder becomes platform-verified (`isVerified = true`) and a score event is created.
-7. Bidder continues participating in auctions/listings; dashboard and score logs reflect activity over time.
+3. Bidder completes **verification** (Stripe card + ID upload, then platform verify) — see [Verification](./verification.md).
+4. If both identity proof and card on file pass checks, bidder becomes platform-verified (`isVerified = true`) with score event and email.
+5. Bidder continues participating in auctions/listings; dashboard and score logs reflect activity over time.
 
 ## Key Business Rules
 
@@ -71,7 +67,7 @@ This module explains bidder business logic in `AJ-Main-Backend`, focused on trus
 
 - Registration (OTP + `registerBidder`): [Registration](./registration.md)
 - Forgot password: [Authentication / Forgot password](../auth/forgot-password.md)
-- Verification: identity update + bidder verify
+- Verification (Stripe card + ID + `verifyBidder`): [Verification](./verification.md)
 - Profile: read/edit/photo update
 - Dashboard: counts + calendar
 - Reputation: score logs
