@@ -37,6 +37,22 @@ Developer-oriented detail lives under [`aj-code-doc`](../) (controllers, APIs, i
 
 ---
 
+## Dev doc changes and keeping user docs in sync
+
+Developer docs live in [`aj-code-doc`](../). User guides live here in **`user_side_doc`**. They are **not** updated by a background job: during an **AI-assisted or manual edit** to dev docs, whoever updates should keep them aligned when the change affects what users see or do.
+
+**Rules (especially for AI):**
+
+1. After changing **`aj-code-doc`** in a way that **should** change user-facing steps or wording, **ask the developer** first: *“Should I update the matching content in `user_side_doc` now?”*
+2. **Do not** edit `user_side_doc` without that confirmation when the change originated from dev-doc work.
+3. If the developer says **no**, the user-side update **cannot be done**, or they **stop** the work — add the **standard pending marker** to the **dev-side** file (see [`../ai_generation_guide.md`](../ai_generation_guide.md) section *User-side documentation sync*) so nothing is forgotten. Remove the marker once `user_side_doc` is updated.
+
+This way “automatic” means **procedural discipline in each session**, not silent overwrites.
+
+---
+
 ## Updating this guide
 
 When the team agrees on a new convention (“always do X,” “never do Y,” “see `folder` for Z”), **add it here** so the same instructions do not need to be repeated in chat. This file is the **accumulated checklist** for user-side doc work.
+
+**Cursor:** The repo rule `.cursor/rules/aj-code-doc-generation.mdc` (`alwaysApply: true`) tells the AI to read this file and `aj-code-doc/ai_generation_guide.md` before editing under `aj-code-doc/`.
