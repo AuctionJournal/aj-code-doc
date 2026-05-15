@@ -26,6 +26,8 @@ Customers of Auction Journal
 
 ## Connect Account
 
+Auctioneers use [Stripe Connect](connect-account.md) to receive bidder and settlement payments. Setup lives under Miscellaneous in the auctioneer dashboard; onboarding must be complete before most auction types can be created.
+
 ## Payment
 
 ### Listing payment

@@ -29,7 +29,7 @@ This module groups operational settings used by auctioneers for supporting busin
 Scope interpretation:
 - Formulas and accounts are auction-use utility configurations.
 - Formula management supports multiple formulas per formula type (for example, slab/range-based variants).
-- This module does not define mandatory-gate rules.
+- Stripe Connect is configured from this hub; **auction-creation eligibility** (including completed Connect) is enforced in auction build — see [Stripe Connect](../payment/connect-account.md) and [Auction build](../auction/build.md).
 - Stripe Connect is treated as a miscellaneous setup item in this document context.
 - Template items are also part of miscellaneous scope in dashboard experience.
 - Template items are editable reusable text blocks for communication/compliance use.
@@ -40,7 +40,7 @@ Scope interpretation:
 From `auctioneer_dashboard_revamp`, the Miscellaneous UI currently includes:
 - Account
 - Formulas
-- Stripe Connect
+- Stripe Connect — route `/dashboard/miscellaneous/payment/setup`; see [Stripe Connect](../payment/connect-account.md)
 - Invoice Details
 - Templates (terms, bidding notices, auction notices, email body, bid increment)
 
