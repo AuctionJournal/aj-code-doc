@@ -38,7 +38,7 @@ Scope interpretation:
 ## Product Surface Alignment
 
 From `auctioneer_dashboard_revamp`, the Miscellaneous UI currently includes:
-- Account
+- Account — route `/dashboard/miscellaneous/account`; see [Miscellaneous accounts](account.md)
 - Formulas
 - Stripe Connect — route `/dashboard/miscellaneous/payment/setup`; see [Stripe Connect](../payment/connect-account.md)
 - Invoice Details
