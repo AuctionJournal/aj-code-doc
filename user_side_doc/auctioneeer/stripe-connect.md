@@ -99,4 +99,4 @@ For most auction types, Auction Journal checks that Stripe Connect is **fully se
 
 - [Forgot password](forgot-password.md)
 - [Auctioneer registration](registration.md)
-- Adding a card to pay Auction Journal fees — see Billing and Payment question 2 in [sample questions](../sample_questions.md) (guide pending).
+- [Payment card on file](payment-method.md) — pay Auction Journal for listings and ads

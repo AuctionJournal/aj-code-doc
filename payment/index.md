@@ -10,7 +10,7 @@
 ## Features
 
 - Customer
-- [Payment Cards](cards.md)
+- [Payment cards](cards.md) — save card for platform fees (auctioneer/bidder); user steps under `user_side_doc/auctioneeer/payment-method.md`
 - [Connect account for auctioneer](connect-account.md)
 - Payment
   - create listing

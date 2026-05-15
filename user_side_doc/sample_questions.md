@@ -217,7 +217,7 @@
 ##### For Auctioneer
 
 1. [Should an auctioneer create Stripe Connect in Auction Journal? How do I set it up? What is it used for?](auctioneeer/stripe-connect.md)
-2. Why should an auctioneer add card details in Auction Journal? How do I add them? Is it safe?
+2. [Why should an auctioneer add card details in Auction Journal? How do I add them? Is it safe?](auctioneeer/payment-method.md)
 3. How do I view my payment invoices as an auctioneer?
 
 ##### For Bidder
