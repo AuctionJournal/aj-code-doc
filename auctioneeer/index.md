@@ -67,7 +67,8 @@ Special case:
 
 ## Minimal API Map (Reference Only)
 
-- Registration and verification (auth module) — detail: [Registration](./registration.md)
+- Registration — detail: [Registration](./registration.md)
+- Forgot password — detail: [Authentication / Forgot password](../auth/forgot-password.md)
 - Profile read/edit/photo/public bio
 - Invoice + location configuration
 - Auctioneer search/discovery

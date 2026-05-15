@@ -70,6 +70,7 @@ This module explains bidder business logic in `AJ-Main-Backend`, focused on trus
 ## Minimal API Map (Reference Only)
 
 - Registration (OTP + `registerBidder`): [Registration](./registration.md)
+- Forgot password: [Authentication / Forgot password](../auth/forgot-password.md)
 - Verification: identity update + bidder verify
 - Profile: read/edit/photo update
 - Dashboard: counts + calendar

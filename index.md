@@ -4,6 +4,8 @@ Documentation of auction journal code logic and implementation. Only code logic 
 
 ### Features
 
+- [Authentication (shared)](auth/index.md)
+  - [Forgot password](auth/forgot-password.md)
 - [Auctioneer](auctioneeer/index.md)
   - [Registration](auctioneeer/index.md)
   - [Profile](auctioneeer/index.md)
