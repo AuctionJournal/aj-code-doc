@@ -126,7 +126,7 @@
 3. If I change an existing formula that is already used in an auction, does that affect the auction—whether it is draft, live, or past?
 4. Why should I create templates in advance?
 5. What types of templates can I create? Where can I use them?
-6. Why should I fill in invoice details? Where are they used?
+6. [Why should I fill in invoice details? Where are they used?](auctioneer-misc/invoice-details.md)
 
 ## Auction
 

@@ -13,7 +13,7 @@ This module groups operational settings used by auctioneers for supporting busin
 
 ## Confirmed Scope (Interview)
 
-- Invoice Details
+- Invoice Details — `/dashboard/miscellaneous/invoices`; [Invoice details](invoice-details.md)
 - Auction Locations
 - Formula Management (commission, buyer premium, taxes) — see [Formulas](formulas.md)
 - Account Management (parent/sub accounts)
@@ -41,7 +41,7 @@ From `auctioneer_dashboard_revamp`, the Miscellaneous UI currently includes:
 - Account — route `/dashboard/miscellaneous/account`; see [Miscellaneous accounts](account.md)
 - Formulas — `/dashboard/miscellaneous/formulas`; [Formulas](formulas.md)
 - Stripe Connect — route `/dashboard/miscellaneous/payment/setup`; see [Stripe Connect](../payment/connect-account.md)
-- Invoice Details
+- Invoice Details — `/dashboard/miscellaneous/invoices`; [Invoice details](invoice-details.md)
 - Templates (terms, bidding notices, auction notices, email body, bid increment)
 
 From `AJ-Main-Backend`, active miscellaneous-related API groups include:
