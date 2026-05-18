@@ -15,7 +15,7 @@ This module groups operational settings used by auctioneers for supporting busin
 
 - Invoice Details
 - Auction Locations
-- Formula Management (commission, buyer premium, taxes)
+- Formula Management (commission, buyer premium, taxes) — see [Formulas](formulas.md)
 - Account Management (parent/sub accounts)
 - Stripe Connection
 - Templates / Text Configuration:
@@ -39,7 +39,7 @@ Scope interpretation:
 
 From `auctioneer_dashboard_revamp`, the Miscellaneous UI currently includes:
 - Account — route `/dashboard/miscellaneous/account`; see [Miscellaneous accounts](account.md)
-- Formulas
+- Formulas — `/dashboard/miscellaneous/formulas`; [Formulas](formulas.md)
 - Stripe Connect — route `/dashboard/miscellaneous/payment/setup`; see [Stripe Connect](../payment/connect-account.md)
 - Invoice Details
 - Templates (terms, bidding notices, auction notices, email body, bid increment)
