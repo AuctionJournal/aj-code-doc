@@ -24,6 +24,8 @@ Documentation of auction journal code logic and implementation. Only code logic 
 - [Auctioneer Client](auctioneer-client/index.md)
   - [Building / add client](auctioneer-client/build.md)
   - [Customer creation paths](auctioneer-client/creation-paths.md)
+  - [Bidder vs client relationship](auctioneer-client/bidder-relationship.md)
+  - [Floor bidder](auctioneer-client/floor-bidder.md)
   - [Fields](auctioneer-client/fields.md)
   - [Mailing List](auctioneer-client/mailing-list.md)
 - [Auctioneer Miscellaneous](auctioneer-misc/index.md)

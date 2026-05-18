@@ -243,8 +243,8 @@
 3. [How can an auctioneer use the mailing list in Customers? What is the benefit?](auctioneer-client/mailing-list.md)
 4. For an auctioneer new to Auction Journal with many existing customers, how can they add them as customers in Auction Journal?
 5. How can an auctioneer configure each customer according to their preferences as a seller and as a buyer?
-6. What is the relationship between a bidder in Auction Journal and a customer of an auctioneer?
-7. Who is a floor bidder? How do I onboard one?
+6. [What is the relationship between a bidder in Auction Journal and a customer of an auctioneer?](auctioneer-client/bidder-relationship.md)
+7. [Who is a floor bidder? How do I onboard one?](auctioneer-client/floor-bidder/index.md)
 8. How can an auctioneer invite a seller to self-register as their customer?
 9. How does a seller self-register as a customer from the invitation email? What is the seller's role after becoming a customer of the auctioneer?
 10. How do I manage customers in a mailing list?

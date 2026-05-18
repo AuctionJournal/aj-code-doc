@@ -131,7 +131,7 @@ For someone bidding **on the floor** at your sale:
 2. Complete that wizard (similar contact, address, and buyer settings).  
 3. Use a **real email** only if they do not already have a bidder account on Auction Journal with that email.
 
-See also [Who is a floor bidder? How do I onboard one?](../sample_questions.md#customer) in Questions.
+See [Who is a floor bidder? How do I onboard one?](floor-bidder/index.md).
 
 ---
 

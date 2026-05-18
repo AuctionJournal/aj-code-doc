@@ -14,7 +14,7 @@ For customer types and step-by-step manual entry, see [Who is a customer of an a
 |-----|-------------|----------------------------------------|
 | **Add manually** | **Customers** → **Add Clients** | Right after you submit the 3-step form |
 | **Import from file** | **Customers** → **Import Clients** | After the import finishes successfully |
-| **Bidder registers for your auction** | Bidder uses the public site (no action from you) | When they complete registration for **your** auction |
+| **Bidder registers for your auction** | Bidder uses the public site (no action from you) | When they complete registration for **your** auction — see [bidder vs customer](bidder-relationship.md) |
 | **Invite a seller** | **Customers** → **Onboard Seller** | After they complete the email registration link |
 | **Onboard floor bidder** | **Customers** → **Onboard Floor Bidder** | Right after you submit that wizard |
 
@@ -84,7 +84,7 @@ For someone who bids **on the floor** at your auction (and is not using the norm
 
 A floor bidder is treated as a **buyer** for your auctions. Do not use this flow if that person already has an Auction Journal **bidder** account with the same email—they should bid from their bidder account instead.
 
-For more on floor bidders, see [Who is a floor bidder? How do I onboard one?](../sample_questions.md#customer) in Questions (answer page when published).
+For more on floor bidders, see [Who is a floor bidder? How do I onboard one?](floor-bidder/index.md).
 
 ---
 

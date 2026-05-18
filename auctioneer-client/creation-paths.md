@@ -53,7 +53,7 @@ createOrUpdateAuctioneerClient(bidder, auction?.Auctioneer?._id)
   - If client exists for `(auctioneer, clientMail === bidder.Email)`: update → `isBuyer: true`, `buyerRef`, identity/photo from bidder.
   - Else: **create** with `isBuyer: true`, `isLinkedToBidder: true`, `isBidderDataConnected: true`, name/phone/address from bidder profile, generated `clientCode` prefix `ACCL{timestamp}`.
 
-This is how platform **bidders** become **customers** of the auctioneer running that sale.
+This is how platform **bidders** become **customers** of the auctioneer running that sale. Full relationship and per-auctioneer settings: [Bidder vs client](./bidder-relationship.md).
 
 ---
 
@@ -97,7 +97,7 @@ Related user Q&A (separate pages): seller invitation email, seller self-register
 
 - **UI:** Customers → **Onboard Floor Bidder** → `BuildFloorBidder` wizard → same `createAuctioneerClient` / `POST /api/client/add` with **`isFloorBidder: true`**.
 - **Backend:** `addClient` floor path — `clientMail` set to `clientCode`, real email in `email`; rejects if email matches existing **Bidder**.
-- **User doc:** [add-customer.md](../user_side_doc/auctioneer-client/add-customer.md#floor-bidder-separate-path), [floor-bidder](../user_side_doc/auctioneer-client/floor-bidder/index.md).
+- **User doc:** [Who is a floor bidder? How do I onboard one?](../user_side_doc/auctioneer-client/floor-bidder/index.md).
 
 ---
 
