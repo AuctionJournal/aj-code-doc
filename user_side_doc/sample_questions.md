@@ -36,6 +36,10 @@
   - Callback Support
   - Chat Bot
 
+## Auctioneer
+
+1. What is Auction Journal? Who should and why should use our Platform?
+
 ## Auctioneer/Bidder onboarding
 
 ##### For Auctioneer
@@ -56,13 +60,13 @@
 
 ## Auctioneer
 
-1. Who is an auctioneer? What do they do in Auction Journal?
-2. How do I use the Auctioneer Dashboard?
+1. [Who is an auctioneer? What do they do in Auction Journal?](auctioneeer/role.md)
+2. [How do I use the Auctioneer Dashboard?](auctioneeer/dashboard.md)
 
 ## Bidder
 
-1. Who is a bidder? What does a bidder do in Auction Journal?
-2. How do I use the Bidder Dashboard?
+1. [Who is a bidder? What does a bidder do in Auction Journal?](bidder/role.md)
+2. [How do I use the Bidder Dashboard?](bidder/dashboard.md)
 
 ## Help and support
 

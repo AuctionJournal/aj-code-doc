@@ -2,6 +2,9 @@
 
 # Bidder
 
+- [Who is a bidder? What does a bidder do in Auction Journal?](role.md)
+- [How do I use the Bidder Dashboard?](dashboard.md)
+
 ## Onboarding
 
 - [How do I register in Auction Journal as a bidder?](registration.md)

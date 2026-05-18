@@ -2,6 +2,9 @@
 
 # Auctioneer
 
+- [Who is an auctioneer? What do they do in Auction Journal?](role.md)
+- [How do I use the Auctioneer Dashboard?](dashboard.md)
+
 ## Onboarding
 
 - [How do I register in Auction Journal as an auctioneer?](registration.md)
