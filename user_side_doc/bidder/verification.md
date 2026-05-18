@@ -109,5 +109,7 @@ You may also receive a **confirmation email** that your verified bidder status i
 
 ## Related questions
 
-- Is verification mandatory, and what are the benefits? — See the next onboarding topics in [Bidder](./index.md) (when documented).
-- Registration only: [How do I register as a bidder?](registration.md)
+- [Is verification mandatory? What are the benefits?](verification-required.md)
+- [What does it cost to become a bidder?](cost.md)
+- [How do I register as a bidder?](registration.md)
+- [How do I update my profile?](profile.md)

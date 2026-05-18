@@ -8,3 +8,4 @@
 - [What should I do if I forget my login password?](forgot-password.md)
 - [Should I set up Stripe Connect? How do I set it up? What is it used for?](stripe-connect.md)
 - [Why should I add card details? How do I add them? Is it safe?](payment-method.md)
+- [How do I update profile details? Which fields can I update?](profile.md)

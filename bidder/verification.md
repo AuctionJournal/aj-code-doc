@@ -143,4 +143,5 @@ stripeCustomer                     // Stripe customer id
 ## Related topics
 
 - Signup only creates a **registered** bidder: [Registration](./registration.md).
-- Whether verification is **mandatory** per auction and **benefits** of verifying: document under user Q4 (and auction registration rules); default auction build often expects **verified** bidders.
+- Whether verification is **mandatory** per auction and **benefits**: [Verification required and benefits](./verification-required.md).
+- **Cost** to become a bidder: [Cost](./cost.md) (no platform signup fee).

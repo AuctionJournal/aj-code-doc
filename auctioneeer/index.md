@@ -51,6 +51,7 @@ Special case:
 ## Profile and Public Presence
 
 - Auctioneer can maintain profile metadata (company/person name, bio, website, socials, photo).
+- Dashboard **MY PROFILE** (`/dashboard/profile`): [Profile](profile.md) — edit form, photo, password.
 - Public bio fetch endpoint exposes curated profile fields for listing/detail pages.
 - Search and grouping flows return auctioneer cards with computed activity counts (auctions/listings).
 
@@ -69,7 +70,7 @@ Special case:
 
 - Registration — detail: [Registration](./registration.md)
 - Forgot password — detail: [Authentication / Forgot password](../auth/forgot-password.md)
-- Profile read/edit/photo/public bio
+- Profile read/edit/photo/public bio — [Profile](profile.md)
 - Invoice + location configuration
 - Auctioneer search/discovery
 - Eligibility gate for auction creation
