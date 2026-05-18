@@ -131,7 +131,7 @@ For someone bidding **on the floor** at your sale:
 2. Complete that wizard (similar contact, address, and buyer settings).  
 3. Use a **real email** only if they do not already have a bidder account on Auction Journal with that email.
 
-More detail: [Floor bidder](./floor-bidder/index.md) (when documented).
+See also [Who is a floor bidder? How do I onboard one?](../sample_questions.md#customer) in Questions.
 
 ---
 
@@ -145,6 +145,6 @@ More detail: [Floor bidder](./floor-bidder/index.md) (when documented).
 
 ## Related
 
-- [In what ways are customers created?](creation.md) — manual, import, bidder registration, seller invite, floor bidder  
+- [In what ways are customers created for an auctioneer?](creation.md)  
 - [Auctioneer Dashboard](../auctioneeer/dashboard.md) — **Customers** menu  
 - [Who is an auctioneer?](../auctioneeer/role.md)

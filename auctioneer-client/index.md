@@ -78,7 +78,7 @@ Controller-level protections in add/update flows include:
 - Manual add flow (routes, APIs, types): [Building / adding a client](./build.md)
 - All creation paths: [Ways customers are created](./creation-paths.md)
 - User steps: [Who is a customer? How do I add one?](../user_side_doc/auctioneer-client/add-customer.md)
-- Client mailing list behavior is documented separately: [Client Mailing List](./mailing-list.md)
+- Mailing lists: [Client Mailing List](./mailing-list.md) — APIs, model, website subscribe list
 
 ## Field Reference
 

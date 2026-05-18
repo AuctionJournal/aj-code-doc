@@ -4,7 +4,7 @@
 
 Your **customers** (called **clients** in the dashboard) can be added in several ways. All of them create a profile **under your auction company** for use in **your auctions**—registration, clerking, settlement, and mailing lists.
 
-For **who** a customer is and the **manual add** steps, see [Who is a customer? How do I add one?](add-customer.md).
+For customer types and step-by-step manual entry, see [Who is a customer of an auctioneer? What customer types exist? How do I add a customer?](add-customer.md).
 
 ---
 
@@ -28,8 +28,6 @@ You enter the person’s details yourself (or scan a driver’s licence to pre-f
 2. Select **Add Clients**.  
 3. Choose **Add Client Data Manually** or the **licence scanner**.  
 4. Complete the **3 steps** (contact, addresses, buyer/consigner settings) and **Submit**.
-
-Full steps: [add-customer.md](add-customer.md).
 
 ---
 
@@ -72,7 +70,7 @@ For **sellers (consigners)** you want to onboard without typing everything yours
 
 Until they complete that link, they are **not** yet a client in your list—the invite only sends the email.
 
-Separate guides cover the seller’s view of the invitation and registration (see [sample questions](../sample_questions.md) — Customer section).
+Other Customer topics in [Questions](../sample_questions.md) cover inviting a seller, self-registration from email, and related flows.
 
 ---
 
@@ -86,7 +84,7 @@ For someone who bids **on the floor** at your auction (and is not using the norm
 
 A floor bidder is treated as a **buyer** for your auctions. Do not use this flow if that person already has an Auction Journal **bidder** account with the same email—they should bid from their bidder account instead.
 
-Details: [add-customer.md — Floor bidder](add-customer.md#floor-bidder-separate-path).
+For more on floor bidders, see [Who is a floor bidder? How do I onboard one?](../sample_questions.md#customer) in Questions (answer page when published).
 
 ---
 
@@ -102,7 +100,9 @@ Details: [add-customer.md — Floor bidder](add-customer.md#floor-bidder-separat
 
 ---
 
-## Related
+## Related questions
 
-- [Auctioneer Dashboard — Customers](../auctioneeer/dashboard.md)  
-- [Add a customer (manual)](add-customer.md)
+- [Who is a customer of an auctioneer? What customer types exist? How do I add a customer?](add-customer.md)  
+- [How can an auctioneer invite a seller to self-register as their customer?](../sample_questions.md#customer)  
+- [Who is a floor bidder? How do I onboard one?](../sample_questions.md#customer)  
+- [Auctioneer Dashboard — Customers menu](../auctioneeer/dashboard.md)

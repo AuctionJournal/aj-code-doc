@@ -1,70 +1,101 @@
-[Auction Journal](../index.md)
+[Auction Journal](../index.md) · [Auctioneer Client](index.md)
 
-# Auctioneer Client Mailing List
+# Auctioneer client mailing lists
 
-This document covers mailing list business logic under Auctioneer Client.
+Auctioneers group **`clientsOfAuctioneer`** records (and optional raw emails) into **`clientMailingList`** documents for organization, export, and website-subscription capture.
 
-## Business Purpose
+**User guide:** [How can an auctioneer use the mailing list in Customers? What is the benefit?](../user_side_doc/auctioneer-client/mailing-list.md)
 
-- Allow auctioneers to group clients/emails into reusable communication lists.
-- Support list-based outreach workflows from dashboard operations.
-- Maintain both known-client membership and raw email subscriptions from website flows.
+---
 
-## Core List Capabilities
+## Business purpose
 
-- Create mailing list (`name`, `description`)
-- Edit list metadata and membership
-- View one list with populated client details
-- View all lists for auctioneer
-- Delete list (except protected system list)
+- Segment auctioneer CRM clients into named lists (marketing audiences, operational groups).
+- Support **CSV export** of list membership for external email tools.
+- Sync membership when clients are created/updated (`mailingLists` on add client, `syncClientMailingLists` on edit).
+- Auto-maintain **Subscribed From Website** for public newsletter/subscribe flows.
 
-## Membership Model
+---
 
-A mailing list can contain:
-- `clients`: references to `clientsOfAuctioneer` records
-- `emails`: raw email entries (used especially for website subscriptions)
+## Data model
 
-Membership operations support:
-- add single client
-- add all auctioneer clients
-- remove single client
-- remove all clients
-- sync membership based on latest selected list set
+**Model:** `app/models/clientMailingList.js`
 
-## Special System List
+| Field | Meaning |
+|-------|---------|
+| `name` | List display name |
+| `description` | List notes |
+| `auctioneer` | Owner `Auctioneer` ref (required) |
+| `clients` | Array of `clientsOfAuctioneer` refs |
+| `emails` | Raw email strings (non-client subscribers) |
+| `isSubScribedFromWebsiteML` | System list flag |
 
-- `Subscribed From Website` list is auto-managed.
-- It is identified with `isSubScribedFromWebsiteML = true`.
-- Backend prevents deleting this protected system list.
+**Member count (UI):** `clients.length + emails.length`.
 
-## Website Subscription Join Flow
+---
 
-- Endpoint accepts `email` + `auctioneer`.
-- If system list does not exist, it is auto-created.
-- If matching client exists, client id is linked.
-- Otherwise raw email is stored in `emails`.
-- Duplicate subscription attempts are blocked.
+## Dashboard (`auctioneer_dashboard_revamp`)
 
-## Ownership and Scope
+| Route | Component | Role |
+|-------|-----------|------|
+| `/dashboard/clients` | `clients.page.jsx` + `ClientHome` | Toggle **CLIENT LIST** / **MAILING LIST** |
+| `/dashboard/clients/mailinglists` | `mailingList.page.jsx` + `ClientMailingListHome` | List all MLs, create, search, export, delete |
+| `/dashboard/clients/mailinglists/view` | `view-mailingList.page.jsx` + `ViewMailingList` | Edit metadata, `ClientList`, add/remove members |
 
-- Mailing lists are auctioneer-scoped.
-- List fetch and mutation operate under auctioneer context.
-- Client membership is tied to `clientsOfAuctioneer` records.
+**Client create/edit:** `BuildClient/ClientInfo` → `ClientMailingLists` dropdown (`fetchMailingLists` with `isSubScribedFromWebsiteML: false`) → passed on `POST /api/client/add` as `mailingLists` → `addClientToLists`.
 
-## Data Model (Business Meaning)
+**List membership UI:** `ClientHandler` dialog — checkbox clients, add all / remove all, saves via `PATCH` edit with full `clients` id array.
 
-Primary model: `clientMailingList` (`app/models/clientMailingList.js`)
+---
 
-- `name`: mailing list name
-- `auctioneer`: owner reference
-- `description`: list description
-- `clients`: client references
-- `emails`: non-client email subscribers
-- `isSubScribedFromWebsiteML`: marks system-managed website-subscription list
+## API map (`app/routes/auctioneer-clients.js`)
 
-## Minimal API Map (Reference Only)
+All authenticated routes use `requireAuth` + `allowRoles("Auctioneer")` unless noted.
 
-- create/edit/delete list
-- fetch one/fetch all lists
-- add/remove clients in list
-- website subscription join to mailing list
+| Method | Path | Handler | Purpose |
+|--------|------|---------|---------|
+| `POST` | `/api/auctioneer/client/mailingList/add` | `createNewList` | Create list (`name`, `description`) |
+| `POST` | `/api/client/mailingLists` | `fetchLists` | List for auctioneer; body: `searchTerm`, `isSubScribedFromWebsiteML` |
+| `GET` | `/api/client/mailingList/:refId` | `fetchList` | One list + populated `clients` |
+| `PATCH` | `/api/auctioneer/client/mailingList/edit` | `editList` | Update `mailingListId`, `name`, `description`, `clients` array |
+| `DELETE` | `/api/auctioneer/client/mailingList/:refId` | `deleteList` | Delete list; blocks **Subscribed From Website** |
+| `POST` | `/api/client/mailingList/clients/add` | `addClientInML` | `refId`, `client` or `isAddAll` + `auctioneer` |
+| `DELETE` | `/api/client/mailingList/clients` | `remClientInML` | `refId`, `client` or `isRemAll` |
+| `GET` | `/api/client/mailingList/clients/export/:refId` | `exportMLClientsInCSV` | CSV download |
+| `POST` | `/api/auctioneer/mailingList/subscribedFromWebsiteML/join` | `subscribedFromWebsiteML` | **Public** — website email subscribe |
+
+**Controller:** `app/controllers/auctioneer/client/mailingList.js` (+ `clientCSV.exportMLClientsInCSV`).
+
+---
+
+## Key behaviors
+
+### Create / edit list
+
+- `createNewList` — `clientMailingList.create({ name, description, auctioneer })`.
+- `editList` — `findByIdAndUpdate` with `name`, `description`, `clients` (full membership replace when UI saves from `ClientHandler`).
+
+### Add / remove clients
+
+- `addClientInML` — `$addToSet` one client, or replace `clients` with all auctioneer client ids when `isAddAll`.
+- `remClientInML` — `$pull` one client, or `clients: []` when `isRemAll`.
+- `addClientToLists` — on manual client create, foreach selected list id `$addToSet` client.
+- `syncClientMailingLists` — on client edit: pull from lists not selected, add to selected.
+- `deleteClientInML` — when client deleted globally, pull from all lists.
+
+### Website system list
+
+- `subscribedFromWebsiteML` — finds or creates list with `name: "Subscribed From Website"`, `isSubScribedFromWebsiteML: true`.
+- Adds matching `clientsOfAuctioneer` by email or appends to `emails`; duplicate email rejected; sends `bidderJoiningAuctioneerMailingList` email.
+
+### Protected delete
+
+- `deleteList` returns `400` if `name === "Subscribed From Website"`.
+
+---
+
+## Related
+
+- [Client fields](./fields.md)  
+- [Building / add client](./build.md) — `mailingLists` on create  
+- [Creation paths](./creation-paths.md)
