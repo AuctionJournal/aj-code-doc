@@ -14,6 +14,7 @@ Documentation of auction journal for users in QA style.
   - [Add a customer](auctioneer-client/add-customer.md)
   - [How customers are created](auctioneer-client/creation.md)
   - [Mailing lists — use and benefit](auctioneer-client/mailing-list.md)
+  - [Manage customers in a mailing list](auctioneer-client/mailing-list-members.md)
   - [Bidder vs customer relationship](auctioneer-client/bidder-relationship.md)
   - [Floor Bidder](auctioneer-client/floor-bidder/index.md)
 - [Auctioneer Miscellaneous](auctioneer-misc/index.md)

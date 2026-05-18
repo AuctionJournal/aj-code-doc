@@ -4,7 +4,10 @@
 
 Auctioneers group **`clientsOfAuctioneer`** records (and optional raw emails) into **`clientMailingList`** documents for organization, export, and website-subscription capture.
 
-**User guide:** [How can an auctioneer use the mailing list in Customers? What is the benefit?](../user_side_doc/auctioneer-client/mailing-list.md)
+**User guides:**
+
+- [How can an auctioneer use the mailing list in Customers? What is the benefit?](../user_side_doc/auctioneer-client/mailing-list.md)
+- [How do I manage customers in a mailing list?](../user_side_doc/auctioneer-client/mailing-list-members.md)
 
 ---
 

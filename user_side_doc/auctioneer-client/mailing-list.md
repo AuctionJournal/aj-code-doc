@@ -45,26 +45,11 @@ The new list appears in the table with **Name**, **Description**, and **Member c
 
 ## Work with a list’s members
 
-1. Find the list and select **View**.  
-2. You see the list **name** and **description** (you can **Edit** them if needed).  
-3. Below, you see **clients** currently in the list.
+See [How do I manage customers in a mailing list?](mailing-list-members.md) for the full flow on `/dashboard/clients/mailinglists/view` — **Add Client**, checkboxes, **Add All** / **Remove All**, **Save**, and single-row remove.
 
-### Add clients to the list
+**Export:** On the mailing-list home row or list view, use **Export** for a CSV of members.
 
-1. Select **Add Client**.  
-2. Search and filter your full client list.  
-3. Check the clients to include (or use **add all** / **remove all** in the dialog, then **save**).  
-4. Save so membership updates.
-
-### Remove one client from the list
-
-- On the member row, use the **delete** control to remove that client from **this list only** (the client record stays in **Customers**).
-
-### Export members
-
-- On the mailing-list home row, or from the list view, use **Export** to download a **CSV** file named after the list.
-
-**Member count** includes both linked **clients** and any **email-only** entries (used for website subscribers on the system list).
+**Member count** includes both linked **clients** and any **email-only** entries (website subscribers on the system list).
 
 ---
 
@@ -95,4 +80,5 @@ When you **add or edit** a client manually (step 1 of the client form), use **Se
 
 - [Who is a customer of an auctioneer? What customer types exist? How do I add a customer?](add-customer.md)  
 - [In what ways are customers created for an auctioneer?](creation.md)  
+- [How do I manage customers in a mailing list?](mailing-list-members.md)  
 - [Auctioneer Dashboard — Customers](../auctioneeer/dashboard.md)

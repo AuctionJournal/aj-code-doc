@@ -28,6 +28,7 @@ Documentation of auction journal code logic and implementation. Only code logic 
   - [Floor bidder](auctioneer-client/floor-bidder.md)
   - [Fields](auctioneer-client/fields.md)
   - [Mailing List](auctioneer-client/mailing-list.md)
+  - [Mailing list — manage members](../user_side_doc/auctioneer-client/mailing-list-members.md)
 - [Auctioneer Miscellaneous](auctioneer-misc/index.md)
 - [Listing](listing/index.md)
   - [Fields](listing/fields.md)

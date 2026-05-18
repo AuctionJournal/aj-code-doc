@@ -247,7 +247,7 @@
 7. [Who is a floor bidder? How do I onboard one?](auctioneer-client/floor-bidder/index.md)
 8. How can an auctioneer invite a seller to self-register as their customer?
 9. How does a seller self-register as a customer from the invitation email? What is the seller's role after becoming a customer of the auctioneer?
-10. How do I manage customers in a mailing list?
+10. [How do I manage customers in a mailing list?](auctioneer-client/mailing-list-members.md)
 
 ## Users
 
