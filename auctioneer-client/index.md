@@ -75,6 +75,9 @@ Controller-level protections in add/update flows include:
 
 - Client module surface includes build/view/edit flows and accounting sections.
 - Client operations are grouped under dashboard customer/client areas.
+- Manual add flow (routes, APIs, types): [Building / adding a client](./build.md)
+- All creation paths: [Ways customers are created](./creation-paths.md)
+- User steps: [Who is a customer? How do I add one?](../user_side_doc/auctioneer-client/add-customer.md)
 - Client mailing list behavior is documented separately: [Client Mailing List](./mailing-list.md)
 
 ## Field Reference

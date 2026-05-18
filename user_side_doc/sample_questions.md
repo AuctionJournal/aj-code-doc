@@ -238,8 +238,8 @@
 
 ##### For Auctioneer
 
-1. Who is a customer of an auctioneer? What customer types exist? How do I add a customer?
-2. In what ways are customers created for an auctioneer?
+1. [Who is a customer of an auctioneer? What customer types exist? How do I add a customer?](auctioneer-client/add-customer.md)
+2. [In what ways are customers created for an auctioneer?](auctioneer-client/creation.md)
 3. How can an auctioneer use the mailing list in Customers? What is the benefit?
 4. For an auctioneer new to Auction Journal with many existing customers, how can they add them as customers in Auction Journal?
 5. How can an auctioneer configure each customer according to their preferences as a seller and as a buyer?

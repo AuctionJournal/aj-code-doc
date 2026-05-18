@@ -18,6 +18,7 @@ Doc will be in module wise.
 - **AJ-Main-Backend** — The main backend of whole AJ
 - **auctioneer_dashboard_revamp** — The auctioneer CRM Dashboard
 - **auctionjournal-public** — Public marketing and bidder dashboard
+- **auction-journal-scapper** — Free-listing website tag verification (Selenium + scheduler); updates eligibility via `AJ-Main-Backend`
 - _(add others as needed)_
 
 ## User-side documentation sync (`user_side_doc`)
