@@ -18,7 +18,7 @@ This module groups operational settings used by auctioneers for supporting busin
 - Formula Management (commission, buyer premium, taxes) — see [Formulas](formulas.md)
 - Account Management (parent/sub accounts)
 - Stripe Connection
-- Templates / Text Configuration:
+- Templates / Text Configuration — see [Templates](templates.md):
   - Terms & Conditions
   - Short BP Explanation
   - Bidding Notices
@@ -42,7 +42,7 @@ From `auctioneer_dashboard_revamp`, the Miscellaneous UI currently includes:
 - Formulas — `/dashboard/miscellaneous/formulas`; [Formulas](formulas.md)
 - Stripe Connect — route `/dashboard/miscellaneous/payment/setup`; see [Stripe Connect](../payment/connect-account.md)
 - Invoice Details — `/dashboard/miscellaneous/invoices`; [Invoice details](invoice-details.md)
-- Templates (terms, bidding notices, auction notices, email body, bid increment)
+- Templates — `/dashboard/miscellaneous/templates/*`; [Templates](templates.md) (terms, notices, email body, bid increment)
 
 From `AJ-Main-Backend`, active miscellaneous-related API groups include:
 - `/api/auctioneer/invoice*`
@@ -50,6 +50,7 @@ From `AJ-Main-Backend`, active miscellaneous-related API groups include:
 - `/api/miscellaneous/formula*`
 - `/api/miscellaneous/account*`
 - `/api/stripe/connect/*`
+- `/api/auctioneer/template*` — auctioneer text and bid-increment templates; see [Templates](templates.md)
 
 ## Known Boundary
 
@@ -59,4 +60,3 @@ From `AJ-Main-Backend`, active miscellaneous-related API groups include:
 ## Pending Interview Clarifications
 
 - Edit restrictions and role permissions per miscellaneous sub-domain.
-- How template items in revamp map to backend modules and business ownership.

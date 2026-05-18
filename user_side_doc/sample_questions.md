@@ -124,9 +124,8 @@
 1. [What is the Account section in Miscellaneous for? How do I manage it?](auctioneer-misc/account.md)
 2. [What is a formula? Why should I create formulas in advance?](auctioneer-misc/formulas.md)
 3. If I change an existing formula that is already used in an auction, does that affect the auction—whether it is draft, live, or past?
-4. Why should I create templates in advance?
-5. What types of templates can I create? Where can I use them?
-6. [Why should I fill in invoice details? Where are they used?](auctioneer-misc/invoice-details.md)
+4. [Why should I create templates in advance? What types can I create, and where are they used?](auctioneer-misc/templates.md)
+5. [Why should I fill in invoice details? Where are they used?](auctioneer-misc/invoice-details.md)
 
 ## Auction
 
