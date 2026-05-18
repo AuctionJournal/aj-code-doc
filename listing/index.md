@@ -31,8 +31,8 @@ Listing is an independent module and should be treated separately from Auction w
 From backend implementation (`listing-draft.js`), minimum publish requirements are:
 
 - Authenticated auctioneer user
-- Auctioneer must be free-listing eligible (`isEligibleForFreeListing = true`)
-- Draft listing record must exist (`req.body.id`)
+- **Free path:** auctioneer must be free-listing eligible (`isEligibleForFreeListing = true`). **Paid path:** complete listing payment (eligibility not required).
+- Draft listing record must exist (`req.body.id`) for draft publish
 - Listing must have usable address components for geocoding:
   - `Address1`, `City`, `State`, `Country`, `Zip`
 
@@ -41,11 +41,17 @@ Notes:
 - It merges request body with existing draft fields, so many values can come from saved draft.
 - If address/geocoding fails, publish fails because geo `location` is required for the saved payload.
 
-## Free Listing Eligibility Rule
+## Free vs paid publish
 
-- Free listing eligibility is a strict publish gate in current business behavior.
-- Listing publish requires `auctioneer.isEligibleForFreeListing = true`.
-- If not eligible, publish is blocked and user must complete payment/eligibility flow before listing can go live.
+| Path | How listing goes live |
+|------|------------------------|
+| **Free** | `isEligibleForFreeListing === true` → `POST …/listing/draft/publish` sets `price: 0` and `isPublished: true`. |
+| **Paid** | Publish API returns `400` with `isEligibleForFreeListing: false` → dashboard payment checkout → payment webhook sets `isPublished: true` on the listing record. |
+
+Eligibility is set by website tag verification (dashboard + `auction-journal-scapper`) and stored on the auctioneer profile. Recurring checks can revoke eligibility; **already published listings are not unpublished**.
+
+Full flow, APIs, and scrapper integration: [Free Listing Eligibility](../auctioneeer/free-listing-eligibility.md).  
+User steps: [Can I publish my listing for free?](../user_side_doc/listing/free-listing.md).
 
 ## Bidder Access Intent Flows
 
