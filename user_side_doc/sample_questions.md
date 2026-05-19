@@ -103,25 +103,25 @@
 
 ##### For Auctioneer
 
-1. How can an auctioneer add video content in Auction Journal?
-2. Does video appear in Auction Journal immediately? What should I avoid in videos to prevent rejection?
+1. [How can an auctioneer add video content in Auction Journal?](video/add-content.md)
+2. [Does video appear in Auction Journal immediately? What should I avoid in videos to prevent rejection?](video/approval-and-rejection.md)
 3. How do I highlight my videos in Auction Journal?
 
-### For Public
+##### For Public
 
-1. How do I find helpful videos in Auction Journal?
+1. [How do I find helpful videos in Auction Journal?](video/find-videos.md)
 
 ## Blog
 
 ##### For Auctioneer
 
-1. How can an auctioneer add blog content in Auction Journal?
-2. Does a blog post appear in Auction Journal immediately? What should I avoid in blog posts to prevent rejection?
+1. [How can an auctioneer add blog content in Auction Journal?](blog/add-content.md)
+2. [Does a blog post appear in Auction Journal immediately? What should I avoid in blog posts to prevent rejection?](blog/approval-and-rejection.md)
 3. How do I highlight my blogs in Auction Journal?
 
-### For Public
+##### For Public
 
-1. How do I find helpful blogs in Auction Journal?
+1. [How do I find helpful blogs in Auction Journal?](blog/find-blogs.md)
 
 ## Miscellaneous
 
