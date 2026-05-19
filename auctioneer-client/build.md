@@ -78,6 +78,7 @@ Routes: `app/routes/auctioneer-clients.js` → `controllers/auctioneer/client/cl
 ## Related
 
 - [All customer creation paths](./creation-paths.md) — import, bidder registration, seller invite, floor bidder  
+- [Import / export CSV](./import-export.md) — bulk import and sample download  
 - [Fields](./fields.md) — model flags and accounting shape  
 - [Mailing list](./mailing-list.md)  
 - [Floor bidder (user)](../user_side_doc/auctioneer-client/floor-bidder/index.md) — dedicated floor-bidder guide (stub may exist)

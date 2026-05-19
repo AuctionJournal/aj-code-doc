@@ -29,11 +29,12 @@ An auctioneer’s **customers** are stored as **`clientsOfAuctioneer`** records,
 
 ## 2. CSV import
 
-- **UI:** Customers → **Import Clients** (`ExportImportClient`) — upload CSV, map columns, optional overwrite / direct import flags.
+- **Details:** [Import and export customers (CSV)](./import-export.md)
+- **UI:** Customers → **Import Clients** (`ExportImportClient`) — upload CSV, map columns, preview, optional overwrite.
 - **APIs** (`auctioneer-clients.js`):
   - `GET /api/auctioneer/clients/download/sampleCSV` — sample file
-  - `POST /api/auctioneer/clients/import` — `upload.single("file")`, body: `mapping` (JSON), `mappedColums`, `isOverwrite`, `isDirectImportOnValid`, `isIncludeFirstRow`
-  - `POST` / `GET` `/api/auctioneer/clients/import/report` — error report for failed rows
+  - `POST /api/auctioneer/clients/import` — `upload.single("file")`, body: `mapping` (JSON column indices), `isOverwrite`
+  - `POST /api/auctioneer/clients/import/report` — error report for failed rows
 - **Handler:** `clientCSV.importClientFromCSV` — parses CSV, builds payloads with **`isBuyer: true`** and **`isConsigner: true`** for imported rows, bulk insert with duplicate checks on `clientCode` / `clientMail` per auctioneer.
 - **Export (not create):** `POST /api/clients/download` exports existing clients.
 

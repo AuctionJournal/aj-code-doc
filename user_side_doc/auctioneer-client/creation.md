@@ -35,11 +35,12 @@ You enter the person’s details yourself (or scan a driver’s licence to pre-f
 
 Use this when you already have many contacts outside Auction Journal.
 
-1. Go to **Customers**.  
-2. Select **Import Clients**.  
-3. Download the **sample CSV** if you need the expected columns.  
-4. Upload your file, **map** your columns to Auction Journal fields, and run the import.  
-5. Review any **error report** if some rows fail.
+See the full walkthrough: [How do I import many existing customers?](import-clients.md).
+
+1. Go to **Customers** → **Import Clients**.  
+2. Download **CSV format** or **Export Clients** for a reference file.  
+3. Upload your CSV, **map** columns, **preview**, then run the import (optional **overwrite**).  
+4. Review the results summary and **Download Report** if any rows fail.
 
 Imported rows are added as clients on your account (typically set up as both buyer and consigner in the system). Fix errors in your file and import again if needed.
 
