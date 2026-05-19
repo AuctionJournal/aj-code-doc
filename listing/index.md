@@ -4,6 +4,14 @@
 
 Listing is an independent module and should be treated separately from Auction workflows.
 
+## Documentation map
+
+| Topic | Dev doc | User doc |
+|-------|---------|----------|
+| What is a listing / how to create | [Create listing](./create-listing.md) | [Create listing](../user_side_doc/listing/create-listing.md) |
+| Free publish eligibility | [Free Listing Eligibility](../auctioneeer/free-listing-eligibility.md) | [Publish for free](../user_side_doc/listing/free-listing.md) |
+| Field reference | [Fields](./fields.md) | — |
+
 ## Business Purpose
 
 - Auctioneers create listing records and publish them to public website visibility.
@@ -86,6 +94,10 @@ User steps: [Can I publish my listing for free?](../user_side_doc/listing/free-l
 - "Live" window starts at publish and lasts until `AuctionDate`.
 - After `AuctionDate`, bidder action buttons are disabled.
 - Past state is driven by `AuctionDate` crossing current date.
+
+## Building a listing (auctioneer dashboard)
+
+Wizard and publish paths are documented in [Create listing](./create-listing.md) (`BuildListing` component, draft vs paid vs free publish).
 
 ## Minimal API Map (Reference Only)
 

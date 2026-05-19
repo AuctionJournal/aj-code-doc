@@ -80,11 +80,11 @@
 
 ##### For Auctioneer
 
-1. What is a listing? How do I create a new listing?
-2. What listing types exist? Which type should I choose for my listing?
+1. [What is a listing? How do I create a new listing?](listing/create-listing.md)
+2. [What listing types exist? Which type should I choose for my listing?](listing/listing-types.md)
 3. [Can I publish my listing for free? If yes, how?](listing/free-listing.md)
 4. How do I view and manage my listings, and how do I see bidders interested in my listing?
-5. What is the cost of publishing a listing in Auction Journal? Is it a one-time payment, and are there any hidden charges?
+5. [What is the cost of publishing a listing in Auction Journal? Is it a one-time payment, and are there any hidden charges?](listing/listing-cost.md)
 6. How do I highlight my listing for better bidder reach?
 
 ##### For Bidder
