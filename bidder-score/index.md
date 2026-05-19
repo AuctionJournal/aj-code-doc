@@ -61,6 +61,10 @@ Current reason score values from backend constants:
 
 - Detailed score model fields: [Fields](./fields.md)
 
+## Implementation
+
+- [How it works (APIs, events, UI)](./score-system.md)
+
 ## Known Boundary
 
 - This doc focuses on bidder-score logic only.

@@ -10,6 +10,7 @@ Documentation of auction journal for users in QA style.
 - [Auctioneer Assistants](auctioneer-assistants/index.md)
 - [Bidder](bidder/index.md)
 - [Bidder Score](bidder-score/index.md)
+  - [What is score? View history, improve](bidder-score/score.md)
 - [Auctioneer Client](auctioneer-client/index.md)
   - [Add a customer](auctioneer-client/add-customer.md)
   - [How customers are created](auctioneer-client/creation.md)

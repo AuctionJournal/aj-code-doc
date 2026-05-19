@@ -95,9 +95,9 @@
 
 ## Bidder Score
 
-1. What is bidder score? How does it affect me?
-2. How do I view my score? Can I do anything about my score history?
-3. What can I do to improve my score? How can I avoid losing score?
+1. [What is bidder score? How does it affect me?](bidder-score/score.md#what-is-bidder-score-how-does-it-affect-me)
+2. [How do I view my score? Can I do anything about my score history?](bidder-score/score.md#how-do-i-view-my-score-can-i-do-anything-about-my-score-history)
+3. [What can I do to improve my score? How can I avoid losing score?](bidder-score/score.md#what-can-i-do-to-improve-my-score-how-can-i-avoid-losing-score)
 
 ## Video
 
