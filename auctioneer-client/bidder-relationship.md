@@ -55,7 +55,7 @@ When a logged-in **bidder** successfully registers for an auction, the backend e
 **Registration then uses the client record:**
 
 - **Reserved bid card** — `client.accounting.buyer.reservedBidCard` if set; else next available number for the auction.
-- **Bid permission** — `buyerPermissionStatus`, `buyerPermission`, public/private notes, decline reason from client accounting (e.g. Permanently Approved / Declined) merged with auction defaults and bidder score.
+- **Bid permission** — `buyerPermissionStatus`, cap, notes; applied on `createAuctionRegistration`. User guide: [bid permission](../user_side_doc/auctioneer-client/bid-permission.md).
 - Registration payload stores `client: client._id` on `AuctionRegistration`.
 
 See also: [Creation paths](./creation-paths.md) § bidder registers for auction.

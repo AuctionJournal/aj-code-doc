@@ -62,17 +62,23 @@ This is how platform **bidders** become **customers** of the auctioneer running 
 
 Auctioneer invites a **seller** (consigner) by email; the invitee completes onboarding via a public link. Client record is created only when they submit self-registration.
 
+**User guides:** [Invite seller](../user_side_doc/auctioneer-client/invite-seller.md) (auctioneer) · [Seller self-register](../user_side_doc/auctioneer-client/seller-self-register.md) (invitee)
+
 ### Invite (auctioneer, authenticated)
 
 | Item | Detail |
 |------|--------|
 | Route | `POST /api/auctioneer/client/invite` |
 | Auth | `requireAuth`, `allowRoles("Auctioneer")` |
-| Handler | `auctioneer-clients/build/index.js` → `inviteAuctioneerClient` |
+| Handler | `app/controllers/auctioneer-clients/build/index.js` → `inviteAuctioneerClient` |
 | Body | `{ email }` (lowercased/trimmed) |
-| Checks | Rejects if `clientMail` already exists for this auctioneer |
-| Action | Builds `clientCode` = `{tickerSymbol}{timestamp}`, JWT payload `{ clientCode, auctioneer, clientMail }`, sends email with encrypted token link |
-| DB | **Does not** `create` client on invite (create line is commented out) |
+| Checks | `400` if `clientMail` already exists for this auctioneer |
+| Action | `clientCode` = `{tickerSymbol}{timestamp}`; JWT payload `{ clientCode, auctioneer, clientMail }`; encrypt JWT; email via `auctioneerClientInviteEmailContent` |
+| DB | **Does not** `create` client on invite (`AuctioneerClients.create` commented out) |
+| Email link | `{AUCTIONEER_WEBSITE_URL}/onboard-client?token=…&clientCode=…&email=…&auctioneerId={AuctioneerID}` — template: `emailContentGenerator.auctioneerClientInviteEmailContent` |
+| Token TTL | `JWT_EXPIRATION_IN_MINUTES` (UI success message: 24 hours) |
+
+**Dashboard:** `clientHome.jsx` → **Onboard Seller** → `InviteNewClient` (`src/Components/Client/InviteNewClient`) → `inviteClient` in `lib/api/clients/build-client.js`.
 
 ### Self-register (public, no JWT auth on route)
 
@@ -80,17 +86,17 @@ Auctioneer invites a **seller** (consigner) by email; the invitee completes onbo
 |------|--------|
 | Route | `POST /api/auctioneer/client/self-register` |
 | Auth | None on route |
-| Handler | `auctioneerClientSelfRegister` |
-| Body | `{ token, client }` — `client` includes form fields (`firstName`, `lastName`, addresses, `dlNumber`, etc.) |
-| Token | Decrypt + `jwt.verify`; expired → `400` “Request expired” |
-| Action | Merges decoded `clientCode`, `auctioneer`, `clientMail` with `client` → `AuctioneerClients.create` |
+| Handler | `auctioneerClientSelfRegister` (same build controller) |
+| Body | `{ token, client }` — frontend maps `clientName`, `clientAddress.billTo` / `shipTo` from form |
+| Token | `decrypt` + `jwt.verify`; `TokenExpiredError` → `400` “Request expired! Please contact auctioneer.” |
+| Action | Merges decoded `clientCode`, `auctioneer`, `clientMail` with submitted `client` → `AuctioneerClients.create` (no explicit `isBuyer` / `isConsigner` in handler; model defaults `false`) |
+| Required on form (UI) | `dlNumber`, `firstName`, `lastName`, `phone1` (+1 format), billing address; email read-only from query |
 
-### Dashboard / public UI
+**Public UI:** `AppRoutes` `/onboard-client` → `clients-self-join.page.jsx` → `InvitedClientSelfJoin` — 2 steps (contact/identity + addresses); images via `imageUploader` + `clientSelfRegister`; invalid/missing query params → “Invalid Request”.
 
-- **Invite:** Customers → **Onboard Seller** → `InviteNewClient` → `inviteClient` → invite API.
-- **Self-join page:** `auctioneer_dashboard_revamp` route `/onboard-client` (`InvitedClientSelfJoin`) — link from email includes token query param; submits to self-register API.
+### Email positioning vs roles
 
-Related user Q&A (separate pages): seller invitation email, seller self-register steps.
+Invite email copy positions the invitee as a **seller/consigner** for that auctioneer’s company. Post-create role flags depend on stored document; auctioneer typically configures **consigner** (and buyer if needed) on the client profile in dashboard ([build.md](./build.md)).
 
 ---
 

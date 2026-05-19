@@ -62,16 +62,10 @@ This keeps your customer list aligned with people who actually sign up to bid at
 
 For **sellers (consigners)** you want to onboard without typing everything yourself:
 
-1. Open **Customers**.  
-2. Select **Onboard Seller**.  
-3. Enter the seller’s **email** (lowercase) and select **Invite**.  
-4. They receive an email with a **registration link** (the link expires after a limited time—about **24 hours** in the product messaging).  
-5. They open the link, fill in their details (similar to the manual client form), and submit.  
-6. They then appear in your **Customers** list.
+- **You (auctioneer):** [How can I invite a seller to self-register?](invite-seller.md)  
+- **The seller (email link):** [How does a seller self-register from the invitation?](seller-self-register.md)
 
-Until they complete that link, they are **not** yet a client in your list—the invite only sends the email.
-
-Other Customer topics in [Questions](../sample_questions.md) cover inviting a seller, self-registration from email, and related flows.
+Until they complete the registration link, they are **not** yet a client in your list—the invite only sends the email.
 
 ---
 

@@ -78,6 +78,8 @@ Controller-level protections in add/update flows include:
 - Manual add flow (routes, APIs, types): [Building / adding a client](./build.md)
 - All creation paths: [Ways customers are created](./creation-paths.md)
 - Bulk import / export: [Import and export customers (CSV)](./import-export.md)
+- Buyer / consigner preferences: [Accounting preferences](./accounting-preferences.md)
+- Customer bid permission: [Bid permission](./bid-permission.md)
 - User steps: [Who is a customer? How do I add one?](../user_side_doc/auctioneer-client/add-customer.md)
 - Mailing lists: [Client Mailing List](./mailing-list.md) — APIs, model, website subscribe list
 - Bidder linkage: [Bidder vs client](./bidder-relationship.md) — auto-create on `POST /api/auction/register`

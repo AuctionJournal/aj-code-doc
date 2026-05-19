@@ -42,7 +42,7 @@ Customers are **not** platform bidders by default. If the email matches an exist
 |------|-----------|----------------|
 | 1 | `ClientInfo` | `clientCode`, name, phones, email, DL, DOB, notes, image, mailing lists, referral, ID card uploads |
 | 2 | `Address` | `billTo`, `shipTo` (optional “same as billing”) |
-| 3 | `Accounting` | Buyer accordion (reserved bid card, tax, bid permission, buyer premium); Consigner accordion (default vs specific commission) |
+| 3 | `Accounting` | Buyer accordion (reserved bid card, tax, bid permission, buyer premium); Consigner accordion (default vs specific commission) — see [accounting preferences](./accounting-preferences.md) |
 
 Submit: uploads images via blob service (`auctioneerClientImage`), then `POST /api/client/add`.
 
@@ -79,6 +79,7 @@ Routes: `app/routes/auctioneer-clients.js` → `controllers/auctioneer/client/cl
 
 - [All customer creation paths](./creation-paths.md) — import, bidder registration, seller invite, floor bidder  
 - [Import / export CSV](./import-export.md) — bulk import and sample download  
+- [Buyer / consigner accounting](./accounting-preferences.md) — step 3 preferences and auction use  
 - [Fields](./fields.md) — model flags and accounting shape  
 - [Mailing list](./mailing-list.md)  
 - [Floor bidder (user)](../user_side_doc/auctioneer-client/floor-bidder/index.md) — dedicated floor-bidder guide (stub may exist)

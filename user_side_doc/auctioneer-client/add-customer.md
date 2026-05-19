@@ -104,20 +104,11 @@ Select **Previous** or **Next**.
 
 Expand **Buyer** and/or **Consigner** to match how this person will work with your auctions.
 
-**Buyer** (purchaser) — examples of what you can set:
+For a full guide (what each setting does at registration, on consigned lots, and at settlement), see [Configure customer as buyer and seller](customer-preferences.md).
 
-- **Reserved bid card number** — type a number or use **Get next** for the next available card.  
-- **Tax status** — **Taxable** or **Tax exempt all purchases**.  
-- Other tabs: **Bid permission**, **Buyers premium** (defaults or client-specific).
+**Buyer** (purchaser) — reserved bid card, tax, buyer’s premium; see [bid permission](bid-permission.md) for registration approve/decline rules.
 
-![Create client — step 3 Buyer accounting](../image/auctioneer-client/create-client-step3-buyer.png "Step 3 — Buyer")
-
-**Consigner** (seller):
-
-- **Use default commission**, or  
-- **Set specific commission** for this client.
-
-![Create client — step 3 Consigner accounting](../image/auctioneer-client/create-client-step3-consigner.png "Step 3 — Consigner")
+**Consigner** (seller) — default or specific commission and seller tax.
 
 Select **Submit** to save. You return to the **Customers** list when the client is created successfully.
 

@@ -45,7 +45,7 @@ Linking does **not** mean you control their bidder password or platform verifica
 - **Buyer’s premium** (default or specific)
 - **Bid permission** — approve, decline, limits, and notes that apply when they register for your auctions
 
-Those settings live under **Customers** → open the client → **Buyer** accounting and related sections. When they register for your auction, the system uses this client record (including permission and bid card rules you configured).
+Those settings live under **Customers** → open the client → **Buyer** on step 3 of create/edit. For **bid permission** (automatic approve/decline at registration), see [Set bid permission for a customer](bid-permission.md). For tax, bid card, and premium, see [Configure customer as buyer and seller](customer-preferences.md).
 
 You can change these preferences anytime; they apply to **your** relationship with that buyer, not to other auctioneers.
 
