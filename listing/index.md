@@ -9,6 +9,7 @@ Listing is an independent module and should be treated separately from Auction w
 | Topic | Dev doc | User doc |
 |-------|---------|----------|
 | What is a listing / how to create | [Create listing](./create-listing.md) | [Create listing](../user_side_doc/listing/create-listing.md) |
+| Manage listings / bidding requests | [Manage listings](./manage-listings.md) | [Manage listings](../user_side_doc/listing/manage-listings.md) |
 | Free publish eligibility | [Free Listing Eligibility](../auctioneeer/free-listing-eligibility.md) | [Publish for free](../user_side_doc/listing/free-listing.md) |
 | Field reference | [Fields](./fields.md) | — |
 

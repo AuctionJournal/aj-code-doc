@@ -32,6 +32,7 @@ Documentation of auction journal code logic and implementation. Only code logic 
 - [Auctioneer Miscellaneous](auctioneer-misc/index.md)
 - [Listing](listing/index.md)
   - [Build listing](listing/create-listing.md)
+  - [Manage listings](listing/manage-listings.md)
   - [Fields](listing/fields.md)
 - [Auction](auction/index.md)
   - [Fields](auction/fields.md)

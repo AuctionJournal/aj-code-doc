@@ -24,6 +24,7 @@ Documentation of auction journal for users in QA style.
   - [Listing types — which to choose](listing/listing-types.md)
   - [Publish for free](listing/free-listing.md)
   - [Listing publish cost](listing/listing-cost.md)
+  - [Manage listings and bidding requests](listing/manage-listings.md)
 - [Auction](auction/index.md)
   - [Onsite Live Webcast](auction/onsite-livewebcast/index.md)
   - [Settlement](auction/settlement/index.md)
