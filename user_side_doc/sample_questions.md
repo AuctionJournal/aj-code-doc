@@ -70,11 +70,11 @@
 
 ## Help and support
 
-1. How do I get help from Auction Journal when I have a question?
-2. How do I start a "Request a Callback" support request? How helpful is it?
-3. How do I start email support? How convenient is it?
-4. Is the Auction Journal chatbot suitable for immediate support?
-5. How do I view my ongoing and past support requests, and how do I continue a conversation?
+1. [How do I get help from Auction Journal when I have a question?](help-and-support/getting-help.md)
+2. [How do I start a "Request a Callback" support request? How helpful is it?](help-and-support/callback-support.md)
+3. [How do I start email support? How convenient is it?](help-and-support/email-support.md)
+4. [Is the Auction Journal chatbot suitable for immediate support?](help-and-support/live-chat.md)
+5. [How do I view my ongoing and past support requests, and how do I continue a conversation?](help-and-support/ticket-history.md)
 
 ## Listing
 

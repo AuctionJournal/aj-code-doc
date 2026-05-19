@@ -62,9 +62,12 @@ Documentation of auction journal code logic and implementation. Only code logic 
   - [Checkout](payment/checkout.md)
 - [Newsletter](newsletter/index.md)
 - [Help And Support](help-and-support/index.md)
+  - [Getting help](help-and-support/getting-help.md)
+  - [Callback support](help-and-support/callback-support.md)
+  - [Email support](help-and-support/email-support.md)
+  - [Live chat (Zoho SalesIQ)](help-and-support/live-chat.md)
+  - [Ticket history](help-and-support/ticket-history.md)
   - [Fields](help-and-support/fields.md)
-  - [Callback](help-and-support/index.md)
-  - [Email](help-and-support/index.md)
 - [AJ Settings and info](aj-settings-and-info/index.md)
 - Blob _(docs pending)_
 

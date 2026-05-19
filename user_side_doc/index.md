@@ -38,6 +38,11 @@ Documentation of auction journal for users in QA style.
 - [Payment](payment/index.md)
 - [Newsletter](newsletter/index.md)
 - [Help and Support](help-and-support/index.md)
+  - [Getting help](help-and-support/getting-help.md)
+  - [Callback support](help-and-support/callback-support.md)
+  - [Email support](help-and-support/email-support.md)
+  - [Live chat](help-and-support/live-chat.md)
+  - [Ticket history](help-and-support/ticket-history.md)
 - [AJ Settings and Info](aj-settings-and-info/index.md)
 
 ## Samples
