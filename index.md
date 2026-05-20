@@ -63,6 +63,7 @@ Documentation of auction journal code logic and implementation. Only code logic 
 - Products _(docs pending)_
 - [Payment](payment/index.md)
   - [Payment Cards](payment/cards.md)
+  - [Bidder payment method](payment/bidder-payment-method.md)
   - [Stripe connect](payment/connect-account.md)
   - [Stripe customers](payment/index.md)
   - [Checkout](payment/checkout.md)

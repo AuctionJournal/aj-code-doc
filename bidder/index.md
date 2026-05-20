@@ -16,6 +16,7 @@ This module explains bidder business logic in `AJ-Main-Backend`, focused on trus
 1. Bidder starts via **public registration** (phone OTP, then `registerBidder`) — see [Registration](./registration.md).
 2. Bidder account exists with profile + verification placeholders.
 3. Bidder completes **verification** (Stripe card + ID upload, then platform verify) — see [Verification](./verification.md). Mandatory for many auctions: [Verification required](./verification-required.md). **No signup fee:** [Cost](./cost.md).
+   - Card details purpose/safety and add flow: [Payment method](../payment/bidder-payment-method.md).
 4. If both identity proof and card on file pass checks, bidder becomes platform-verified (`isVerified = true`) with score event and email.
 5. Bidder continues participating in auctions/listings; dashboard and score logs reflect activity over time.
 
