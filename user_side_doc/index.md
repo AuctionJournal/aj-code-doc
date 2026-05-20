@@ -8,6 +8,9 @@ Documentation of auction journal for users in QA style.
 
 - [Auctioneer](auctioneeer/index.md)
 - [Auctioneer Assistants](auctioneer-assistants/index.md)
+  - [Onboard a user](auctioneer-assistants/onboard-user.md)
+  - [Manage users and invitations](auctioneer-assistants/manage-users-and-invitations.md)
+  - [Self-register from invite email](auctioneer-assistants/self-register-from-invite.md)
 - [Bidder](bidder/index.md)
 - [Bidder Score](bidder-score/index.md)
   - [What is score? View history, improve](bidder-score/score.md)

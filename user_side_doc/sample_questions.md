@@ -252,7 +252,7 @@
 
 ## Users
 
-1. Who is a user? How can a user help an auctioneer?
-2. How do I onboard a user?
-3. How do I manage existing users and user invitations?
-4. How does a user self-register from the invitation email sent by an auctioneer?
+1. [Who is a user? How can a user help an auctioneer?](auctioneer-assistants/index.md#who-is-a-user-assistant)
+2. [How do I onboard a user?](auctioneer-assistants/onboard-user.md)
+3. [How do I manage existing users and user invitations?](auctioneer-assistants/manage-users-and-invitations.md)
+4. [How does a user self-register from the invitation email sent by an auctioneer?](auctioneer-assistants/self-register-from-invite.md)

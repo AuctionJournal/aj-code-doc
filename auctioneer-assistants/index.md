@@ -11,6 +11,25 @@ This module explains the business logic for delegated team access under an aucti
 - Support controlled onboarding by invitation instead of open signup.
 - Allow auctioneer to disable or remove assistants without deleting primary account ownership.
 
+## Who is a user (assistant) and how they help
+
+In Auction Journal, a "user" in this module means an **auctioneer assistant**: a delegated team account under a specific auctioneer tenant.
+
+Assistants primarily help auctioneers with lot preparation work. A common workflow uses **Lot-AI** ([catalog.auctionjournal.com](https://catalog.auctionjournal.com/)) to:
+
+- open auctions owned by the parent auctioneer
+- create and add lots to those auctions
+- capture and upload lot images
+- organize lot data for auctioneer review and publish readiness
+
+This delegation shortens catalog build time and reduces day-to-day operational load on the primary auctioneer account.
+
+## User onboarding
+
+- [How do I onboard a user?](onboard-user.md)
+- [How do I manage existing users and user invitations?](manage-users-and-invitations.md)
+- [How does a user self-register from the invitation email sent by an auctioneer?](self-register-from-invite.md)
+
 ## Core Lifecycle
 
 1. Auctioneer sends assistant invitation using email.
