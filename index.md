@@ -4,6 +4,8 @@ Documentation of auction journal code logic and implementation. Only code logic 
 
 ### Features
 
+- [Auction Journal and Module relations](auctionjournal.md)
+- [System Architecture](system-architecture.md)
 - [Authentication (shared)](auth/index.md)
   - [Forgot password](auth/forgot-password.md)
 - [Auctioneer](auctioneeer/index.md)
