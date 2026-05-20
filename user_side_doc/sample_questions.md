@@ -85,7 +85,7 @@
 3. [Can I publish my listing for free? If yes, how?](listing/free-listing.md)
 4. [How do I view and manage my listings, and how do I see bidders interested in my listing?](listing/manage-listings.md)
 5. [What is the cost of publishing a listing in Auction Journal? Is it a one-time payment, and are there any hidden charges?](listing/listing-cost.md)
-6. How do I highlight my listing for better bidder reach?
+6. [How do I highlight my listing for better bidder reach?](listing/highlight-listing.md)
 
 ##### For Bidder
 
@@ -105,7 +105,7 @@
 
 1. [How can an auctioneer add video content in Auction Journal?](video/add-content.md)
 2. [Does video appear in Auction Journal immediately? What should I avoid in videos to prevent rejection?](video/approval-and-rejection.md)
-3. How do I highlight my videos in Auction Journal?
+3. [How do I highlight my videos in Auction Journal?](video/highlight-video.md)
 
 ##### For Public
 
@@ -117,7 +117,7 @@
 
 1. [How can an auctioneer add blog content in Auction Journal?](blog/add-content.md)
 2. [Does a blog post appear in Auction Journal immediately? What should I avoid in blog posts to prevent rejection?](blog/approval-and-rejection.md)
-3. How do I highlight my blogs in Auction Journal?
+3. [How do I highlight my blogs in Auction Journal?](blog/highlight-blog.md)
 
 ##### For Public
 
@@ -230,9 +230,18 @@
 
 ## Advertisement
 
-1. How does Advertisement work in Auction Journal? How can an auctioneer benefit from it?
-2. What types of Advertisement are available to auctioneers in Auction Journal?
-3. How do I create an advertisement?
+##### For Auctioneer
+
+1. [How does Advertisement work in Auction Journal? How can an auctioneer benefit from it?](advertisement/how-it-works.md)
+2. [What types of Advertisement are available to auctioneers in Auction Journal?](advertisement/ad-types.md)
+3. [How do I create an advertisement?](advertisement/create-advertisement.md)
+4. [Where does each advertisement appear on the public website?](advertisement/public-placement.md)
+5. [What is the difference between national and state advertisements?](advertisement/national-vs-state.md)
+6. [How do I promote a listing (ticker vs featured national vs featured state)?](advertisement/listing-ads.md)
+7. [How do I create a print, poster, or banner advertisement?](advertisement/business-create-ads.md)
+8. [How do I advertise my blog or video content?](advertisement/blog-video-ads.md)
+9. [How does advertisement pricing and duration work?](advertisement/pricing-and-duration.md)
+10. [When does my paid advertisement go live on Auction Journal?](advertisement/go-live.md)
 
 ## Customer
 

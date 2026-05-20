@@ -9,3 +9,4 @@
 - [Can I publish my listing for free? If yes, how?](free-listing.md)
 - [What is the cost of publishing a listing? One-time? Hidden charges?](listing-cost.md)
 - [How do I view and manage listings, and see bidder interest?](manage-listings.md)
+- [How do I highlight my listing for better bidder reach?](highlight-listing.md)

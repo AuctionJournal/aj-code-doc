@@ -10,3 +10,4 @@ Auctioneer:
 
 - [How can I add blog content in Auction Journal?](add-content.md)
 - [Does a blog appear immediately? What should I avoid?](approval-and-rejection.md)
+- [How do I highlight my blogs?](highlight-blog.md)

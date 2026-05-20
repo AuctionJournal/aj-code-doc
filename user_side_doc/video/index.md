@@ -10,3 +10,4 @@ Auctioneer:
 
 - [How can I add video content in Auction Journal?](add-content.md)
 - [Does video appear immediately? What should I avoid?](approval-and-rejection.md)
+- [How do I highlight my videos?](highlight-video.md)
