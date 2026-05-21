@@ -17,6 +17,10 @@ Run full auctions from the **Auctioneer Dashboard** — lots, bidding, registrat
 - [Soft close and bid soft close](soft-close.md) (online timed / absolute)
 - [How do I use the Auction Dashboard?](auction-dashboard.md)
 
+## For bidders (public site)
+
+- [How do I search for auctions?](../bidder/search-auctions.md)
+
 ## More topics (coming)
 
 See [sample questions](../sample_questions.md) under **Auction** for remaining open questions.

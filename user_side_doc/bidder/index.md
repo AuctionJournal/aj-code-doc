@@ -4,6 +4,7 @@
 
 - [Who is a bidder? What does a bidder do in Auction Journal?](role.md)
 - [How do I use the Bidder Dashboard?](dashboard.md)
+- [How do I search for auctions in Auction Journal?](search-auctions.md)
 
 ## Onboarding
 
