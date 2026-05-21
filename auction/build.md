@@ -142,7 +142,7 @@ From `validate_PublishAuctionDetailsRequest` + `publishAuctionDetails` logic:
 
 | Type | Additional rules |
 |------|------------------|
-| **Online Timed / Online Absolute** | `Commission`, `BuyerPremium` required; `OpenBidding` ≥ `startDate`; `closebidding` &gt; open; optional soft close (`hh:mm:ss`, max 72h); with lots → `endDate` from close + soft close via `updateLotCloseBidding` |
+| **Online Timed / Online Absolute** | `Commission`, `BuyerPremium` required; `OpenBidding` ≥ `startDate`; `closebidding` &gt; open; soft close / bid soft close (`hh:mm:ss`, max 72h) — [Soft close](./soft-close.md); with lots → `endDate` via `updateLotCloseBidding` |
 | **Absentee Bidding** | Commission/BP **not** required in Joi |
 | **Lots — Catalogued** | ≥1 auction-ready lot; no incomplete non-QR lots |
 | **Lots — Non Catalogued** (mainly Onsite) | No lot required; `Commission`, `BuyerPremium`, `sellers`; if `collectTaxes` → buyer/seller tax |
@@ -205,6 +205,7 @@ Per-field keys: `auctioneer_dashboard_revamp/src/hooks/edit_auction_disable_cont
 
 ## Related
 
+- [Auction lifecycle and stages](./lifecycle.md) · [User: stages](../user_side_doc/auction/auction-stages.md)
 - [Auction fields](./fields.md)
 - [Registration](./registration.md)
 - [Auction lot build](../auction-lot/build.md)

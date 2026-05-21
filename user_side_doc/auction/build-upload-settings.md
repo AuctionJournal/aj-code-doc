@@ -72,8 +72,10 @@ Controls how online timed (and similar) auctions open and close. Onsite webcast 
 | **Timezone** | Reference zone for open/close times |
 | **Open Bidding** | When online bidding starts (must be on or after listing date at publish) |
 | **Closed Bidding** | When bidding ends (must be after open bidding) |
-| **Soft Close Seconds** | Lot extension window near close (optional; format `hh:mm:ss`) |
-| **Bid Soft Closed Seconds** | Extension triggered by late bids |
+| **Soft Close Seconds** | Stagger between lots closing one-by-one after **Closed Bidding** (format `hh:mm:ss`) |
+| **Bid Soft Closed Seconds** | Extra time added to a lot when bid after **Closed Bidding** during soft close |
+
+Full behavior: [Soft close and bid soft close](soft-close.md). **Onsite With Live Webcast** does not use these fields.
 | **Show Immediate Bid Status…** | Show won/lost on closed lots when enabled |
 
 **Publish (Online Timed / Absolute):** Open and close times and timezone are validated; commission and buyer premium come from **Details → New Lot Default**.

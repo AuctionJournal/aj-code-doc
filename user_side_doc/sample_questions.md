@@ -141,9 +141,9 @@
 4. [How do I fill in the details section when creating an auction?](auction/build-details.md)
 5. [How do I fill in the upload settings section when creating an auction?](auction/build-upload-settings.md)
 6. [What are auction expenses? How do I create them?](auction/auction-expenses.md)
-7. What are the different stages of an auction?
+7. [What are the different stages of an auction?](auction/auction-stages.md)
 8. [How does Ring work in an auction?](auction/rings.md)
-9. Explain soft close in an auction. How do bid soft close and soft close work?
+9. [Explain soft close in an auction. How do bid soft close and soft close work?](auction/soft-close.md)
 10. How do I use the Auction Dashboard?
 
 ##### For Bidder
@@ -273,7 +273,7 @@
 | Metric                          | Count |
 | ------------------------------- | ----: |
 | Numbered questions in this file |   122 |
-| Linked to a user doc page       |    81 |
-| Still open (no link yet)        |    41 |
+| Linked to a user doc page       |    83 |
+| Still open (no link yet)        |    39 |
 
-_Last updated when **Auction rings** (Onsite With Live Webcast) was documented._
+_Last updated when **Soft close** (online timed / absolute) was documented._
