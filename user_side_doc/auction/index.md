@@ -1,4 +1,24 @@
-﻿[Auction Journal](../../index.md)
+﻿[Auction Journal](../index.md)
 
 # Auction
 
+Run full auctions from the **Auctioneer Dashboard** — lots, bidding, registration, and settlement. This is separate from a public **listing**, which only promotes an upcoming sale on the website.
+
+## Build an auction
+
+- [What is an auction? How do I create one?](create-auction.md)
+- [Auction types — which to choose](auction-types.md)
+- [Prerequisites for creating an auction](auction-prerequisites.md)
+- [How do I fill in the Details section?](build-details.md)
+- [How do I fill in the Upload Settings section?](build-upload-settings.md)
+
+## More topics (coming)
+
+See [sample questions](../sample_questions.md) under **Auction** for types, prerequisites, expenses, rings, soft close, and the auction dashboard.
+
+## Related modules
+
+- [Listing](../listing/index.md) — public promotion (not the same as a CRM auction)
+- [Initial setup — fully functional auctioneer](../auctioneeer/initial-setup.md)
+- [Onsite live webcast](onsite-livewebcast/index.md) (dev mirror: [onsite live webcast](../../auction/onsite-livewebcast/index.md))
+- [Help and Support](../help-and-support/index.md)

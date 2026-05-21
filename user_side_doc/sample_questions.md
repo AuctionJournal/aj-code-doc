@@ -36,7 +36,7 @@
   - Callback Support
   - Chat Bot
 
-## Auctioneer
+## Auction Journal Platform
 
 1. What is Auction Journal? Who should and why should use our Platform?
 
@@ -135,11 +135,11 @@
 
 ##### For Auctioneer
 
-1. What is an auction? How do I create one?
-2. What types of auction exist? Which one should I choose?
-3. What are the prerequisites for creating an auction?
-4. How do I fill in the details section when creating an auction?
-5. How do I fill in the upload settings section when creating an auction?
+1. [What is an auction? How do I create one?](auction/create-auction.md)
+2. [What types of auction exist? Which one should I choose?](auction/auction-types.md)
+3. [What are the prerequisites for creating an auction?](auction/auction-prerequisites.md)
+4. [How do I fill in the details section when creating an auction?](auction/build-details.md)
+5. [How do I fill in the upload settings section when creating an auction?](auction/build-upload-settings.md)
 6. What are auction expenses? How do I create them?
 7. What are the different stages of an auction?
 8. How does Ring work in an auction?
@@ -270,10 +270,10 @@
 
 ## Documentation progress
 
-| Metric | Count |
-|--------|------:|
-| Numbered questions in this file | 122 |
-| Linked to a user doc page | 74 |
-| Still open (no link yet) | 48 |
+| Metric                          | Count |
+| ------------------------------- | ----: |
+| Numbered questions in this file |   122 |
+| Linked to a user doc page       |    79 |
+| Still open (no link yet)        |    43 |
 
-*Last updated when **Auctioneer onboarding #3** (initial setup) was documented.*
+_Last updated when **Auction types** and **auction prerequisites** were documented._
