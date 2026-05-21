@@ -67,7 +67,7 @@ Triggered via job event `AUCTION_RINGS_UPDATE` after ring close and related lot 
 
 ## Live day — enter / stop ring
 
-### Dashboard
+### Live day (start ring UI)
 
 `LiveWebcastAuction/StartLiveAuction/index.jsx`:
 

@@ -144,7 +144,7 @@
 7. [What are the different stages of an auction?](auction/auction-stages.md)
 8. [How does Ring work in an auction?](auction/rings.md)
 9. [Explain soft close in an auction. How do bid soft close and soft close work?](auction/soft-close.md)
-10. How do I use the Auction Dashboard?
+10. [How do I use the Auction Dashboard?](auction/auction-dashboard.md)
 
 ##### For Bidder
 
@@ -273,7 +273,7 @@
 | Metric                          | Count |
 | ------------------------------- | ----: |
 | Numbered questions in this file |   122 |
-| Linked to a user doc page       |    83 |
-| Still open (no link yet)        |    39 |
+| Linked to a user doc page       |    84 |
+| Still open (no link yet)        |    38 |
 
-_Last updated when **Soft close** (online timed / absolute) was documented._
+_Last updated when **Auction Dashboard** was documented._

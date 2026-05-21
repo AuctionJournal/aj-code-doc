@@ -9,7 +9,7 @@ User guide: [Auction expenses](../user_side_doc/auction/auction-expenses.md).
 **Inhouse auction expenses** are costs the auctioneer incurs to **conduct** the auction (marketing, supplies, cleaning, and similar). They are stored per auction while building in the CRM and support:
 
 - A running expense log on the **Expenses** tab of **Build Auction**
-- **Auction dashboard** statistics (`totalAuctionExpences` sum on auction statics)
+- **Auction statics** API (`totalAuctionExpences` sum on `getAuctionStatics`) — shown on the auction operations screen in the user guide [Auction dashboard](../user_side_doc/auction/auction-dashboard.md)
 - **Settlement invoices** — line items appear as **`auctionCharges`** on buyer/seller settlement PDFs (`settlementPDF.js` § auction charges)
 
 Build-tab rows live in **`expencesDetails`**; settlement documents use **`auctionSettlement.auctionCharges`**. The auctioneer workflow is to record costs during build, then reflect them on settlement billing (see settlement edit: **auctionChargeCreate**).
@@ -49,7 +49,7 @@ Build-tab rows live in **`expencesDetails`**; settlement documents use **`auctio
 
 ---
 
-## Dashboard UI
+## Build UI (Expenses tab)
 
 | Piece | Path |
 |-------|------|
@@ -76,7 +76,7 @@ Build-tab rows live in **`expencesDetails`**; settlement documents use **`auctio
 | **First generate** | `generateAuctionSettlement` creates buyer/seller settlements with `auctionCharges: []` (lot lines from sold lots). |
 | **PDF** | `settlement/settlementPDF.js` prints `settlement.auctionCharges` (account desc, description, `$amount/100`). |
 | **After generate** | `editAuctionSettlement` with `editType: auctionChargeCreate` (dashboard `BuildCharge`) adds/edits auction charges on a settlement row. |
-| **Build expense total** | `getAuctionStatics` aggregates `expencesDetails` → `totalAuctionExpences` for auction dashboard metrics. |
+| **Build expense total** | `getAuctionStatics` aggregates `expencesDetails` → `totalAuctionExpences` for auction statics metrics. |
 
 **Settlement module:** [Auction settlement](./settlement/index.md) · `settlement/index.js`.
 

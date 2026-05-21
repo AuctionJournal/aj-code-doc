@@ -4,7 +4,7 @@
 
 ## Business purpose
 
-**Auction registration** is how a **bidder** (or floor participant linked to a **client**) is tied to a **specific auction** under that auction’s **auctioneer**, with **permission to bid** and related rules. This page covers **online** and **onsite live webcast floor** registration, **auctioneer permission changes**, and **auctioneer list tools** (export, broadcast email, invite bidder) at a business level. **Screen-by-screen** auctioneer UI is not documented here.
+**Auction registration** is how a **bidder** (or floor participant linked to a **client**) is tied to a **specific auction** under that auction’s **auctioneer**, with **permission to bid** and related rules. This page covers **online** and **onsite live webcast floor** registration, **auctioneer permission changes**, and **auctioneer list tools** (export, broadcast email, invite bidder) at a business level. **Screen-by-screen** registration tab UI: [Auction Dashboard (user)](../user_side_doc/auction/auction-dashboard.md#registration-tab).
 
 Persisted fields for the registration row: **[Registration fields](./registration-fields.md)**.
 

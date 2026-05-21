@@ -15,10 +15,11 @@ Run full auctions from the **Auctioneer Dashboard** — lots, bidding, registrat
 - [How does Ring work in an auction?](rings.md) (Onsite With Live Webcast)
 - [What are the different stages of an auction?](auction-stages.md)
 - [Soft close and bid soft close](soft-close.md) (online timed / absolute)
+- [How do I use the Auction Dashboard?](auction-dashboard.md)
 
 ## More topics (coming)
 
-See [sample questions](../sample_questions.md) under **Auction** for the auction dashboard.
+See [sample questions](../sample_questions.md) under **Auction** for remaining open questions.
 
 ## Related modules
 
