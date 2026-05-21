@@ -40,6 +40,7 @@ Documentation of auction journal for users in QA style.
   - [Auction prerequisites](auction/auction-prerequisites.md)
   - [Build — Details section](auction/build-details.md)
   - [Build — Upload Settings](auction/build-upload-settings.md)
+  - [Auction expenses](auction/auction-expenses.md)
   - [Onsite Live Webcast](auction/onsite-livewebcast/index.md)
   - [Settlement](auction/settlement/index.md)
 - [Auction Lot](auction-lot/index.md)

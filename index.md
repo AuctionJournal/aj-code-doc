@@ -44,6 +44,7 @@ Documentation of auction journal code logic and implementation. Only code logic 
   - [Building](auction/build.md) · [Create (user)](../user_side_doc/auction/create-auction.md) · [Types](../user_side_doc/auction/auction-types.md) · [Prerequisites](../user_side_doc/auction/auction-prerequisites.md)
   - [Build Details (user)](../user_side_doc/auction/build-details.md)
   - [Build Upload Settings (user)](../user_side_doc/auction/build-upload-settings.md)
+  - [Auction expenses (user)](../user_side_doc/auction/auction-expenses.md) · [Expenses (dev)](auction/expenses.md)
   - [Registration](auction/registration.md)
   - [Clerking](auction/clerking.md)
   - [After auction closes](auction/post-close.md)

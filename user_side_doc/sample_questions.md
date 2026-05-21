@@ -140,7 +140,7 @@
 3. [What are the prerequisites for creating an auction?](auction/auction-prerequisites.md)
 4. [How do I fill in the details section when creating an auction?](auction/build-details.md)
 5. [How do I fill in the upload settings section when creating an auction?](auction/build-upload-settings.md)
-6. What are auction expenses? How do I create them?
+6. [What are auction expenses? How do I create them?](auction/auction-expenses.md)
 7. What are the different stages of an auction?
 8. How does Ring work in an auction?
 9. Explain soft close in an auction. How do bid soft close and soft close work?
@@ -273,7 +273,7 @@
 | Metric                          | Count |
 | ------------------------------- | ----: |
 | Numbered questions in this file |   122 |
-| Linked to a user doc page       |    79 |
-| Still open (no link yet)        |    43 |
+| Linked to a user doc page       |    80 |
+| Still open (no link yet)        |    42 |
 
-_Last updated when **Auction types** and **auction prerequisites** were documented._
+_Last updated when **Auction expenses** (inhouse expenses tab) was documented._

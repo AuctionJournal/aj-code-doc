@@ -11,10 +11,11 @@ Run full auctions from the **Auctioneer Dashboard** — lots, bidding, registrat
 - [Prerequisites for creating an auction](auction-prerequisites.md)
 - [How do I fill in the Details section?](build-details.md)
 - [How do I fill in the Upload Settings section?](build-upload-settings.md)
+- [What are auction expenses? How do I create them?](auction-expenses.md)
 
 ## More topics (coming)
 
-See [sample questions](../sample_questions.md) under **Auction** for types, prerequisites, expenses, rings, soft close, and the auction dashboard.
+See [sample questions](../sample_questions.md) under **Auction** for stages, rings, soft close, and the auction dashboard.
 
 ## Related modules
 

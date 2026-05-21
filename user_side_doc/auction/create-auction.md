@@ -62,7 +62,7 @@ After save, you work on the **Auction** page with five tabs:
 | **Upload Settings** | Dates, notices, payment/pickup text, bidding, registration, bid increments — [Upload Settings guide](build-upload-settings.md) |
 | **Preview** | Reorder images in the **Auction Preview Gallery** (featured order) |
 | **Lots** | Add and manage lots *(documented separately)* |
-| **Expenses** | Auction expenses *(documented separately)* |
+| **Expenses** | Inhouse costs to run the auction — [Auction expenses](auction-expenses.md) |
 
 **Top buttons (draft):**
 
