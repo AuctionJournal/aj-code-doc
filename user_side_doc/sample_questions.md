@@ -152,7 +152,7 @@
 
 ## Auction Lot
 
-1. How do I create a lot in an auction?
+1. [How do I create a lot in an auction?](auction-lot/create-lot.md)
 2. What are the ways lots can be created in an auction?
 3. What are QR lots?
 4. How do I import lots?

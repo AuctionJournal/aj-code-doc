@@ -44,6 +44,7 @@ Documentation of auction journal for users in QA style.
   - [Onsite Live Webcast](auction/onsite-livewebcast/index.md)
   - [Settlement](auction/settlement/index.md)
 - [Auction Lot](auction-lot/index.md)
+  - [Create a lot in an auction](auction-lot/create-lot.md)
   - [Bidding](auction-lot/bidding/index.md)
   - [Onsite Live Webcast](auction-lot/onsite-livewebcast/index.md)
 - [Video](video/index.md)

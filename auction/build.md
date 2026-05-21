@@ -38,7 +38,7 @@ Type and onsite `lotType` are **locked in UI** after draft exists. See [auction 
 | **Details** | Auctions Information, Auction Images, New Lot Default, Shipping; **Ring Option** (Onsite + multi-ring) | Identity, media, default lot fees/sellers, shipping · [Rings](./onsite-livewebcast/ring.md) · [User](../../user_side_doc/auction/rings.md) |
 | **Upload Settings** | Dates, Notices, Payment / Shipping / Pickup, Bidding, Registration, Bid Increment | Schedule copy, rules, bidding windows, registration email, increments |
 | **Preview** | Auction Preview Gallery | Reorder featured gallery images (same auction images) |
-| **Lots** | Manage auction lots | See [Auction lot build](../auction-lot/build.md) |
+| **Lots** | Manage auction lots | [Create lot (user)](../user_side_doc/auction-lot/create-lot.md) · [Auction lot build](../auction-lot/build.md) |
 | **Expenses** | Inhouse auction expenses | [Auction expenses](./expenses.md) · [User guide](../user_side_doc/auction/auction-expenses.md) |
 
 **Top actions (draft):** Save Draft, Publish, Delete. **After publish:** Save Draft and Delete hidden; **Save Changes** (replaces Publish) calls `updatePublishedAuction`.

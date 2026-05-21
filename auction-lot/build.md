@@ -16,9 +16,20 @@ The product supports several entry points. They can be combined (for example QR 
 
 ### 1. Auctioneer — manual lot create
 
+User guide: [How do I create a lot in an auction?](../user_side_doc/auction-lot/create-lot.md).
+
 The auctioneer creates **one lot at a time** with full catalog fields (lot number, sale order, seller, title, category, description, media, reserves, fees inherited or overridden as the product allows, etc.). The server validates the payload and enforces **unique lot number** and **sale order** rules for that auction. For **onsite live webcast** catalogued auctions, lot numbers must fit **ring ranges** unless a dedicated **on-the-fly / instant** create path relaxes some checks for in-event use.
 
 If a **QR-only placeholder** already exists for that lot number, a normal create can **replace** it with a full catalog row (placeholder cleared in favor of the real lot).
+
+| Layer | Path |
+|-------|------|
+| **UI** | `auctioneer_dashboard_revamp/src/Components/AuctionLot/CreateAuctionLot/` (`LotCreateForm`); opened from **Lots** tab → **New Lot** (`ManageAuctionLots`) |
+| **API** | `POST /api/auctioneer/auction/lot/create` → `lotCreation` in `lot/lot-build.js` |
+| **Validation** | `validate_LotCreation_Request` (`lot/lot.validation.js`); client `lotSchema` (yup) in `CreateAuctionLot/index.jsx` |
+| **Client** | `createAuctionLot` in `src/lib/api/auction/lot.js` |
+
+**Defaults on create:** Payload merges auction **New Lot Default** (commission, BP, taxes, soft close, reserve, start bid from first increment). `getAuctionLotFields` applies seller tax flags. `isAuctionReady: true` on success. **Ring:** `checkAuctionRingAwailability`; may extend last ring or return `ringOptionUnavailabilityError` (UI: `RingOptionUnavailabilityError` modal). **Onsite catalogued:** `ringOptionUpdateOnLotUpdate` after save.
 
 ### 2. Assistant — fast catalog (minimal lots)
 
