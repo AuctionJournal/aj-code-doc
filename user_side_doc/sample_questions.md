@@ -89,9 +89,9 @@
 
 ##### For Bidder
 
-1. How do I search for listings in Auction Journal?
-2. How do I register for a listing? Are there any charges?
-3. How do I see my registered listings?
+1. [How do I search for listings in Auction Journal?](listing/search-listings.md)
+2. [How do I register for a listing? Are there any charges?](listing/register-for-listing.md)
+3. [How do I see my registered listings?](listing/registered-listings.md)
 
 ## Bidder Score
 
@@ -265,3 +265,15 @@
 2. [How do I onboard a user?](auctioneer-assistants/onboard-user.md)
 3. [How do I manage existing users and user invitations?](auctioneer-assistants/manage-users-and-invitations.md)
 4. [How does a user self-register from the invitation email sent by an auctioneer?](auctioneer-assistants/self-register-from-invite.md)
+
+---
+
+## Documentation progress
+
+| Metric | Count |
+|--------|------:|
+| Numbered questions in this file | 122 |
+| Linked to a user doc page | 73 |
+| Still open (no link yet) | 49 |
+
+*Last updated when **Listing → For Bidder #3** (view registered listings) was documented.*

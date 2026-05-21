@@ -55,8 +55,8 @@ To browse and register for sales on the **public** catalog, leave the dashboard 
 |------|-------------------|
 | **Dashboard** | Home overview: lot alerts, counts, calendar. |
 | **My Profile** | Edit name, address, phone; change password ([profile](profile.md)). |
-| **My Passes** | View passes related to your auction access where the product provides them. |
-| **My Requests** | Track requests you have sent (for example to auctioneers). |
+| **My Passes** | Listing **bid passes** you generated on **OnSite Auction** listings ([registered listings](../listing/registered-listings.md)). |
+| **My Requests** | Listing **callback requests** you sent on other listing types ([registered listings](../listing/registered-listings.md)). |
 | **My Watchlist** | Lots you saved to follow. |
 | **My Bids** | History of bids you placed. |
 | **Score History** | Log of changes to your **bidder score** (shown in the header). |
