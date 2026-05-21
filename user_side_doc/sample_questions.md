@@ -142,7 +142,7 @@
 5. [How do I fill in the upload settings section when creating an auction?](auction/build-upload-settings.md)
 6. [What are auction expenses? How do I create them?](auction/auction-expenses.md)
 7. What are the different stages of an auction?
-8. How does Ring work in an auction?
+8. [How does Ring work in an auction?](auction/rings.md)
 9. Explain soft close in an auction. How do bid soft close and soft close work?
 10. How do I use the Auction Dashboard?
 
@@ -273,7 +273,7 @@
 | Metric                          | Count |
 | ------------------------------- | ----: |
 | Numbered questions in this file |   122 |
-| Linked to a user doc page       |    80 |
-| Still open (no link yet)        |    42 |
+| Linked to a user doc page       |    81 |
+| Still open (no link yet)        |    41 |
 
-_Last updated when **Auction expenses** (inhouse expenses tab) was documented._
+_Last updated when **Auction rings** (Onsite With Live Webcast) was documented._

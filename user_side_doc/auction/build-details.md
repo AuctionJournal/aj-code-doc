@@ -94,7 +94,9 @@ Defaults apply to **new lots** you add and can update existing lots when you cha
 
 ## Ring Option (Onsite With Live Webcast only)
 
-If you chose **Onsite With Live Webcast** and enabled **multiple rings**, an extra **Ring Option** subsection appears under Details. Configure ring ranges and assignment there (see future doc: [How does Ring work in an auction?](../sample_questions.md)).
+For **Onsite With Live Webcast**, open **Auctions Information** and check **Auction Will Have Multiple Rings** if the sale runs in more than one ring.
+
+When multiple rings are enabled, **Ring Option** appears under **Details**. Set **Assign Ring By** (lot# or sale order), add rings, and enter each **Range Begins** / **Range Ends**. Full behavior, live-day steps, and screenshots: [How does Ring work in an auction?](rings.md).
 
 Screenshots in this guide use **Online Timed Auction**; onsite forms add bidding dates, pre-bidding, and ring fields under **Upload Settings** and Details.
 

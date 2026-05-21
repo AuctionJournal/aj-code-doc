@@ -53,7 +53,7 @@ Publish rules differ (for example commission/buyer premium are not required the 
   - **Non Catalogued** — flat bidding; stricter seller/commission rules at publish without a full catalog.
 - Extra sections appear later: **Ring Option** (multi-ring), pre-bidding, **bidding day** timings, and onsite-specific bidding in [Upload Settings](build-upload-settings.md).
 
-For ring behavior, see sample question [How does Ring work?](../sample_questions.md). For onsite detail, see [Onsite live webcast](onsite-livewebcast/index.md) when available.
+For ring behavior, see [How does Ring work in an auction?](rings.md). For onsite detail, see [Onsite live webcast](onsite-livewebcast/index.md).
 
 ---
 

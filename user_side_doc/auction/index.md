@@ -12,10 +12,11 @@ Run full auctions from the **Auctioneer Dashboard** — lots, bidding, registrat
 - [How do I fill in the Details section?](build-details.md)
 - [How do I fill in the Upload Settings section?](build-upload-settings.md)
 - [What are auction expenses? How do I create them?](auction-expenses.md)
+- [How does Ring work in an auction?](rings.md) (Onsite With Live Webcast)
 
 ## More topics (coming)
 
-See [sample questions](../sample_questions.md) under **Auction** for stages, rings, soft close, and the auction dashboard.
+See [sample questions](../sample_questions.md) under **Auction** for stages, soft close, and the auction dashboard.
 
 ## Related modules
 

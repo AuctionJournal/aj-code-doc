@@ -35,7 +35,7 @@ Type and onsite `lotType` are **locked in UI** after draft exists. See [auction 
 
 | Tab | Subsections (accordions) | Role |
 |-----|--------------------------|------|
-| **Details** | Auctions Information, Auction Images, New Lot Default, Shipping; **Ring Option** (Onsite + multi-ring) | Identity, media, default lot fees/sellers, shipping |
+| **Details** | Auctions Information, Auction Images, New Lot Default, Shipping; **Ring Option** (Onsite + multi-ring) | Identity, media, default lot fees/sellers, shipping · [Rings](./onsite-livewebcast/ring.md) · [User](../../user_side_doc/auction/rings.md) |
 | **Upload Settings** | Dates, Notices, Payment / Shipping / Pickup, Bidding, Registration, Bid Increment | Schedule copy, rules, bidding windows, registration email, increments |
 | **Preview** | Auction Preview Gallery | Reorder featured gallery images (same auction images) |
 | **Lots** | Manage auction lots | See [Auction lot build](../auction-lot/build.md) |
