@@ -4,7 +4,7 @@
 
 The **Auctioneer Dashboard** is where you sign in to **create and run** your sales on Auction Journal—listings, auctions, customers, billing, and account setup. Bidders use a **different** site and login; this guide is only for auctioneers.
 
-If you are new to the platform, read [Who is an auctioneer?](role.md) first, then [register](registration.md) and complete key setup under **Miscellaneous** before your first **New Auction**.
+If you are new to the platform, read [Who is an auctioneer?](role.md) first, then [register](registration.md) and complete [initial setup](initial-setup.md) under **Miscellaneous** and **Customers** before your first **New Auction**.
 
 ---
 

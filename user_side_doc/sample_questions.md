@@ -46,7 +46,7 @@
 
 1. [How do I register in Auction Journal as an auctioneer?](auctioneeer/registration.md)
 2. [What should I do if I forget my login password?](auctioneeer/forgot-password.md)
-3. What initial setup is required to become a fully functional auctioneer?
+3. [What initial setup is required to become a fully functional auctioneer?](auctioneeer/initial-setup.md)
 4. [How can an auctioneer update profile details? Which fields can be updated?](auctioneeer/profile.md)
 
 ##### For Bidder
@@ -273,7 +273,7 @@
 | Metric | Count |
 |--------|------:|
 | Numbered questions in this file | 122 |
-| Linked to a user doc page | 73 |
-| Still open (no link yet) | 49 |
+| Linked to a user doc page | 74 |
+| Still open (no link yet) | 48 |
 
-*Last updated when **Listing → For Bidder #3** (view registered listings) was documented.*
+*Last updated when **Auctioneer onboarding #3** (initial setup) was documented.*

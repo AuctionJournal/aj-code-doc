@@ -7,6 +7,7 @@ Documentation of auction journal for users in QA style.
 ## Modules
 
 - [Auctioneer](auctioneeer/index.md)
+  - [Initial setup — fully functional auctioneer](auctioneeer/initial-setup.md)
 - [Auctioneer Assistants](auctioneer-assistants/index.md)
   - [Onboard a user](auctioneer-assistants/onboard-user.md)
   - [Manage users and invitations](auctioneer-assistants/manage-users-and-invitations.md)
